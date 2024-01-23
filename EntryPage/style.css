@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "BebasNeue";
+    src: url("BebasNeue.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #fdfff0;
+}
+
+#slogan {
+    color: #24323F;
+    text-align: left;
+    font-family: "BebasNeue", sans-serif;
+    font-size: 90px;
+    
+}
+
+img{
+    margin-top: 225px;
+}
