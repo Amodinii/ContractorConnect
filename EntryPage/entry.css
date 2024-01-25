@@ -5,10 +5,14 @@
     font-style: normal;
 }
 
+*
+{
+    box-sizing: border-box;
+}
+
 body {
     background-color: #fdfff0;
     background-size: cover;
-    background-repeat: no-repeat;
     background-size: 100% 100%;
     margin: 0;
 }
@@ -26,19 +30,20 @@ body {
     max-width: 30%;
     height: auto;
     position: absolute;
-    bottom: 0; /* Position at the bottom */
-    right: 0; /* Position at the right */
+    bottom: 0; 
+    right: 0; 
     opacity: 0.45;
     transform: scaleX(-1) scaleY(-1);
+    z-index:-1;
 }
 
 h1 {
-    margin-top: 20rem; /* Adjusted margin-top */
-    margin-left: 60rem; /* Adjusted margin-left */
+    margin-top: 11vw; /* Adjusted margin-top */
+    margin-left: 48vw; /* Adjusted margin-left */
     color: #050024;
     text-align: left;
     font-family: "BebasNeue", sans-serif;
-    font-size: 8rem; /* Adjusted font-size */
+    font-size: 7.5vw; /* Adjusted font-size */
 }
 
 #peeps {
@@ -46,45 +51,45 @@ h1 {
     height: 80%;
     position: absolute;
     bottom: 0; /* Position at the bottom */
-    left: 0; /* Position at the right */
+    margin-left:3.4vw; /* Position at the right */
 }
 
 .slogan {
     color: #24323F;
     text-align: left;
     font-family: "BebasNeue", sans-serif;
-    font-size: 5rem; /* Adjusted font-size */
-    margin-top: -6rem; /* Adjusted margin-top */
-    margin-left: 60rem; /* Adjusted margin-left */
+    font-size: 5.6vw; /* Adjusted font-size */
+    margin-top: -6vw; /* Adjusted margin-top */
+    margin-left: 48vw; /* Adjusted margin-left */
 }
 
 #reg {
     border: 2px solid white; /* Use border instead of stroke */
     color: #050024;
     font-family: "BebasNeue", sans-serif;
-    font-size: 3rem;
+    font-size: 2.6vw;
     font-weight: bold;
-    width: 13rem;
-    height: 6rem;
+    width: 11vw;
+    height: 5vw;
     border-radius: 4rem;
     background-color: white;
     box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
-    margin-right: 5rem;
-    margin-left: 60rem;
+    margin-right: 5vw;
+    margin-left: 48vw;
 }
 
 #sig {
     border: 2px solid white; /* Use border instead of stroke */
     color: #050024;
     font-family: "BebasNeue", sans-serif;
-    font-size: 3rem;
+    font-size: 2.6vw;
     font-weight: bold;
-    width: 13rem;
-    height: 6rem;
+    width: 11vw;
+    height: 5vw;
     border-radius: 4rem;
     background-color: white;
     box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
-    margin-right: 0.25rem;
+    margin-left: -3vw;
 }
 
 
@@ -96,14 +101,14 @@ h1 {
 }
 
 .buttons{
-    margin-top: -4.5rem;
+    margin-top: -5.2vw;
 }
 
 #logo {
-    max-width: 10%;
-    height: 10%;
+    width: 10.3%;
+    height: 11%;
     position: absolute;
-    top: 1rem; /* Position at the bottom */
-    right: 2rem; /* Position at the right */
+    top: 1vw; /* Position at the bottom */
+    right: 2vw; /* Position at the right */
     opacity: 1;
 }
