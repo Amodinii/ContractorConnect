@@ -29,13 +29,12 @@ body{
     max-width: 30%;
     height: auto;
     position: absolute;
-    bottom: 0; 
-    right: 0; 
+    bottom: -28vw; 
+    right: 0;
     opacity: 0.45;
     transform: scaleX(-1) scaleY(-1);
     z-index:-1;
 }
-
 #logo{
     max-width: 8%;
     position: absolute;
@@ -54,7 +53,7 @@ body{
     margin-top: 7vw;
     margin-left:31vw;
     width: 40vw; 
-    height: 54vw; 
+    height: 64vw; 
     position: relative;
     z-index: 0; 
 }
@@ -130,4 +129,10 @@ a
     font-family: "Monda", sans-serif;
     display: block;
     text-align: center;
+}
+
+select
+{
+    width: 10vw;
+    background-color:white;
 }
