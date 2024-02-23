@@ -31,12 +31,13 @@
                 <p>Username</p>
                 <input type="text" NAME="username">
                 <p>User Type</p>
-                <select name="usertype">
-                    <option value="" disabled selected hidden>Select User Type</option>
-                    <option value="comp">Company</option>
-                    <option value="contr">Contractor</option>
-                </select>
-
+                <div class="selcontainer">
+                    <select name="usertype">
+                        <option value="" disabled selected hidden>Select User Type</option>
+                        <option value="comp">Company</option>
+                        <option value="contr">Contractor</option>
+                    </select>
+                </div>
             </div>
         </form>
         <button type="button" value="Register" id="sig">Register</button>
