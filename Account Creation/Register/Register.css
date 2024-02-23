@@ -53,7 +53,7 @@ body{
     margin-top: 7vw;
     margin-left:31vw;
     width: 40vw; 
-    height: 64vw; 
+    height: 65vw; 
     position: relative;
     z-index: 0; 
 }
@@ -131,8 +131,40 @@ a
     text-align: center;
 }
 
+.selcontainer
+{
+    position: relative;
+    width: 32vw;
+}
+  /* Style the arrow icon */
+.selcontainer::after 
+{
+    content: '\25BC'; /* Down arrow character */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
 select
 {
-    width: 10vw;
+    appearance: none;
+    -webkit-appearance: none;
+    width:32vw;
+    height:3vw;
+    border-radius: 2vw;
+    box-shadow: 
+    0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.01),  /* Right */
+    -0.3rem 0.3rem 0.2rem rgba(0, 0, 0, 0.03), /* Left */
+    0 0.3rem 0.5rem rgba(0, 0, 0, 0.1); /* Bottom */
+    border:none;
     background-color:white;
+    padding: 1vw;
+}
+
+option
+{
+    font-size: 1vw;
+    text-align:center;
 }
