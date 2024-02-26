@@ -8,7 +8,7 @@
 img
 {
     width: 8vw;
-    height: 5vw;
+    height: 6vw;
     float: left;
 }
 
@@ -147,4 +147,38 @@ p
     height:5vh;
     top:25vh;
     cursor: pointer;
+}
+
+#Account{
+    height: 3vw;
+    width: 3vw;
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    padding-top: 3vh;
+    padding-right: 2vw;
+    position:relative;
+}
+
+.AccountDrop {
+    display: none;
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    background-color: #fcfef1;
+    min-width: 1vw;
+    box-shadow: 0 1vh 1vw 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.AccountDrop a {
+    color: black;
+    padding: 1vw 1vh;
+    text-decoration: none;
+    display: block;
+}
+
+.AccountDrop a:hover {
+    background-color: #fcfef1;
 }
