@@ -98,13 +98,12 @@ p
 .contactlist{
     font-size: 1.5vh;
 }
+
+/*Image Slider*/
 .gallery{
-    width: 70vw;
-    position: absolute;
+    width: 95vw;
     display: flex;
     overflow-x:scroll;
-    top:10vh;
-    left:15vw;
 }
 
 .gallery div{
@@ -116,19 +115,37 @@ p
 
 .gallery img{
     width: 70vw;
-    height: 30vh;
+    height: 40vh;
+    margin-right: 1vw;
 }
 
 .gallery-wrap{
+    margin-top: -7vh;
+    margin-left: 14vw;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    width:70vw;
-    height:30vh;
+    width:95vw;
+    height:40vh;
 }
 .gallery::-webkit-scrollbar{
     display:none;
+}
+
+/* Manual navigation */
+.manual-navi
+{
+    position:absolute;
+    width: 1350px;
+    margin-top: 604px;
+    display: flex;
+    justify-content: center;
+}
+
+.main
+{
+    margin-top:12vh;
 }
 
 #back{
@@ -136,7 +153,7 @@ p
     left:10vh;
     width:2vw;
     height:5vh;
-    top:25vh;
+    top:34vh;
     cursor: pointer;
 }
 
@@ -145,7 +162,7 @@ p
     right:10vh;
     width:2vw;
     height:5vh;
-    top:25vh;
+    top:34vh;
     cursor: pointer;
 }
 
