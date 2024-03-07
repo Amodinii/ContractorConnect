@@ -1,0 +1,170 @@
+@font-face {
+    font-family: "BebasNeue";
+    src: url("BebasNeue.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Monda";
+    src: url("Monda-Regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+#geartop {
+    max-width: 40%;
+    height: auto;
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 0.45;
+}
+
+#gearbottom {
+    max-width: 30%;
+    height: auto;
+    position: absolute;
+    bottom: 0; 
+    right: 0; 
+    opacity: 0.45;
+    transform: scaleX(-1) scaleY(-1);
+    z-index:-1;
+}
+
+#logo{
+    max-width: 8%;
+    position: absolute;
+    top:3vh;
+    right:3vw;
+}
+body {
+    font-family: "Monda",sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfff0;
+    overflow: hidden;
+}
+
+.container {
+    width: 80vw;
+    max-width: 600px;
+    margin: 10vh auto;
+    padding: 5vh;
+    background-color: #fff;
+    border-radius: 2vh;
+    box-shadow: 0 0 1vh rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 0; 
+}
+
+h1{
+    font-family: "BebasNeue", sans-serif;
+    font-size: 3vw;
+    color:#050024;
+    margin-left: 7vw;
+}
+
+.form-group {
+    margin-bottom: 2vh;
+}
+
+label,option {
+    font-size: 1.1vw;
+    font-family:"Monda",sans-serif ;
+    text-align: left;
+    margin-left:1vw;
+}
+
+input[type="text"],
+select,
+input[type="range"] {
+    font-family: "Monda",sans-serif;
+    width: calc(100% - 2vh);
+    padding: 2vh;
+    font-size: 2vh;
+    border-radius: 2vw;
+    stroke: white;
+}
+
+
+
+.range-value {
+    text-align: center;
+    font-size: 1.8vh;
+    margin-top: 1vh;
+    color: #666;
+}
+#sig {
+    border: 2px solid white; /* Use border instead of stroke */
+    color: #050024;
+    font-family: "BebasNeue", sans-serif;
+    font-size: 2vw;
+    font-weight: bold;
+    width: 20vw;
+    height: 5vw;
+    border-radius: 4rem;
+    background-color: white;
+    box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+    margin-left: 5vw;
+    margin-top: 0vh;
+}
+
+#sig:hover {
+    border: 2px solid #13202c;
+    background-color: #13202c;
+    color: white;
+}
+
+select
+{
+    
+    width:32vw;
+    height:4vw;
+    border-radius: 2vw;
+    box-shadow: 
+    0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.01),  /* Right */
+    -0.3rem 0.3rem 0.2rem rgba(0, 0, 0, 0.03), /* Left */
+    0 0.3rem 0.5rem rgba(0, 0, 0, 0.1); /* Bottom */
+    border:none;
+    background-color:white;
+    margin-top: 1vh;
+    padding: 2vh;
+    font-size: 2vh;
+    font-family: "Monda",sans-serif;
+}
+
+input[type="range"]{
+    color: #13202c;
+}
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 32vw;
+    height: 0.025vw;
+    border-radius: 3vw;  
+    background: #dadada;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1vw;
+    height: 1vw;
+    border-radius: 50%; 
+    background: #13202c;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1vw;
+    height: 1vw;
+    border-radius: 50%; 
+    background: #13202c;
+    cursor: pointer;
+}

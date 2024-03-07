@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vendor Filter</title>
+<link rel="stylesheet" href="page1.css">
+</head>
+<body>
+    <img src="Gear.png" alt="gear" id="geartop">
+    <img src="Gear.png" alt="gear" id="gearbottom">
+    <img src="Logo - PNG.png" alt="logo" id="logo">
+<div class="container">
+    <h1>Find Your Vendor!</h1>
+    <form id="filterForm">
+    <div class="form-group">
+        <label for="manpower">Manpower:</label>
+        <select id="manpower">
+            <option value="" disabled selected hidden>Select Vendor ManPower</option>
+        <option value="lt50">Less than 50</option>
+        <option value="gt50">Greater than 50</option>
+        <option value="lt100">Less than 100</option>
+        <option value="gt100">Greater than 100</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="location">Location:</label>
+        <input type="text" id="location" placeholder="Enter location">
+    </div>
+    <div class="form-group">
+        <label for="price">Price (in lakhs rupees):</label>
+        <input type="range" id="price" min="0" max="100" step="1" value="0" class="slider">
+    </div>
+    <div class="form-group">
+        <label for="field">Field:</label>
+        <select id="field">
+            <option value="" disabled selected hidden>Select Vendor Domain</option>
+        <option value="construction">Construction</option>
+        <option value="electrical">Electrical</option>
+        <option value="plumbing">Plumbing</option>
+        <option value="carpentry">Carpentry</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="time">Completion Time (in weeks):</label>
+        <input type="range" id="time" min="0" max="100" step="1" value="1" class="slider">
+    </div>
+    <button type="button" value="Register" id="sig">SEARCH VENDORS</button>
+    </form>
+</div>
+</body>
+</html>
