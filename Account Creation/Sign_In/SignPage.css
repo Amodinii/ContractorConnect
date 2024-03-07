@@ -51,7 +51,7 @@ body{
     0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.01),  /* Right */
     -0.3rem 0.3rem 0.2rem rgba(0, 0, 0, 0.03), /* Left */
     0 0.3rem 0.5rem rgba(0, 0, 0, 0.1); /* Bottom */
-    margin-top: 7vw;
+    margin-top: 18vh;
     margin-left:31vw;
     width: 40vw; 
     height: 35vw; 
@@ -132,3 +132,6 @@ a
     text-align: center;
 }
 
+.textlow{
+    margin-top: 12vh;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SIGN IN</title>
+        <link rel="stylesheet" href = "register-1.css">
+    </head>
+    <body>
+        <img src="Gear.png" alt="gear" id="geartop">
+        <img src="Gear.png" alt="gear" id="gearbottom">
+        <img src="Logo - PNG.png" alt="logo" id="logo">
+        <div class="container">
+            <h1 id="heading">REGISTER</h1>
+            <form>
+                <div class="details">
+                    <p id="companyname">Company Name</p>
+                    <input type="text" NAME="username">
+                    <div class="register-1">
+                        <p id="usertype">User Type</p>
+                        <div class="selcontainer">
+                        <select name="usertype" aria-placeholder="Select User Type">
+                            <option value="" disabled selected hidden>Select User Type</option>
+                            <option value="comp">Company</option>
+                            <option value="contr">Contractor</option>
+                        </select>
+                    </div>
+                    </div>
+                </div>
+            </form>
+            <button type="button" value="Register" id="sig">NEXT</button>
+            <div class="textlow">
+                <a href="../Sign_In/SignPage.html">Already have an account</a>
+                <a id="a2" href="../Sign_In/SignPage.html"> LOG IN HERE!</a>
+            </div>
+        </div>
+        <script>
+            document.getElementById('usertype').addEventListener('change', function () {
+                var select = this;
+                if (select.value === "") {
+                    select.remove(0);
+                }
+            });
+        </script>
+    </body>
+</html>

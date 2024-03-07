@@ -1,0 +1,187 @@
+@font-face {
+    font-family: "BebasNeue";
+    src: url("BebasNeue.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Monda";
+    src: url("Monda-Regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-color: #fdfff0;
+}
+
+#geartop {
+    max-width: 40%;
+    height: auto;
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 0.45;
+}
+
+#gearbottom {
+    max-width: 30%;
+    height: auto;
+    position: absolute;
+    bottom: 0; 
+    right: 0; 
+    opacity: 0.45;
+    transform: scaleX(-1) scaleY(-1);
+    z-index:-1;
+}
+
+#logo{
+    max-width: 8%;
+    position: absolute;
+    top:3vh;
+    right:3vw;
+}
+
+.container {
+    text-align: center;
+    background-color: rgb(255, 250, 250);
+    border-radius:3vw;
+    box-shadow: 
+    0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.01),  /* Right */
+    -0.3rem 0.3rem 0.2rem rgba(0, 0, 0, 0.03), /* Left */
+    0 0.3rem 0.5rem rgba(0, 0, 0, 0.1); /* Bottom */
+    margin-top: 18vh;
+    margin-left:31vw;
+    width: 40vw; 
+    height: 35vw; 
+    position: relative;
+    z-index: 0; 
+}
+
+#heading{
+    padding-top: 1.0vw;
+    font-family: "BebasNeue", sans-serif;
+    font-size: 4vw;
+    color:#050024;
+}
+
+.details {
+    margin: 3vw;
+    font-size: 1vw;
+}
+
+p{
+    font-size: 1.1vw;
+    font-family:"Monda",sans-serif ;
+    text-align: left;
+    margin-left:1vw;
+}
+
+input
+{
+    margin-top:-3vw;
+    width:32vw;
+    height:2vw;
+    border-radius: 2vw;
+    box-shadow: 
+    0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.01),  /* Right */
+    -0.3rem 0.3rem 0.2rem rgba(0, 0, 0, 0.03), /* Left */
+    0 0.3rem 0.5rem rgba(0, 0, 0, 0.1); /* Bottom */
+    border:none;
+    padding:0.5vw;
+}
+
+#sig {
+    border: 2px solid white; /* Use border instead of stroke */
+    color: #050024;
+    font-family: "BebasNeue", sans-serif;
+    font-size: 2vw;
+    font-weight: bold;
+    width: 7vw;
+    height: 3vw;
+    border-radius: 4rem;
+    background-color: white;
+    box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+    margin-left: 0vw;
+    margin-top:2vh;
+}
+
+#sig:hover {
+    border: 2px solid #13202c;
+    background-color: #13202c;
+    color: white;
+}
+
+a
+{
+    text-decoration:none;
+    margin-top: 2vw;
+    color:#050024;
+    font-family: "Monda", sans-serif;
+    display: block;
+    text-align: center;
+}
+
+#a2
+{
+    text-decoration:none;
+    margin-top: 1vw;
+    color:#050024;
+    font-family: "Monda", sans-serif;
+    display: block;
+    text-align: center;
+}
+
+.textlow{
+    margin-top: 10vh;
+}
+
+.selcontainer
+{
+    position: relative;
+    width:37vw;
+    height:2vw;
+    margin-top: -1.2vh;
+    margin-left: -1.75vw;
+}
+  /* Style the arrow icon */
+.selcontainer::after 
+{
+    content: '\25BC'; /* Down arrow character */
+    position: absolute;
+    top: 2.75vh;
+    right: 3vw;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+select
+{
+    appearance: none;
+    -webkit-appearance: none;
+    width:32vw;
+    height:3vw;
+    border-radius: 2vw;
+    box-shadow: 
+    0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.01),  /* Right */
+    -0.3rem 0.3rem 0.2rem rgba(0, 0, 0, 0.03), /* Left */
+    0 0.3rem 0.5rem rgba(0, 0, 0, 0.1); /* Bottom */
+    border:none;
+    background-color:white;
+    padding: 1vw;
+}
+
+option
+{
+    font-size: 1vw;
+    text-align:center;
+}
+
+#usertype{
+    font-size: 1.1vw;
+    font-family:"Monda",sans-serif ;
+    text-align: left;
+    margin-left:1vw;
+    margin-top: 3vh;
+}
