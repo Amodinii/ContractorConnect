@@ -7,8 +7,8 @@
 
 img
 {
-    width: 8vw;
-    height: 6vw;
+    width: 9vw;
+    height: 7vw;
     float: left;
 }
 
@@ -100,35 +100,41 @@ p
 }
 
 /*Image Slider*/
-.gallery{
-    width: 95vw;
+
+.gallery-wrap
+{
+    margin-top: -2vw;
+    margin-left: 10vw;
+    width: 80vw;
+    height: 50vh;
+    border-radius: 10px;
+}
+
+.gallery
+{
+    width: 300% ;
+    height: 50vh;
     display: flex;
-    overflow-x:scroll;
 }
 
-.gallery div{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 0vw;
-    flex:none;
+.gallery input
+{
+    display: none;
 }
 
-.gallery img{
-    width: 70vw;
-    height: 40vh;
-    margin-right: 1vw;
+.im
+{
+    width: 40% ;
+    transition: 2s;
+    margin-right: 10vw;
 }
 
-.gallery-wrap{
-    margin-top: -7vh;
-    margin-left: 14vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    width:95vw;
-    height:40vh;
+.gallery img
+{
+    width: 80vw;
+    height: 50vh;
 }
+
 .gallery::-webkit-scrollbar{
     display:none;
 }
@@ -137,33 +143,61 @@ p
 .manual-navi
 {
     position:absolute;
-    width: 1350px;
-    margin-top: 604px;
+    width: 70vw;
+    margin-top: 45vh;
+    margin-left: 5vw;
     display: flex;
     justify-content: center;
 }
 
+.manual-btn
+{
+    border: 2px solid rgb(165, 42, 42) ;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child)
+{
+    margin-right: 14px;
+}
+
+.manual-btn:hover
+{
+    background-color:rgb(90, 90, 95);
+}
+
+#radio1:checked ~ .fir
+{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .sec
+{
+    margin-left: -37%;
+}
+
+#radio3:checked ~ .thir
+{
+    margin-left: -76%;
+}
+
+#radio4:checked ~ .fou
+{
+    margin-left: -132%;
+}
+
+#radio5:checked ~ .fif
+{
+    margin-left: -177%;
+}
+
+
 .main
 {
     margin-top:12vh;
-}
-
-#back{
-    position: absolute;
-    left:10vh;
-    width:2vw;
-    height:5vh;
-    top:34vh;
-    cursor: pointer;
-}
-
-#front{
-    position: absolute;
-    right:10vh;
-    width:2vw;
-    height:5vh;
-    top:34vh;
-    cursor: pointer;
 }
 
 #Account{
