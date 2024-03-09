@@ -286,3 +286,148 @@ p
 .AccountDrop a:hover {
     background-color: #fcfef1;
 }
+
+/*POP UP*/
+.popup {
+    display: none; /*Hidden by default */
+    position: fixed; 
+    z-index: 1; 
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%, -50%); /*Place the pop-up beech mein */
+    max-width: 80%; 
+    max-height: 80%; 
+    overflow: auto ; /*Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; 
+  }
+  
+  /* Popup content */
+  .popup-content {
+    background-color: #fdfff0;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px; 
+  }
+
+  @font-face {
+    font-family: "BebasNeue";
+    src: url("BebasNeue.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+#geartop {
+    width: 35%;
+    height: auto;
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 0.45;
+}
+
+#gearbottom {
+    width: 30%;
+    height: auto;
+    position: absolute;
+    bottom: 0; 
+    right: 0; 
+    opacity: 0.45;
+    transform: scaleX(-1) scaleY(-1);
+    z-index:-1;
+}
+
+h1 {
+    margin-top: 5vw; /* Adjusted margin-top */
+    margin-left: 35vw; /* Adjusted margin-left */
+    color: #050024;
+    text-align: left;
+    font-family: "BebasNeue", sans-serif;
+    font-size: 5.5vw; /* Adjusted font-size */
+}
+
+#peeps {
+    width: 35%;
+    height: 81%;
+    position: absolute;
+    bottom: 0; /* Position at the bottom */
+    margin-left:3.4vw; /* Position at the right */
+    margin-bottom: 1.6vw;
+}
+
+.slogan {
+    color: #24323F;
+    text-align: left;
+    font-family: "BebasNeue", sans-serif;
+    font-size: 3vw;
+    margin-top: -1vw;
+    margin-left: 35vw; /* Adjusted margin-left */
+}
+
+#reg {
+    border: 2px solid white; /* Use border instead of stroke */
+    color: #050024;
+    font-family: "BebasNeue", sans-serif;
+    font-size: 2.6vw;
+    font-weight: bold;
+    width: 11vw;
+    height: 5vw;
+    border-radius: 4rem;
+    background-color: white;
+    box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+    margin-right: 5vw;
+    margin-left: 35vw;
+    margin-top: 3.8vw;
+}
+
+#sig {
+    border: 2px solid white; /* Use border instead of stroke */
+    color: #050024;
+    font-family: "BebasNeue", sans-serif;
+    font-size: 2.6vw;
+    font-weight: bold;
+    width: 11vw;
+    height: 5vw;
+    border-radius: 4rem;
+    background-color: white;
+    box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+    margin-left: -3vw;
+}
+
+
+#reg:hover,
+#sig:hover {
+    border: 2px solid #13202c;
+    background-color: #13202c;
+    color: white;
+}
+
+.buttons{
+    margin-top: -5.2vw;
+}
+
+#logo {
+    width: 10.3%;
+    height: 11%;
+    position: absolute;
+    top: 1vw; /* Position at the bottom */
+    right: 2vw; /* Position at the right */
+    opacity: 1;
+}
+  
+  /* Close button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
