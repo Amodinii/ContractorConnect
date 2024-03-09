@@ -7,8 +7,8 @@
 
 img
 {
-    width: 9vw;
-    height: 7vw;
+    width: 10vw;
+    height: 8vw;
     float: left;
 }
 
@@ -16,7 +16,7 @@ img
 
 body {
     background-color: #FDFFF0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -51,10 +51,11 @@ body {
     justify-content: flex-start;
     background-color: #374047;
     color: white;
-    position:absolute;
+    position: absolute;
+    top: 145vh;
     bottom:0;
     left:0;
-
+    height: 35vh;
 }
 
 .left {
@@ -67,7 +68,7 @@ body {
     flex: 1;
     margin-right: 2vw;
     margin-left: 2vw;
-    font-size: 1.5vh;
+    font-size: 2.3vh;
 }
 
 a {
@@ -80,14 +81,14 @@ a {
 {
     text-align:justify;
     font-family: "Monda",sans-serif;
-    font-size:1.5vh;
+    font-size:2.3vh;
 }
 
 #topic
 {
     margin-top: -1vw;
     font-family: "Monda",sans-serif;
-    font-size:2vh;
+    font-size:2.5vh;
 
 }
 
@@ -97,7 +98,7 @@ p
 }
 
 .contactlist{
-    font-size: 1.5vh;
+    font-size: 2.3vh;
 }
 
 /*Image Slider*/
@@ -251,9 +252,10 @@ p
     margin-top:12vh;
 }
 
+/*Account Info*/
 #Account{
-    height: 3vw;
-    width: 3vw;
+    height: 2.5vw;
+    width: 2.5vw;
     float: right;
     display: flex;
     justify-content: flex-end;
