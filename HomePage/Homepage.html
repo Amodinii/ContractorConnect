@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="hp.css">
     </head>
     <body>
-        
         <img src="iMAGES/Logo - PNG.png" alt="Logo Image" map="#mymap">
         <img src="iMAGES/Account Logo Thing.png" alt="Account" id="Account" onclick="toggleDropdown()">
         <div id="AccountDrop" class="AccountDrop">
@@ -23,6 +22,27 @@
                 <a href="">ABOUT</a>
                 <a href="">HELP</a>
         </div>
+        <!--POP UP FOR SIGN IN/REGISTER-->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+              <span class="close" onclick="closePopup()">&times;</span>
+              <h1 class ="name">ContractorConnect</h1>
+              <img src="iMages/Gear.png" alt="gear" id="geartop">
+              <img src="iMages/img.png" alt="Contractor Image" id="peeps">
+            <div class="slogan">
+                <p>Aligning Companies <br>
+                Empowering Contractors, <br>
+                Driving Success</p>
+            </div>
+            <div class="buttons">
+                <button type="button" value="Sign in" id="reg">REGISTER</button>
+                <button type="button" value="Register" id="sig">SIGN IN</button>
+            </div>
+            <img src="iMages/Gear.png" alt="gear" id="gearbottom">
+            <!--<img src="iMages/Logo - PNG.png" alt="logo" id="logo"> --> 
+        </div>
+        </div>
+          
         <section class="main">
             <div class="gallery-wrap">
                 <div class="gallery">
