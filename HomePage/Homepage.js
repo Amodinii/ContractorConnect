@@ -16,3 +16,17 @@ setInterval(function(){
     }
 }, 5000);
 
+//POP UP CARD FOR REGISTERING/SIGNING IN
+// Function to show the pop-up
+function showPopup() {
+    document.getElementById('popup').style.display = 'block';
+}
+  
+// Function to close the pop-up
+function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+}
+  
+// Setting timeout to show the pop-up after 1 minute
+setTimeout(showPopup, 60000); // 1 minute in milliseconds
+  
