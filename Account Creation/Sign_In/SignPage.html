@@ -7,22 +7,27 @@
         <link rel="stylesheet" href = "SignPage.css">
     </head>
     <body>
-        <img src="Gear.png" alt="gear" id="geartop">
-        <img src="Gear.png" alt="gear" id="gearbottom">
-        <img src="Logo - PNG.png" alt="logo" id="logo">
+        <!--<img src="Logo - PNG.png" alt="logo" id="logo">-->
         <div class="container">
             <h1 id="heading">SIGN IN</h1>
             <form>
-                <div class="details">
-                    <p>Email/Username</p>
-                    <input type="text" NAME="username">
-                    <p>Password</p>
-                    <input type="password" name="password">
+                <div class="flexcont">
+                    <div class="details">
+                        <p>Email</p>
+                        <input type="text" name="mailu">
+                        <p>Password</p>
+                        <input type="password" name="password">
+                        <input type="checkbox" id="checku">
+                        <label for="checku">Remember Me</label>
+                    </div>
+                    <div class="imgflex">
+                        <img id="photu" src="mainimg.png" alt="Image">
+                    </div>
                 </div>
             </form>
             <button type="button" value="Register" id="sig">SIGN IN</button>
             <div class="textlow">
-                <a href="../Register/register-1.html">Forgot Your Password?</a>
+                <a href="../Register/register-1.html">Forgot Password?</a>
                 <a id="a2" href="../Register/register-1.html">New Here? Register Now!</a>
             </div>
         </div>
