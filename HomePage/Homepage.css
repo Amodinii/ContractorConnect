@@ -289,7 +289,7 @@ p
 
 /*POP UP*/
 .popup {
-    /*display: none; /*Hidden by default */
+    display: none; /*Hidden by default */
     position: fixed; 
     z-index: 1; 
     left: 50%; 
