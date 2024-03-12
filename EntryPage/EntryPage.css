@@ -337,7 +337,7 @@ p
 
 #peeps {
     width: 44vw;
-    height: 63vh;
+    height: 60vh;
     position: absolute;
     margin-left:-15.9vw; /* Position at the right */
     margin-bottom: 1.6vw;
@@ -485,7 +485,7 @@ p
 
   .revicont p
   {
-    margin-top:7vw;
+    margin-top:1vw;
     text-align:justify;
     padding:1vw;
     color:#282727;
