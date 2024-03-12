@@ -101,7 +101,7 @@ input
     margin-bottom:1vw;
 }
 
-#sig {
+#signInButton {
     border: 2px solid white; 
     color: #282727;
     position: relative;
@@ -117,7 +117,7 @@ input
     top: -11vw;
 }
 
-#sig:hover {
+#signInButton:hover {
     border: 2px solid #e5d5bc;
     background-color: #282727;
     color: #e5d5bc;
