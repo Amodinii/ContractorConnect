@@ -102,7 +102,7 @@ input
 }
 
 #sig {
-    border: 2px solid white; /* Use border instead of stroke */
+    border: 2px solid white; 
     color: #282727;
     position: relative;
     font-family: "BebasNeue", sans-serif;
