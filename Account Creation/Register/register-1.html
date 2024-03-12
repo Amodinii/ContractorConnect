@@ -1,55 +1,83 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>REGISTER</title>
-        <link rel="stylesheet" href = "Register.css">
-    </head>
-    <body>
-        <div class="container">
-            <h1 id="heading">REGISTER</h1>
-            <form>
-                <div class="detailscont">
-                    <div class="deta1">
-                        <p id="companyname">Company Name</p>
-                        <input type="text" NAME="username">
-                        <p id="usertype">User Type</p>
-                        <div class="selcontainer">
-                            <select name="usertype" aria-placeholder="Select User Type">
-                                <option value="" disabled selected hidden>Select User Type</option>
-                                <option value="comp">Company</option>
-                                <option value="contr">Contractor</option>
-                            </select>
-                        </div>
-                        <p id="mailu">Email</p>
-                        <input type="text" NAME="mailu">
-                        <p id="phno">Phone Number</p>
-                        <input type="text" NAME="phno">
-                    </div>
-                    <div class="deta2">
-                        <p id="addr">Address</p>
-                        <input type="text" NAME="addr">
-                        <input type="text" name="city">
-                        <label for="city">City</label>
-                        <input type="text" name="coun">
-                        <label for="coun">Country</label>
-                    </div>
-                </div>
-            </form>
-            <button type="button" value="Register" id="sig">NEXT</button>
-            <div class="textlow">
-                <a href="../Sign_In/SignPage.html">Already have an account</a>
-                <a id="a2" href="../Sign_In/SignPage.html"> LOG IN HERE!</a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTER</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Monda&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="register-1.css">
+</head>
+<body>
+<div class="container">
+    <h1 id="heading">REGISTER</h1>
+    <form>
+        <div class="detailscont">
+            <div class="deta1">
+                <label for="yourname" class="label">Your Name</label>
+                <input type="text" id="yourname" name="yourname">
+                
+                <label for="mailu" class="label">Email</label>
+                <input type="email" id="mailu" name="mailu">
+                
+                <label for="phno" class="label">Phone Number</label>
+                <input type="tel" id="phno" name="phno">
+                
+                <label for="addr" class="label">Address</label>
+                <input type="text" id="addr" name="addr">
+            </div>
+            <div class="deta2">
+                <label for="city" class="label">City</label>
+                <input type="text" id="city" name="city" placeholder="Enter city">
+                
+                <label for="state" class="label">State</label>
+                <input type="text" id="state" name="state" list="states" placeholder="Enter state">
+                <datalist id="states">
+                    <option value="Andhra Pradesh">
+                        <option value="Arunachal Pradesh">
+                        <option value="Assam">
+                        <option value="Bihar">
+                        <option value="Chhattisgarh">
+                        <option value="Goa">
+                        <option value="Gujarat">
+                        <option value="Haryana">
+                        <option value="Himachal Pradesh">
+                        <option value="Jharkhand">
+                        <option value="Karnataka">
+                        <option value="Kerala">
+                        <option value="Madhya Pradesh">
+                        <option value="Maharashtra">
+                        <option value="Manipur">
+                        <option value="Meghalaya">
+                        <option value="Mizoram">
+                        <option value="Nagaland">
+                        <option value="Odisha">
+                        <option value="Punjab">
+                        <option value="Rajasthan">
+                        <option value="Sikkim">
+                        <option value="Tamil Nadu">
+                        <option value="Telangana">
+                        <option value="Tripura">
+                        <option value="Uttar Pradesh">
+                        <option value="Uttarakhand">
+                        <option value="West Bengal">
+                </datalist>
+                
+                <label for="usertype" class="label">Select User Type</label>
+                <select name="usertype" id="usertype">
+                    <option value="" disabled selected hidden></option>
+                    <option value="company">Company</option>
+                    <option value="contractor">Contractor</option>
+                </select>
+                <label for="password" class="label">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password">
             </div>
         </div>
-        <script>
-            document.getElementById('usertype').addEventListener('change', function () {
-                var select = this;
-                if (select.value === "") {
-                    select.remove(0);
-                }
-            });
-        </script>
-    </body>
+    </form>
+    <button type="button" id="sig">NEXT</button>
+    <div class="textlow">
+        <a href="../Sign_In/SignPage.html">Already have an account</a>
+        <a href="../Sign_In/SignPage.html"> LOG IN HERE!</a>
+    </div>
+</div>
+</body>
 </html>
