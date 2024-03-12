@@ -1,169 +1,114 @@
-@font-face {
-    font-family: "BebasNeue";
-    src: url("BebasNeue.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
+body {
+    background-color: #f8f9fa; 
 }
-
-@font-face {
-    font-family: "Monda";
-    src: url("Monda-Regular.ttf") format("ttf");
-    font-weight: normal;
-    font-style: normal;
-}
-
-body{
-    background-color: white;
-}
-
-/*#logo{
-    max-width: 8%;
-    position: absolute;
-    top:3vh;
-    right:3vw;
-}*/
 
 .container {
     text-align: center;
     background-color: #282727;
-    border-radius:1vw;
-    box-shadow: 
-    0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.01),  /* Right */
-    -0.3rem 0.3rem 0.2rem rgba(0, 0, 0, 0.03), /* Left */
-    0 0.3rem 0.5rem rgba(0, 0, 0, 0.1); /* Bottom */
-    margin-top: 8vh;
-    margin-left:18vw;
-    width: 66vw; 
-    height: 40vw; 
-    position: relative;
-    z-index: 0; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    padding: 30px;
+    max-width: 800px;
 }
 
-#heading{
-    padding-top: 1.0vw;
-    font-family: "BebasNeue", sans-serif;
-    font-size: 3vw;
-    color:#e5d5bc;
+#heading {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 36px;
+    color: #e5d5bc;
+    margin-bottom: 30px;
 }
 
-.details {
-    margin: 3vw;
-    font-size: 1vw;
-    margin-top:1vw;
+.detailscont {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-p{
-    font-size: 1.1vw;
-    font-family:"Monda",sans-serif ;
+.deta1, .deta2 {
+    width: 48%;
+}
+
+.label {
+    font-family: "Monda", sans-serif;
+    font-size: 18px;
+    color: #e5d5bc;
+    margin-bottom: 5px;
+    display: block;
     text-align: left;
-    margin-left:1vw;
-    color:#e5d5bc;
 }
 
-input
-{
-    margin-top:-3vw;
-    width:32vw;
-    height:2vw;
-    border-radius: 2vw;
-    box-shadow: 
-    0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.01),  /* Right */
-    -0.3rem 0.3rem 0.2rem rgba(0, 0, 0, 0.03), /* Left */
-    0 0.3rem 0.5rem rgba(0, 0, 0, 0.1); /* Bottom */
-    border:none;
-    padding:0.5vw;
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"], select {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-family: "Monda", sans-serif; 
+    font-size: 16px; 
 }
 
-#sig {
-    border: 2px solid white; /* Use border instead of stroke */
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="password"]:focus, select:focus {
+    outline: none;
+    border-color: #495057;
+}
+
+button {
+    border: 2px solid white;
     color: #050024;
-    font-family: "BebasNeue", sans-serif;
-    font-size: 2vw;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 24px;
     font-weight: bold;
-    width: 7vw;
-    height: 3vw;
-    border-radius: 4rem;
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
     background-color: white;
-    box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
-    margin-left: 0vw;
-    margin-top:2vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
-#sig:hover {
-    border: 2px solid #13202c;
+button:hover {
+    border-color: #13202c;
     background-color: #13202c;
     color: white;
 }
 
-a
-{
-    text-decoration:none;
-    margin-top: 2vw;
-    color:#050024;
+.textlow a {
+    color: #050024;
     font-family: "Monda", sans-serif;
-    display: block;
-    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-#a2
-{
-    text-decoration:none;
-    margin-top: 1vw;
-    color:#050024;
-    font-family: "Monda", sans-serif;
-    display: block;
-    text-align: center;
+.textlow a:hover {
+    color: #495057;
 }
 
-.textlow{
-    margin-top: 10vh;
-}
-
-.selcontainer
-{
+.selcontainer {
     position: relative;
-    width:37vw;
-    height:2vw;
-    margin-top: -1.2vh;
-    margin-left: -1.75vw;
+    width: 100%;
+    margin-top: -10px;
 }
-  /* Style the arrow icon */
-.selcontainer::after 
-{
-    content: '\25BC'; /* Down arrow character */
+
+.selcontainer::after {
+    content: '\25BC';
     position: absolute;
-    top: 2.75vh;
-    right: 3vw;
+    top: 50%;
+    right: 10px;
     transform: translateY(-50%);
     pointer-events: none;
 }
 
-select
-{
+select {
     appearance: none;
     -webkit-appearance: none;
-    width:32vw;
-    height:3vw;
-    border-radius: 2vw;
-    box-shadow: 
-    0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.01),  /* Right */
-    -0.3rem 0.3rem 0.2rem rgba(0, 0, 0, 0.03), /* Left */
-    0 0.3rem 0.5rem rgba(0, 0, 0, 0.1); /* Bottom */
-    border:none;
-    background-color:white;
-    padding: 1vw;
 }
 
-option
-{
-    font-size: 1vw;
-    text-align:center;
+option {
+    font-size: 16px;
+    text-align: center;
 }
 
-#usertype{
-    font-size: 1.1vw;
-    font-family:"Monda",sans-serif ;
-    text-align: left;
-    margin-left:1vw;
-    margin-top: 3vh;
-}
