@@ -1,0 +1,141 @@
+@font-face {
+    font-family: "BebasNeue";
+    src: url("BebasNeue.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Monda";
+    src: url("Monda-Regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-color: white;
+}
+
+.container {
+    text-align: center;
+    background-color: #282727;
+    border-radius: 1vw;
+    box-shadow: 
+    0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.01),  /* Right */
+    -0.3rem 0.3rem 0.2rem rgba(0, 0, 0, 0.03), /* Left */
+    0 0.3rem 0.5rem rgba(0, 0, 0, 0.1); /* Bottom */
+    margin-top: 10vh;
+    margin-left: 24vw;
+    width: 50vw; 
+    height: 37vw; 
+    position: relative;
+    z-index: 0; 
+}
+
+#heading {
+    margin-left: -22vw;
+    position:relative;
+    top: 2.5vw;
+    padding-top: 1.0vw;
+    font-family: "BebasNeue", sans-serif;
+    font-size: 4vw;
+    color: #e5d5bc;
+}
+
+.flexcont {
+    display: flex;
+}
+
+#photu {
+    height: 36.5vw;
+    width: 63vw;
+    margin-top: -7.7vw;
+    margin-left: -21vw;
+}
+
+.details {
+    margin: 3vw;
+    font-size: 1vw;
+    margin-top: 0.5vw;
+}
+
+p {
+    color: #e5d5bc;
+    font-size: 1.1vw;
+    font-family: "Monda", sans-serif;
+    text-align: left;
+    margin-left: 1vw;
+}
+
+#checku {
+    width: 2.5vw;
+    height: 2.5vh;
+    margin-top: 1vw;
+    margin-left: -12vw;
+}
+
+label {
+    color: #e5d5bc;
+}
+
+input, #userType {
+    margin-top: -3vw;
+    margin-left: 1vw;
+    width: 20vw;
+    height: 2vw;
+    border-radius: 0.5vw;
+    border: none;
+    padding: 0.5vw;
+    margin-bottom: 1vw;
+    font-size: 1vw;
+}
+
+#userType {
+    color: grey;
+    background-color: white;
+    width: 20vw;
+    height: 2.5vw;
+}
+
+#userType option {
+    color: #282727;
+    background-color: #e5d5bc;
+}
+
+#signInButton {
+    border: 2px solid #e5d5bc; 
+    color: #282727;
+    position: relative;
+    font-family: "BebasNeue", sans-serif;
+    font-size: 2vw;
+    font-weight: bold;
+    width: 21vw;
+    height: 3.5vw;
+    border-radius: 0.5rem;
+    background-color: #e5d5bc; 
+    box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+    margin-left: -21vw;
+    top: -11vw;
+}
+
+#signInButton:hover {
+    border: 2px solid #e5d5bc;
+    background-color: #282727;
+    color: #e5d5bc;
+}
+
+#a {
+    text-decoration: none;
+    margin-top: 0.4vw;
+    color: #e5d5bc;
+    font-family: "Monda", sans-serif;
+    display: block;
+    text-align: center;
+    font-size: 1vw;
+    padding: 0.5vw;
+}
+
+.textlow {
+    margin-top: -25vh;
+    margin-left: -21vw;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTER</title>
+    <link rel="stylesheet" href="Register.css">
+</head>
+<body>
+<div class="container">
+    <h1 id="heading">REGISTER</h1>
+    <form id="loginForm">
+        <div class="flexcont">
+            <div class="details">
+                <p>Email</p>
+                <input type="text" name="mailu" id="email" placeholder="Enter your email">
+                <p>User Type</p>
+                <div class="dropdown">
+                    <select id="userType" name="userType">
+                        <option value="contractor">Contractor</option>
+                        <option value="company">Company</option>
+                    </select>
+                </div>
+            </div>
+            <div class="imgflex">
+                <img id="photu" src="Hands.png" alt="Image">
+            </div>
+        </div>
+    </form>
+    <button type="button" value="Register" id="signInButton">NEXT</button>
+    <div class="textlow">
+        <a id="a" href="">Already a user? Sign In Here!</a>
+    </div>
+</div>
+<script src="Register.js"></script>
+</body>
+</html>
