@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Homepage.css">
+    </head>
+    <body>
+        <img src="iMAGES/Logo - PNG.png" alt="Logo Image" map="#mymap">
+        <img src="iMAGES/Account Logo Thing.png" alt="Account" id="Account" onclick="toggleDropdown()">
+        <div id="AccountDrop" class="AccountDrop">
+            <a href="">SETTINGS</a>
+            <a href="">LOG OUT</a>
+        </div>
+
+        <div class="navbar">
+                <a href="Homepage.html" id="pehla">HOME</a>
+                <a href="">DASHBOARD</a>
+                <a href="">ABOUT</a>
+                <a href="">HELP</a>
+        </div>
+          
+        <section class="main">
+            <div class="gallery-wrap">
+                <div class="gallery">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <input type="radio" name="radio-btn" id="radio5">
+                    <div class="im fir">
+                        <img src="iMAGES/1.png" alt="image-1">
+                    </div>
+                    <div class="im sec">
+                        <img src="iMAGES/2.png" alt="image-2">
+                    </div>
+                    <div class="im thir">
+                        <img src="iMAGES/3.png" alt="image-3">
+                    </div>
+                    <div class="im fou">
+                        <img src="iMAGES/4.png" alt="image-4">
+                    </div>
+                    <div class="im fif">
+                        <img src="iMAGES/5.png" alt="image-5">
+                    </div>
+
+                    <!--Automatic navigaion-->
+                    <div class="autonavi">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                        <div class="auto-btn5"></div>
+                    </div>
+                <!--Manual navigation-->
+                    <div class="manual-navi">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                        <label for="radio5" class="manual-btn"></label>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="subcont">
+            <div class="subflim">
+                <img src="iMages/find.png" alt="Contractors" id="findy">
+            </div>
+            <div class="flexsub">
+                <h1 id="subh">FIND CONTRACTOR</h1>
+                <p id="sec">Leave the matching to us—our platform connects you with the perfect contractor for your project, ensuring a hassle-free experience. Click here to find contractors!</p>
+                <button id="buttu">FIND NOW!</button>
+            </div>
+        </div>
+        <h1 id="revih">What They Say About Us?</h1>
+        <p id="pararev">Let's tune in to what our users have to say about their experience with us. Their voices paint a vivid picture of satisfaction and trust. From contractors to clients, our platform has become the cornerstone of seamless connections. Here's a glimpse into their thoughts, echoing the sentiment of a community built on reliability, efficiency, and success.</p>
+        <div class="revicont">
+            <div class="revi1">
+                <img src="iMAGES/per1.png" alt="Image1" id="per1">
+                <p>Joining this platform has been a game-changer for my business. Not only have I found new clients, but it's also provided consistent employment opportunities. The vetting process ensures quality, and the support team is always there when I need assistance.</p>
+            </div>
+            <div class="revi2">
+                <img src="iMAGES/per2.png" alt="Image2" id="per2">
+                <p>As a vendor, I appreciate the seamless experience this platform offers. It's incredibly easy to showcase my services and connect with potential clients. Plus, the variety of job opportunities available ensures steady income.</p>
+            </div>
+            <div class="revi3">
+                <img src="iMAGES/per3.png" alt="Image3" id="per3">
+                <p>Finding vendors through the platform has streamlined our operations significantly. The transparency and efficiency of the platform make it easy to identify and engage with skilled professionals. It's become an invaluable resource for sourcing talent and completing projects.</p>
+            </div>
+        </div>
+        <map name = "mymap">
+            <area shape="rect" coords="2,2,4,4" alt="ContractorConnect" href="Homepage.html">
+        </map>
+        <footer>
+            <div class="footer">
+                <div class="left">
+                    <p id="topic">ABOUT US</p>
+                    <p id="content">Elevate your vendor selection process with Contractor Connect! The Ultimate solution for seamless company-agent connections. Our smart matching algorithm, comprehensive vendor database, and user-friendly interface ensure efficient collaborations. Stay informed with real-time updates in a secure, customizable environment. Experience hassle-free vendor hiring today.</p>
+                </div>
+                <div class="column">
+                    <p style="font-size: 2.5vh">FOLLOW THE TEAM!</p>
+                    <div class="contactlist">
+                        <li><a href="https://www.linkedin.com/in/nottpande/"> Aditya Pande</a></li>
+                        <li><a href="https://www.linkedin.com/in/amodini-a-p-892aa8265/"> Amodini A P</a></li>
+                        <li><a href="https://www.linkedin.com/in/parth-chandel-98880226b/"> Parth Chandel</a></li>
+                        <li><a href=""> Mihirchandra Loke</a></li>
+                        <li><a href="https://www.linkedin.com/in/isathyam31/"> Sathyam A</a></li>
+                    </div>
+                </div>
+                <div class="column">
+                    <p style="font-size: 2.5vh;">WANT HELP?</p>
+                    <li><a href="">Customer Care</a></li>
+                    <li><a href="">Email : example@example.com</a></li>
+                    <li><a href="">Phone : 1234567890</a></li>
+                </div>
+                <div class="column">
+                    <p>HELP US IMPROVE</p>
+                    <p>PROVIDE US A FEEDBACK!</p>
+                    <li><a href="">feedbacks@example.com</a></li>
+                </div>           
+            </div>
+        </footer>
+        <script src = "Homepage.js"></script>
+    </body>
+</html>
