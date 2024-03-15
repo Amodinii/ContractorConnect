@@ -1,3 +1,17 @@
+@font-face {
+    font-family: "BebasNeue";
+    src: url("BebasNeue.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Monda";
+    src: url("Monda-Regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     background-color: #f8f9fa; 
 }
@@ -5,24 +19,25 @@ body {
 .container {
     text-align: center;
     background-color: #282727;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 50px auto;
-    padding: 30px;
-    max-width: 800px;
+    border-radius: 2vw;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1);
+    margin: 3vh auto;
+    padding: 10vh 2vh;
+    max-width: 40vw;
 }
 
 #heading {
     font-family: "Bebas Neue", sans-serif;
-    font-size: 36px;
+    font-size: 2.5vw;
     color: #e5d5bc;
-    margin-bottom: 30px;
+    margin-bottom: 1.5vh;
+    font-weight: normal;
 }
 
 .detailscont {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 1vh;
 }
 
 .deta1, .deta2 {
@@ -31,40 +46,55 @@ body {
 
 .label {
     font-family: "Monda", sans-serif;
-    font-size: 18px;
+    font-size: 1.25vw;
     color: #e5d5bc;
-    margin-bottom: 5px;
+    margin-bottom: 0.1vh;
     display: block;
     text-align: left;
 }
 
-input[type="text"], input[type="email"], input[type="tel"], input[type="password"], select {
-    width: 100%;
-    height: 40px;
-    border-radius: 5px;
-    border: 1px solid #ced4da;
-    padding: 10px;
-    margin-bottom: 15px;
-    font-family: "Monda", sans-serif; 
-    font-size: 16px; 
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select {
+    width: 75%;
+    height: 2vh;
+    border-radius: 1vw;
+    border: 0.1vw solid #ced4da;
+    padding: 1.5vh;
+    margin-bottom: 1vh;
+    font-family: "Monda", sans-serif;
+    font-size: 1vw;
 }
 
-input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="password"]:focus, select:focus {
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="password"]::placeholder,
+select::placeholder {
+    color: #c4c4c2;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus,
+select:focus {
     outline: none;
     border-color: #495057;
 }
 
 button {
-    border: 2px solid white;
+    border: 0.1vw solid white;
     color: #050024;
     font-family: "Bebas Neue", sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    width: 150px;
-    height: 50px;
-    border-radius: 25px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-size: 1.25vw;
+    width: 10vw;
+    height: 6vh;
+    border-radius: 1vw;
+    background-color: #e5d5bc;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
 
@@ -75,10 +105,10 @@ button:hover {
 }
 
 .textlow a {
-    color: #050024;
+    color: #e5d5bc;
     font-family: "Monda", sans-serif;
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 1vh;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -90,14 +120,14 @@ button:hover {
 .selcontainer {
     position: relative;
     width: 100%;
-    margin-top: -10px;
+    margin-top: -0.5vh;
 }
 
 .selcontainer::after {
     content: '\25BC';
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: 1vw;
     transform: translateY(-50%);
     pointer-events: none;
 }
@@ -108,7 +138,6 @@ select {
 }
 
 option {
-    font-size: 16px;
+    font-size: 1vw;
     text-align: center;
 }
-
