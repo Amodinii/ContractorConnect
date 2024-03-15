@@ -5,6 +5,10 @@
     font-style: normal;
 }
 
+*{
+    margin:0;
+    padding:0;
+}
 img
 {
     width: 10vw;
@@ -34,6 +38,7 @@ body {
     text-decoration: none;
     padding: 1vw;
     font-size:1.2vw;
+    font-family: "Mukta Vaani", sans-serif;
 }
 
 .navbar a:hover {
@@ -54,16 +59,18 @@ body {
     background-color: #282727;
     color: #e5d5bc;
     position: absolute;
-    top: 249vh;
+    top: 237vh;
     bottom:0;
     left:0;
     height: 39vh;
+    font-family: "Mukta Vaani", sans-serif;
 }
 
 .left {
     flex: 1;
     text-align: left;
     padding: 2vw;
+    font-family: "Mukta Vaani", sans-serif;
 }
 
 .column {
@@ -71,6 +78,8 @@ body {
     margin-right: 2vw;
     margin-left: 2vw;
     font-size: 2.3vh;
+    font-family: "Mukta Vaani", sans-serif;
+    padding-top:2vh;
 }
 
 a {
@@ -83,21 +92,25 @@ a {
 #content
 {
     text-align:justify;
-    font-family: "Monda";
-    font-size:2.3vh;
+    font-family: "Mukta Vaani", sans-serif;
+    font-size:2vh;
 }
 
 #topic
 {
     margin-top: -1vw;
-    font-family: "Monda";
+    font-family: "Mukta Vaani", sans-serif;
     font-size:2.5vh;
 
 }
 
 p
 {
-    font-family: "Monda";
+    font-family: "Mukta Vaani", sans-serif;
+}
+
+.contactlist{
+    font-size: 2.3vh;
 }
 
 .contactlist{
@@ -273,7 +286,7 @@ p
     position: absolute;
     top: 9vh;
     right: 1vw;
-    background-color: #e5d5bc;
+    background-color: #eff0ec;
     min-width: 1vw;
     box-shadow: 0 1vh 1vw 0 rgba(0,0,0,0.2);
     z-index: 1;
@@ -285,10 +298,13 @@ p
     padding: 0.5vw 1vh;
     text-decoration: none;
     display: block;
+    font-family: "Mukta Vaani", sans-serif;
 }
 
 .AccountDrop a:hover {
-    background-color: #fcfef1;
+    border-radius: 1vw;
+    background-color: #e5d5bc;
+    color:#282727;
 }
 
   /*SECOND SECTION*/
@@ -312,12 +328,14 @@ p
   {
     color:#e5d5bc ;
     font-size:3vw;
-    margin-left:10vw;
-    margin-top:9vw;
+    margin-left:6vw;
+    margin-top:5vw;
+    font-family: "Mukta Vaani", sans-serif;
+    font-size:5vw;
   }
 
   .subcont p{
-    margin-left:10vw;
+    margin-left:6vw;
     font-size:1.3vw;
     margin-right:6vw;
     color:white;
@@ -326,14 +344,16 @@ p
 
   #buttu
   {
-    margin-left:10vw;
+    margin-left:6vw;
     margin-top:1vw;
-    width:8vw;
-    height:3vw;
+    width:10vw;
+    height:4vw;
     border-radius:2vw;
     color:#282727;
     background-color: #e5d5bc;
-    font-size:1vw;
+    font-size:1.5vw;
+    font-family: "Mukta Vaani", sans-serif;
+    font-weight: bold;
   }
 
   #buttu:hover
@@ -357,6 +377,7 @@ p
     margin-top:4vw;
     margin-left:31vw;
     font-size:3vw;
+    font-family: "Mukta Vaani", sans-serif;
   }
 
   #pararev
@@ -364,6 +385,8 @@ p
     margin-left:20vw;
     margin-right:20vw;
     text-align:center;
+    font-size: 2vh;
+    font-family: "Mukta Vaani", sans-serif;
   }
 
   .revicont img
@@ -403,6 +426,8 @@ p
     width:25vw;
     background-color:#EFF0EC;
     border-radius:2vw;
+    font-family: "Mukta Vaani", sans-serif;
+    font-size:1.7vh;
   }
 
   .revi2
@@ -414,6 +439,8 @@ p
     width:25vw;
     background-color:#EFF0EC;
     border-radius:2vw;
+    font-family: "Mukta Vaani", sans-serif;
+    font-size:1.7vh;
   }
 
   .revi3
@@ -425,4 +452,14 @@ p
     width:25vw;
     background-color:#EFF0EC;
     border-radius:2vw;
+    font-family: "Mukta Vaani", sans-serif;
+    font-size:1.7vh;
   }
+  .footer li{
+    list-style : none;
+    font-family: "Mukta Vaani", sans-serif;
+}
+
+.column a{
+    font-family: "Mukta Vaani", sans-serif;
+}

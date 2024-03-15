@@ -5,6 +5,10 @@
     font-style: normal;
 }
 
+*{
+    margin:0;
+    padding: 0;
+}
 img
 {
     width: 10vw;
@@ -44,6 +48,7 @@ body {
     margin-left: 2vw;
     font-size: 2.3vh;
     font-family: "Mukta Vaani", sans-serif;
+    padding-top:2vh;
 }
 
 a {
@@ -525,7 +530,7 @@ p
   /* Add this to style the JOIN NOW button */
 #joinNowBtn {
     position: fixed;
-    top: 2vh;
+    top: 4vh;
     right: 2vw;
     background-color: #282727;
     color: white;
@@ -533,16 +538,18 @@ p
     padding: 1vh 2vw;
     cursor: pointer;
     border-radius: 2vw;
+    font-size: 1.2vw;
+    margin-bottom:2vh;
 }
 
 /* Add this to style the dropdown */
 .joinDropdown {
     display: none;
     position: fixed;
-    top: 6vh;
-    right: 2vw;
+    top: 9vh;
+    right: 2.5vw;
     background-color: #EFF0EC;
-    min-width: 10vw;
+    border-radius: 1vw;
     box-shadow: 0.3vw 0.8vh 1.6vw 0 rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -552,12 +559,25 @@ p
     color: black;
     padding: 1.2vh 1.6vw;
     text-decoration: none;
+    border-radius: 1vw;
+    font-family: "Mukta Vaani", sans-serif;
 }
 
 .joinDropdown a:hover {
-    background-color: #f1f1f1;
+    background-color: #e5d5bc;
+    color:#282727;
+    border-radius: 1vw;
 }
 
 .show {
     display: block;
+}
+
+.footer li{
+    list-style : none;
+    font-family: "Mukta Vaani", sans-serif;
+}
+
+.column a{
+    font-family: "Mukta Vaani", sans-serif;
 }

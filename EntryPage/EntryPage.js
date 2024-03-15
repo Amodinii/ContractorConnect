@@ -1,4 +1,7 @@
 let AccountButton = document.getElementById("Account");
+let joinNowBtn = document.getElementById("joinNowBtn");
+let joinDropdown = document.getElementById("joinDropdown");
+
 AccountButton.addEventListener("click", () => {
     var dropdown = document.getElementsByClassName("AccountDrop")[0];
     dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
@@ -21,12 +24,12 @@ setInterval(function(){
 function showPopup() {
     document.getElementById('popup').style.display = 'block';
 }
-  
+
 // Function to close the pop-up
 function closePopup() {
     document.getElementById('popup').style.display = 'none';
 }
-  
+
 // Setting timeout to show the pop-up after 1 minute
 setTimeout(showPopup, 60000); // 1 minute in milliseconds
 
@@ -59,8 +62,7 @@ window.onscroll = function() {
 }
 
 // Add this JavaScript to show/hide the dropdown on hover
-var joinNowBtn = document.getElementById("joinNowBtn");
-var joinDropdown = document.getElementById("joinDropdown");
+
 
 joinNowBtn.addEventListener("mouseover", function() {
     joinDropdown.classList.add("show");
