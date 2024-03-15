@@ -11,7 +11,9 @@ img
     height: 8vw;
 }
 
-
+li{
+    list-style: none;
+}
 
 body {
     background-color: white;
@@ -266,15 +268,15 @@ p
     display: none; /*Hidden by default */
     position: fixed; 
     z-index: 1; 
-    left: 50%; 
+    left: 47%; 
     top: 50%; 
     transform: translate(-50%, -50%); /*Place the pop-up beech mein */
     width: 57vw;
     height: 59vh; 
     overflow: none;
-    background-color: rgba(0,0,0,0.4); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 1vw; 
+    background-color: #282727 ;
+    box-shadow: 0 4vw 8vw rgba(0, 0, 0, 0.1);
+    border-radius: 2vw; 
   }
   
   /* Popup content */
@@ -282,7 +284,7 @@ p
     display:flex;
     background-color: #282727;
     background-size: cover;
-    padding: 20px;
+    padding: 2vw;
     border-radius: 10px; 
   }
 
@@ -300,6 +302,7 @@ p
     text-align: left;
     font-family: "BebasNeue", sans-serif;
     font-size: 5.2vw; /* Adjusted font-size */
+
 }
 
 #lolo
@@ -309,12 +312,12 @@ p
 }
 
 #peeps {
-    width: 44vw;
-    height: 60vh;
+    width: 36vw;
+    height: 59vh;
     position: absolute;
-    margin-left:-15.9vw; /* Position at the right */
+    padding-left: 2vw;;
     margin-bottom: 1.6vw;
-    margin-top:-1vw;
+    margin-top:-2vw;
     border-radius:1vw;
 }
 
@@ -507,3 +510,42 @@ p
     background-color:#EFF0EC;
     border-radius:2vw;
   }
+
+  /* Add this to style the JOIN NOW button */
+#joinNowBtn {
+    position: fixed;
+    top: 2vh;
+    right: 2vw;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 1vh 2vw;
+    cursor: pointer;
+}
+
+/* Add this to style the dropdown */
+.joinDropdown {
+    display: none;
+    position: fixed;
+    top: 6vh;
+    right: 2vw;
+    background-color: #f9f9f9;
+    min-width: 10vw;
+    box-shadow: 0.3vw 0.8vh 1.6vw 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.joinDropdown a {
+    display: block;
+    color: black;
+    padding: 1.2vh 1.6vw;
+    text-decoration: none;
+}
+
+.joinDropdown a:hover {
+    background-color: #f1f1f1;
+}
+
+.show {
+    display: block;
+}
