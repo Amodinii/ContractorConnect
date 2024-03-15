@@ -1,0 +1,175 @@
+@font-face {
+    font-family: "BebasNeue";
+    src: url("BebasNeue.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Monda";
+    src: url("Monda-Regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #f8f9fa; 
+}
+
+.container {
+    text-align: center;
+    background-color: #282727;
+    border-radius: 2vw;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1);
+    margin: 3vh auto;
+    padding: 10vh 2vh;
+    max-width: 40vw;
+}
+
+#heading {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.5vw;
+    color: #e5d5bc;
+    margin-bottom: 1.5vh;
+    font-weight: normal;
+}
+
+.detailscont {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1vh;
+}
+
+.deta1, .deta2 {
+    width: 48%;
+}
+
+.label {
+    font-family: "Monda", sans-serif;
+    font-size: 1.25vw;
+    color: #e5d5bc;
+    margin-bottom: 0.1vh;
+    display: block;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select {
+    width: 75%;
+    height: 2vh;
+    border-radius: 1vw;
+    border: 0.1vw solid #ced4da;
+    padding: 1.5vh;
+    margin-bottom: 1vh;
+    font-family: "Monda", sans-serif;
+    font-size: 1vw;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="password"]::placeholder,
+select::placeholder {
+    color: #c4c4c2;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus,
+select:focus {
+    outline: none;
+    border-color: #495057;
+}
+
+button {
+    border: 0.1vw solid white;
+    color: #050024;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.25vw;
+    width: 10vw;
+    height: 6vh;
+    border-radius: 1vw;
+    background-color: #e5d5bc;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+button:hover {
+    border-color: #13202c;
+    background-color: #13202c;
+    color: white;
+}
+
+.textlow a {
+    color: #e5d5bc;
+    font-family: "Monda", sans-serif;
+    display: inline-block;
+    margin-top: 1vh;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.textlow a:hover {
+    color: #495057;
+}
+
+.selcontainer {
+    position: relative;
+    width: 100%;
+    margin-top: -0.5vh;
+}
+
+.selcontainer::after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    right: 1vw;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+option {
+    font-size: 1vw;
+    text-align: center;
+}
+
+.input-container {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 75%;
+}
+
+input[type="file"] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.custom-file-upload {
+    background-color: white;
+    color: #050024;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.25vw;
+    border-radius: 1vw;
+    border: 0.1vw solid white;
+    padding: 1.5vh 7vh;
+    cursor: pointer;
+}
+
+.custom-file-upload:hover {
+    background-color: #13202c;
+    color: white;
+}

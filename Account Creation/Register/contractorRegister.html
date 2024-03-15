@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTER</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Monda&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contractorRegister.css">
+</head>
+<body>
+<div class="container">
+    <h1 id="heading">REGISTER</h1>
+    <form>
+        <div class="detailscont">
+            <div class="deta1">
+                <label for="yourname" class="label">Contractor Name</label>
+                <input type="text" id="yourname" name="yourname" placeholder="CONTRACTOR Name">
+                
+                <label for="mailu" class="label">License Number</label>
+                <input type="email" id="mailu" name="mailu" placeholder="Enter License and Certifications">
+                
+                <label for="phno" class="label">Phone Number</label>
+                <input type="tel" id="phno" name="phno" placeholder="+91-1234567890">
+                
+                <label for="attachments" class="label">Attach Documents and Certificates</label>
+                <div class="input-container">
+                    <input type="file" id="attachments" name="attachments" accept=".pdf,.doc,.docx" multiple>
+                    <label for="attachments" class="custom-file-upload">Choose Files</label>
+                </div>
+            </div>
+            <div class="deta2">
+                <label for="address" class="label">Address</label>
+                <input type="text" id="address" name="address" placeholder="123 Anywhere St, Any City, ST 12345">
+                
+                <label for="city" class="label">City</label>
+                <input type="text" id="city" name="city" placeholder="City">
+                
+                <label for="state" class="label">State</label>
+                <input type="text" id="state" name="state" list="states" placeholder="Enter state">
+                <datalist id="states">
+                    <option value="Andhra Pradesh">
+                        <option value="Arunachal Pradesh">
+                        <option value="Assam">
+                        <option value="Bihar">
+                        <option value="Chhattisgarh">
+                        <option value="Goa">
+                        <option value="Gujarat">
+                        <option value="Haryana">
+                        <option value="Himachal Pradesh">
+                        <option value="Jharkhand">
+                        <option value="Karnataka">
+                        <option value="Kerala">
+                        <option value="Madhya Pradesh">
+                        <option value="Maharashtra">
+                        <option value="Manipur">
+                        <option value="Meghalaya">
+                        <option value="Mizoram">
+                        <option value="Nagaland">
+                        <option value="Odisha">
+                        <option value="Punjab">
+                        <option value="Rajasthan">
+                        <option value="Sikkim">
+                        <option value="Tamil Nadu">
+                        <option value="Telangana">
+                        <option value="Tripura">
+                        <option value="Uttar Pradesh">
+                        <option value="Uttarakhand">
+                        <option value="West Bengal">
+                </datalist>
+                
+                <label for="password" class="label">Enter Password</label>
+                <input type="password" id="password" name="password" placeholder="********">
+                <label for="password-confirm" class="label">Confirm Password</label>
+                <input type="password" id="password-confirm" name="password-confirm" placeholder="********">
+            </div>
+        </div>
+    </form>
+    <button type="button" id="sig">Register Now</button>
+    <div class="textlow">
+        <a href="../Sign_In/SignPage.html">Already have an account? Sign in Here</a>
+    </div>
+</div>
+</body>
+</html>
