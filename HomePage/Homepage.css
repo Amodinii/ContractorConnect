@@ -30,14 +30,15 @@ body {
 .navbar a {
     color: black;
     text-align: center;
-    margin: 1vw;
+    margin: 1.5vw;
     text-decoration: none;
     padding: 1vw;
+    font-size:1.2vw;
 }
 
 .navbar a:hover {
     display: inline-block;
-    color: rgb(131, 131, 131);
+    color: #e6bc7c;
     
 }
 
@@ -47,15 +48,16 @@ body {
 }
 
 .footer {
+    padding:1vw;
     display: flex;
     justify-content: flex-start;
     background-color: #282727;
     color: #e5d5bc;
     position: absolute;
-    top: 155vh;
+    top: 249vh;
     bottom:0;
     left:0;
-    height: 35vh;
+    height: 39vh;
 }
 
 .left {
@@ -75,6 +77,7 @@ a {
     color: #e5d5bc;
     text-decoration: none;
     font-family: "Monda";
+    font-size:2.3vh;
 }
 
 #content
@@ -268,17 +271,18 @@ p
 .AccountDrop {
     display: none;
     position: absolute;
-    top: 8vh;
-    right: 0;
-    background-color: #fcfef1;
+    top: 9vh;
+    right: 1vw;
+    background-color: #e5d5bc;
     min-width: 1vw;
     box-shadow: 0 1vh 1vw 0 rgba(0,0,0,0.2);
     z-index: 1;
+    border-radius:1vw;
 }
 
 .AccountDrop a {
-    color: black;
-    padding: 1vw 1vh;
+    color: #282727;
+    padding: 0.5vw 1vh;
     text-decoration: none;
     display: block;
 }
@@ -287,171 +291,138 @@ p
     background-color: #fcfef1;
 }
 
-/*POP UP*/
-.popup {
-    display: none; /*Hidden by default */
-    position: fixed; 
-    z-index: 1; 
-    left: 50%; 
-    top: 50%; 
-    transform: translate(-50%, -50%); /*Place the pop-up beech mein */
-    width: 57vw;
-    height: 59vh; 
-    overflow: none;
-    background-color: rgba(0,0,0,0.4); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 1vw; 
-  }
-  
-  /* Popup content */
-  .popup-content {
+  /*SECOND SECTION*/
+  .subcont
+  {
     display:flex;
-    background-color: #282727;
-    background-size: cover;
-    padding: 20px;
-    border-radius: 10px; 
+    background-color:#282727;
+    margin-top:8vw;
+    height:32vw;
   }
 
-  @font-face {
-    font-family: "BebasNeue";
-    src: url("BebasNeue.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-}
-
-#pop,#lolo {
-    margin-top: 2vw; /* Adjusted margin-top */
-    margin-left: 0.7vw; /* Adjusted margin-left */
-    color: #e5d5bc;
-    text-align: left;
-    font-family: "BebasNeue", sans-serif;
-    font-size: 5.2vw; /* Adjusted font-size */
-}
-
-#lolo
-{
-    position:relative;
-    top:-5vw;
-}
-
-#peeps {
-    width: 44vw;
-    height: 63vh;
-    position: absolute;
-    margin-left:-15.9vw; /* Position at the right */
-    margin-bottom: 1.6vw;
-    margin-top:-1vw;
-    border-radius:1vw;
-}
-
-.slogan {
-    color: #e5d5bc;
-    text-align: left;
-    font-family: "BebasNeue", sans-serif;
-    font-size: 2.5vw;
-    margin-top: -9vw;
-    margin-left: 0.7vw; /* Adjusted margin-left */
-}
-
-#reg {
-    border: 2px solid white; 
-    color: #282727;
-    font-family: "BebasNeue", sans-serif;
-    font-size: 2.2vw;
-    font-weight: bold;
-    width: 8vw;
-    height: 3.5vw;
-    border-radius: 3rem;
-    background-color: #e5d5bc;
-    margin-right: 5vw;
-    margin-left: 0.7vw;
-    margin-top: 3.8vw;
-    margin-bottom:2vw;
-}
-
-#sig {
-    border: 2px solid white; 
-    color: #282727;
-    font-family: "BebasNeue", sans-serif;
-    font-size: 2.2vw;
-    font-weight: bold;
-    width: 8vw;
-    height: 3.5vw;
-    border-radius: 3rem;
-    background-color: #e5d5bc;
-    margin-left: -3vw;
-}
-
-#reg:hover, #sig:hover
-{
-    border: 2px solid #e5d5bc;
-    background-color: #282727;
-    color: #e5d5bc;
-}
-
-.buttons{
-    margin-top: -5.2vw;
-}
-
-/*#logo {
-    width: 10.3%;
-    height: 11%;
-    position: absolute;
-    top: 1vw; Position at the bottom */
-  
-  /* Close button */
-  .close {
-    color: #e5d5bc;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  #findy
+  {
+    margin-top:1.5vw;
+    width:45vw;
+    height:29vw;
+    margin-left:1vw;
   }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+
+  #subh
+  {
+    color:#e5d5bc ;
+    font-size:3vw;
+    margin-left:10vw;
+    margin-top:9vw;
+  }
+
+  .subcont p{
+    margin-left:10vw;
+    font-size:1.3vw;
+    margin-right:6vw;
+    color:white;
+    text-align:left;
+  }
+
+  #buttu
+  {
+    margin-left:10vw;
+    margin-top:1vw;
+    width:8vw;
+    height:3vw;
+    border-radius:2vw;
+    color:#282727;
+    background-color: #e5d5bc;
+    font-size:1vw;
+  }
+
+  #buttu:hover
+  {
+    background-color:#282727;
+    border-color: #e5d5bc;
+    color:#e5d5bc;
   }
 
   /*REVIEW SECTION*/
   .revicont
   {
-    margin-top:7vw;
+    margin-top:-6vw;
     display:flex;
-    background-color:#282727;
+    background-color:white;
     height:30vw;
   }
+
+  #revih
+  {
+    margin-top:4vw;
+    margin-left:31vw;
+    font-size:3vw;
+  }
+
+  #pararev
+  {
+    margin-left:20vw;
+    margin-right:20vw;
+    text-align:center;
+  }
+
+  .revicont img
+  {
+    width:14vw;
+    height:5vw;
+    margin-left:5vw;
+    padding-right:5vw;
+    margin-top:0.6vw;
+  }
+
+  .revicont p
+  {
+    margin-top:7vw;
+    text-align:justify;
+    padding:1vw;
+    color:#282727;
+  }
+
+  #per2
+  {
+    width:12vw;
+    margin-left:6vw;
+  }
   
+  #per3
+  {
+    height:4.5vw;
+  }
+
   .revi1
   {
     margin-left:5vw;
-    margin-top:7vw;
+    margin-top:9vw;
     margin-right:3vw;
     margin-bottom:3vw;
     width:25vw;
-    background-color:#e5d5bc;
+    background-color:#EFF0EC;
     border-radius:2vw;
   }
 
   .revi2
   {
-    margin-top:7vw;
+    margin-top:9vw;
     margin-left:3vw;
     margin-right:3vw;
     margin-bottom:3vw;
     width:25vw;
-    background-color:#e5d5bc;
+    background-color:#EFF0EC;
     border-radius:2vw;
   }
 
   .revi3
   {
-    margin-top:7vw;
+    margin-top:9vw;
     margin-left:3vw;
     margin-right:3vw;
     margin-bottom:3vw;
     width:25vw;
-    background-color:#e5d5bc;
+    background-color:#EFF0EC;
     border-radius:2vw;
   }
