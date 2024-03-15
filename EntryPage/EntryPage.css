@@ -11,9 +11,6 @@ img
     height: 8vw;
 }
 
-li{
-    list-style: none;
-}
 
 body {
     background-color: white;
@@ -31,12 +28,14 @@ body {
     bottom:0;
     left:0;
     height: 39vh;
+    font-family: "Mukta Vaani", sans-serif;
 }
 
 .left {
     flex: 1;
     text-align: left;
     padding: 2vw;
+    font-family: "Mukta Vaani", sans-serif;
 }
 
 .column {
@@ -44,6 +43,7 @@ body {
     margin-right: 2vw;
     margin-left: 2vw;
     font-size: 2.3vh;
+    font-family: "Mukta Vaani", sans-serif;
 }
 
 a {
@@ -56,21 +56,21 @@ a {
 #content
 {
     text-align:justify;
-    font-family: "Monda";
-    font-size:2.3vh;
+    font-family: "Mukta Vaani", sans-serif;
+    font-size:2vh;
 }
 
 #topic
 {
     margin-top: -1vw;
-    font-family: "Monda";
+    font-family: "Mukta Vaani", sans-serif;
     font-size:2.5vh;
 
 }
 
 p
 {
-    font-family: "Monda";
+    font-family: "Mukta Vaani", sans-serif;
 }
 
 .contactlist{
@@ -398,6 +398,7 @@ p
     background-color:#282727;
     margin-top:8vw;
     height:30vw;
+    width:100vw;
   }
 
   #doosrapic
@@ -414,6 +415,7 @@ p
     font-size:3vw;
     margin-left:4vw;
     margin-top:3vw;
+    font-family: "Mukta Vaani", sans-serif;
   }
 
   ul{
@@ -424,7 +426,7 @@ p
   {
     color:#e5d5bc;
     font-size:1.4vw;
-    padding:0.5vw;
+    font-family: "Mukta Vaani", sans-serif; 
   }
 
   /*REVIEW SECTION*/
@@ -441,6 +443,7 @@ p
     margin-top:4vw;
     margin-left:31vw;
     font-size:3vw;
+    font-family: "Mukta Vaani", sans-serif;
   }
 
   #pararev
@@ -448,6 +451,8 @@ p
     margin-left:20vw;
     margin-right:20vw;
     text-align:center;
+    font-size: 2vh;
+    font-family: "Mukta Vaani", sans-serif;
   }
 
   .revicont img
@@ -487,6 +492,8 @@ p
     width:25vw;
     background-color:#EFF0EC;
     border-radius:2vw;
+    font-family: "Mukta Vaani", sans-serif;
+    font-size:1.7vh;
   }
 
   .revi2
@@ -498,6 +505,8 @@ p
     width:25vw;
     background-color:#EFF0EC;
     border-radius:2vw;
+    font-family: "Mukta Vaani", sans-serif;
+    font-size:1.7vh;
   }
 
   .revi3
@@ -509,6 +518,8 @@ p
     width:25vw;
     background-color:#EFF0EC;
     border-radius:2vw;
+    font-family: "Mukta Vaani", sans-serif;
+    font-size:1.7vh;
   }
 
   /* Add this to style the JOIN NOW button */
@@ -516,11 +527,12 @@ p
     position: fixed;
     top: 2vh;
     right: 2vw;
-    background-color: #007bff;
+    background-color: #282727;
     color: white;
     border: none;
     padding: 1vh 2vw;
     cursor: pointer;
+    border-radius: 2vw;
 }
 
 /* Add this to style the dropdown */
@@ -529,7 +541,7 @@ p
     position: fixed;
     top: 6vh;
     right: 2vw;
-    background-color: #f9f9f9;
+    background-color: #EFF0EC;
     min-width: 10vw;
     box-shadow: 0.3vw 0.8vh 1.6vw 0 rgba(0,0,0,0.2);
     z-index: 1;

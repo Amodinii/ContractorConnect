@@ -1,0 +1,146 @@
+/* styles.css */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    width: 13vw;
+    height: 100vh;
+    background-color: #333;
+    transition: left 0.3s ease;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 2vw;
+}
+
+.sidebar li {
+    color: #fff;
+    margin-bottom: 3vh;
+    font-size: 1.3vh;
+}
+
+.bottom-options {
+    position: absolute;
+    bottom: 4vh;
+}
+
+.bottom-options ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.bottom-options li {
+    color: #fff;
+    margin-bottom: 2vh;
+    font-size: 1.3vh;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 13vw; /* Same as sidebar width */
+    padding: 4vw;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4vh;
+}
+
+.greeting {
+    text-align: center;
+}
+
+.header-buttons button {
+    margin-left: 1vw;
+    padding: 1.5vh 2.5vw; /* Adjust padding as needed */
+    font-size: 1.3vh;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 2vw; /* Rounded corners */
+    cursor: pointer;
+}
+
+.flexbox-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4vh;
+}
+
+.flexbox {
+    width: 30%;
+    padding: 4vw;
+    border-radius: 2vw;
+}
+
+.pale-green, .pale-yellow, .pale-blue {
+    text-align: center;
+    line-height: 1.2;
+}
+
+.pale-green {
+    background-color: #c0ebd7;
+    border-radius: 2vw;
+    height: 25vh;
+    width: 25vw;
+}
+
+.pale-yellow {
+    background-color: #f7f3d7;
+    border-radius: 2vw;
+    height: 25vh;
+    width: 25vw;
+}
+
+.pale-blue {
+    background-color: #d7eaf7;
+    border-radius: 2vw;
+    height: 25vh;
+    width: 25vw;
+}
+
+.square-flexbox {
+    margin-top: 5vh;
+    padding: 5vh;
+    text-align: center;
+    background-color: #f7f7f7;
+    border-radius: 2vw;
+    height: 35vh;
+    width: 35vw;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 30vw;
+    }
+
+    .main-content {
+        margin-left: 30vw;
+    }
+
+    .header-buttons button {
+        margin-left: 2vw;
+    }
+
+    .flexbox {
+        width: 100%;
+        margin-bottom: 4vh;
+    }
+}

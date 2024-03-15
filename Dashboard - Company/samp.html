@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="samo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.1/css/all.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="hamburger-menu">
+            <i class="fas fa-bars"></i> <!-- Hamburger icon -->
+        </div>
+        <ul>
+            <li><i class="fal fa-objects-column"></i> Dashboard</li> <!-- Dashboard icon -->
+            <li><i class="fas fa-file-contract"></i> Contractors</li> <!-- Contractors icon -->
+            <li><i class="fas fa-box"></i> Your Orders</li> <!-- Your Orders icon -->
+            <li><i class="fas fa-user"></i> About Us</li> <!-- About Us icon -->
+        </ul>
+        <div class="bottom-options">
+            <ul>
+                <li><i class="fas fa-gear"></i> Settings</li> <!-- Settings icon -->
+                <li><i class="fas fa-sign-out-alt"></i> Logout</li> <!-- Logout icon -->
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <div class="greeting">
+                <h2>Welcome Back, <span id="username">Username</span></h2>
+                <p>How can we help you today?</p>
+            </div>
+            <div class="header-buttons">
+                <button class="search-btn">Search</button>
+                <button class="notification-btn">Notification</button>
+                <button class="profile-btn">
+                    <img src="profile-pic.jpg" alt="Profile Picture">
+                    <span id="username">Username</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="flexbox-row">
+            <div class="flexbox pale-green">
+                <h3>All Completed Contracts</h3>
+                <p>Share your feedback!</p>
+            </div>
+            <div class="flexbox pale-yellow">
+                <h3>Ongoing Contracts</h3>
+                <p>Learn More</p>
+            </div>
+            <div class="flexbox pale-blue">
+                <h3>Total Contracts</h3>
+                <p>Find more contracts here</p>
+            </div>
+        </div>
+
+        <div class="square-flexbox">
+            <h3>Find Amazing Vendors Easily</h3>
+            <p>Find the vendors for your work with just one click</p>
+            <button class="find-now-btn">Find Now!</button>
+        </div>
+    </div>
+
+    <script src="samp.js"></script>
+</body>
+</html>
