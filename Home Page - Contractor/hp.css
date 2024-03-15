@@ -312,23 +312,23 @@ p
   {
     color:#e5d5bc ;
     font-size:3vw;
-    margin-left:10vw;
-    margin-top:9vw;
+    margin-left:8vw;
+    margin-top:8.5vw;
   }
 
   .subcont p{
-    margin-left:10vw;
+    margin-left:8vw;
     font-size:1.3vw;
-    margin-right:6vw;
+    margin-right:7vw;
     color:white;
     text-align:left;
   }
 
   #buttu
   {
-    margin-left:10vw;
+    margin-left:8vw;
     margin-top:1vw;
-    width:8vw;
+    width:15vw;
     height:3vw;
     border-radius:2vw;
     color:#282727;
