@@ -25,8 +25,8 @@ function closePopup() {
     document.getElementById('popup').style.display = 'none';
 }
 
-// Setting timeout to show the pop-up after 1 minute
-setTimeout(showPopup, 60000); // 1 minute in milliseconds
+// Setting timeout to show the pop-up after 30 seconds
+setTimeout(showPopup, 30000); // 30 seconds in milliseconds
 
 // To toggle the dropdown
 function toggleJoinDropdown() {

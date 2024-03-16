@@ -279,7 +279,7 @@ p
     /*display: none; /*Hidden by default */
     position: fixed; 
     z-index: 1; 
-    left: 47%; 
+    left: 43%; 
     top: 50%; 
     transform: translate(-50%, -50%); /*Place the pop-up beech mein */
     width: 57vw;
@@ -319,12 +319,12 @@ p
 #lolo
 {
     position:relative;
-    top:-5vw;
+    top:-3vw;
 }
 
 #peeps {
     width: 36vw;
-    height: 59vh;
+    height: 60.9vh;
     position: absolute;
     padding-left: 2vw;;
     margin-bottom: 1.6vw;
@@ -335,10 +335,15 @@ p
 .slogan {
     color: #e5d5bc;
     text-align: left;
-    font-family: "BebasNeue", sans-serif;
     font-size: 2.5vw;
-    margin-top: -9vw;
+    margin-top: 2vw;
     margin-left: 0.7vw; /* Adjusted margin-left */
+    font-family: "Mukta Vaani", sans-serif;
+    font-weight: bold;
+}
+
+.slogan p{
+    margin-top: -5vw;
 }
 
 #reg {
@@ -353,7 +358,7 @@ p
     background-color: #e5d5bc;
     margin-right: 5vw;
     margin-left: 0.7vw;
-    margin-top: 3.8vw;
+    margin-top: 5vw;
     margin-bottom:2vw;
 }
 
