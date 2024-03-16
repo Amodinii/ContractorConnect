@@ -28,7 +28,7 @@ body {
     background-color: #282727;
     color: #e5d5bc;
     position: absolute;
-    top: 237vh;
+    top: 244vh;
     bottom:0;
     left:0;
     height: 39vh;
@@ -270,7 +270,7 @@ p
 
 /*POP UP*/
 .popup {
-    display: none; /*Hidden by default */
+    /*display: none; /*Hidden by default */
     position: fixed; 
     z-index: 1; 
     left: 47%; 
@@ -456,7 +456,7 @@ p
     margin-left:20vw;
     margin-right:20vw;
     text-align:center;
-    font-size: 2vh;
+    font-size: 2.2vh;
     font-family: "Mukta Vaani", sans-serif;
   }
 
@@ -471,10 +471,11 @@ p
 
   .revicont p
   {
-    margin-top:1vw;
+    margin-top:0.4vw;
     text-align:justify;
     padding:1vw;
     color:#282727;
+    font-size:1vw;
   }
 
   #per2
