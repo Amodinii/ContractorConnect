@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    position: relative; /* Add position relative to the body */
+}
+
+.container {
+    position: relative; /* Add position relative */
+    z-index: 1; /* Ensure the container is behind the image */
+    width: 60vw;
+    height: 60vh;
+    background-color: #f9f9f9;
+    display: flex;
+    border-radius: 3vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-form {
+    display: flex;
+    align-items: center;
+    width: 70vw;
+    justify-content: flex-end; /* Align items to the right end */
+    padding-right: 4vw; /* Add padding to the right to create space */
+}
+
+.paymenttext {
+    padding: 4.8vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    white-space: nowrap; /* Ensure text doesn't wrap */
+    overflow: hidden; /* Hide overflow */
+    font-family: "Mukta Vaani", sans-serif;
+}
+
+.payment-details {
+    margin-bottom: 4vh;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align items to the right end */
+    width: 100%; /* Ensure full width */
+}
+
+.input-section input {
+    margin-bottom: 2.7vh;
+    padding: 1.5vh;
+    border-radius: 3.6px;
+    border: 0.9px solid #ccc;
+    width: calc(100% - 2.7vw); /* Adjust width */
+}
+
+
+label {
+    display: flex;
+    align-items: justify;
+    justify-content: flex-end; /* Align items to the right end */
+    white-space: nowrap; /* Ensure text doesn't wrap */
+    overflow: hidden; /* Hide overflow */
+}
+
+label input[type="checkbox"] {
+    margin-right: 0.5vw; /* Adjust margin between checkbox and label */
+}
+
+button {
+    background-color: #282727;
+    color: #efd5bc;
+    padding:2vh;
+    border: none;
+    cursor: pointer;
+    border-radius: 2vw;
+    font-size:1.5vh;
+    align-self: flex-end; /* Align button to the right end */
+    width: 60%; /* Ensure full width */
+    font-family: "Mukta Vaani", sans-serif;
+}
+
+button:hover {
+    background-color: #efd5bc;
+    color: #282727;
+    font-family: "Mukta Vaani", sans-serif;
+}
+
+img {
+    max-width: 30%; /* Adjusted to 30% to make it smaller */
+    height: auto;
+    position: absolute; /* Add position absolute */
+    top: 50%; /* Position at the center vertically */
+    left: 10%; /* Position at the left */
+    transform: translateY(-50%); /* Center vertically */
+    z-index: 2; /* Ensure the image is on top */
+    box-shadow: inset;
+}
+
+
+a{
+    text-decoration: none;
+    color: #282727;
+    padding-left: 0.3vw;
+    font-family: "Mukta Vaani", sans-serif;
+}
+
+.input-section input[type="tel"] {
+    margin-bottom: 0.5vh;
+    padding: 2vh;
+    border-radius: 2vw; /* Adjust border-radius for rounded corners */
+    border: 0.9px solid #ccc;
+    width: calc(100% - 2.7vw); /* Adjust width */
+}
