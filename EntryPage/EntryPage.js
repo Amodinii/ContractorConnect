@@ -1,11 +1,6 @@
-let AccountButton = document.getElementById("Account");
+document.addEventListener('DOMContentLoaded', function() {
 let joinNowBtn = document.getElementById("joinNowBtn");
 let joinDropdown = document.getElementById("joinDropdown");
-
-AccountButton.addEventListener("click", () => {
-    var dropdown = document.getElementsByClassName("AccountDrop")[0];
-    dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
-});
 
 // AUTOMATIC NAVIGATION OF IMAGE SLIDER
 let counter = 1;
@@ -33,13 +28,13 @@ function closePopup() {
 // Setting timeout to show the pop-up after 1 minute
 setTimeout(showPopup, 60000); // 1 minute in milliseconds
 
-// Add this JavaScript function to toggle the dropdown
+// To toggle the dropdown
 function toggleJoinDropdown() {
     var dropdown = document.getElementById("joinDropdown");
     dropdown.classList.toggle("show");
 }
 
-// Add this JavaScript to close the dropdown if the user clicks outside of it
+// To close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
     if (!event.target.matches('#joinNowBtn')) {
         var dropdowns = document.getElementsByClassName("joinDropdown");
@@ -61,7 +56,7 @@ window.onscroll = function() {
     }
 }
 
-// Add this JavaScript to show/hide the dropdown on hover
+//To show/hide the dropdown on hover
 
 
 joinNowBtn.addEventListener("mouseover", function() {
@@ -79,5 +74,5 @@ joinDropdown.addEventListener("mouseover", function() {
 joinDropdown.addEventListener("mouseout", function() {
     joinDropdown.classList.remove("show");
 });
-
+});
 
