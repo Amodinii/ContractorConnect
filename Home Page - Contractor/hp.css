@@ -81,11 +81,20 @@ body {
     padding-top:2vh;
 }
 
+.column li
+{
+    padding-bottom:0.5vw;
+}
+.column p
+{
+    margin-bottom:0.5vw;
+}
+
 a {
     color: #e5d5bc;
     text-decoration: none;
     font-family: "Mukta Vaani", sans-serif;
-    font-size:2.3vh;
+    font-size:2.05vh;
 }
 
 #content
@@ -100,6 +109,7 @@ a {
     margin-top: -1vw;
     font-family: "Mukta Vaani", sans-serif;
     font-size:2.5vh;
+    margin-bottom:1vw;
 
 }
 
@@ -314,6 +324,7 @@ p
     width:45vw;
     height:29vw;
     margin-left:1vw;
+    border-radius:3vw;
   }
 
   #subh
@@ -372,6 +383,7 @@ p
   #pararev
   {
     margin-left:20vw;
+    margin-top:1.1vw;
     margin-right:20vw;
     text-align:center;
     font-size: 2.2vh;
@@ -403,7 +415,7 @@ p
   
   #per3
   {
-    height:4.5vw;
+    height:4.8vw;
   }
 
   .revi1
