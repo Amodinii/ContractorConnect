@@ -338,6 +338,7 @@ p
 
   .subcont p{
     margin-left:8vw;
+    margin-top:1vw;
     font-size:1.3vw;
     margin-right:7vw;
     color:white;
@@ -347,7 +348,7 @@ p
   #buttu
   {
     margin-left:8vw;
-    margin-top:1vw;
+    margin-top:1.7vw;
     width:15vw;
     height:3vw;
     border-radius:2vw;
@@ -355,7 +356,6 @@ p
     background-color: #e5d5bc;
     font-size:1vw;
   }
-
   #buttu:hover
   {
     background-color:#282727;
