@@ -94,13 +94,13 @@ input, #userType {
 #userType {
     color: grey;
     background-color: white;
-    width: 20vw;
+    width: 21vw;
     height: 2.5vw;
 }
 
 #userType option {
     color: #282727;
-    background-color: #e5d5bc;
+    background-color: white;
 }
 
 #signInButton {
