@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loading...</title>
+<link rel="stylesheet" href="loading.css">
+<style>
+/* Tetrominos Animation */
+.tetrominos {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tetromino {
+    width: 96px;
+    height: 112px;
+    position: absolute;
+    transition: all ease .3s;
+    background: url('data:image/svg+xml;utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 684"%3E%3Cpath fill="%23010101" d="M305.7 0L0 170.9v342.3L305.7 684 612 513.2V170.9L305.7 0z"/%3E%3Cpath fill="%23fff" d="M305.7 80.1l-233.6 131 233.6 131 234.2-131-234.2-131"/%3E%3C/svg%3E') no-repeat top center;
+}
+
+.box1 {
+    animation: tetromino1 1.5s ease-out infinite;
+}
+
+.box2 {
+    animation: tetromino2 1.5s ease-out infinite;
+}
+
+.box3 {
+    animation: tetromino3 1.5s ease-out infinite;
+    z-index: 2;
+}
+
+.box4 {
+    animation: tetromino4 1.5s ease-out infinite;
+}
+
+@keyframes tetromino1 {
+    0%, 40% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(48px, -28px);
+    }
+    60%, 100% {
+        transform: translate(96px, 0);
+    }
+}
+
+@keyframes tetromino2 {
+    0%, 20% {
+        transform: translate(96px, 0px);
+    }
+    40%, 100% {
+        transform: translate(144px, 28px);
+    }
+}
+
+@keyframes tetromino3 {
+    0% {
+        transform: translate(144px, 28px);
+    }
+    20%, 60% {
+        transform: translate(96px, 56px);
+    }
+    90%, 100% {
+        transform: translate(48px, 28px);
+    }
+}
+
+@keyframes tetromino4 {
+    0%, 60% {
+        transform: translate(48px, 28px);
+    }
+    90%, 100% {
+        transform: translate(0, 0);
+    }
+}
+</style>
+</head>
+<body>
+    <div class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Tetrominos Animation -->
+    <div class='tetrominos'>
+        <div class='tetromino box1'></div>
+        <div class='tetromino box2'></div>
+        <div class='tetromino box3'></div>
+        <div class='tetromino box4'></div>
+    </div>
+
+    <script src="load.js"></script>
+</body>
+</html>
