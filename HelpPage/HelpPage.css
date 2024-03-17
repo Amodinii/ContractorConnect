@@ -1,0 +1,307 @@
+@font-face {
+    font-family: "BebasNeue";
+    src: url("BebasNeue.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Monda";
+    src: url("Monda-Regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+
+img
+{
+    z-index: 0;
+    position: absolute;
+    width: 10vw;
+    height: 8vw;
+    float: left;
+    top: 0;
+}
+
+.navbar {
+    z-index: 0;
+    position: absolute;
+    background-color: #e5d5bc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left:25%;
+    top:2%;
+}
+
+.navbar a {
+    z-index: 0;
+    position: relative;
+    color: black;
+    text-align: center;
+    margin: 1.5vw;
+    text-decoration: none;
+    padding: 1vw;
+    font-size:1.2vw;
+    font-family: "Mukta Vaani", sans-serif;
+    background-color: #e5d5bc;
+    top:0;
+}
+
+.navbar a:hover {
+    z-index: 0;
+    position: absolute;
+    display: inline-block;
+    color: #3e3e3e;
+    position: relative;
+    text-align: center;
+    margin: 1.5vw;
+    text-decoration: none;
+    padding: 1vw;
+    font-size:1.2vw;
+    font-family: "Mukta Vaani", sans-serif;
+    background-color: #e5d5bc;
+    top:0;
+    
+}
+
+body{
+    background-color: white;
+    /*overflow-x: hidden;*/
+}
+
+.Background img{
+    z-index: -1;
+    position: absolute;
+    width:100vw;
+    height: auto;
+    top:0vh;
+}
+
+.container {
+    text-align: center;
+    background-color: #282727;
+    border-radius:1vw;
+    box-shadow: 
+    0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.01),  /* Right */
+    -0.3rem 0.3rem 0.2rem rgba(0, 0, 0, 0.03), /* Left */
+    0 0.3rem 0.5rem rgba(0, 0, 0, 0.1); /* Bottom */
+    margin-top: 15vh;
+    margin-left:55vw;
+    width: 30vw; 
+    height: 47vw; 
+    position: relative;
+    z-index: 2; 
+}
+
+.contact {
+    z-index: 4;
+    position: absolute;
+    text-align: center;
+    background-color: #eff0ec;
+    border-radius: 1vw;
+    margin-top: 57vh;
+    margin-left: 24vh;
+    width: 20vw;
+    height: 20vh;
+}
+
+.contact h1{
+    font-family: "BebasNeue", sans-serif;
+    font-size: 3vw;
+}
+
+.contactdetails p{
+    font-family: "Mukta Vaani", sans-serif;
+    color: #282727;
+    padding: 0.3vh;
+}
+
+#heading{
+    margin-left:-1vw;
+    position:relative;
+    top:1.5vw;
+    padding-top: 0vw;
+    font-family: "BebasNeue", sans-serif;
+    font-size: 4vw;
+    color:#e5d5bc;
+}
+
+.flexcont
+{
+    display:flex;
+}
+
+#photu
+{
+    height: 38.5vw;
+    width: 25vw;
+    margin-top: -5vw;
+    margin-left:10vw;
+    opacity: 60%;
+}
+
+.details {
+    margin: 3vw;
+    font-size: 1vw;
+    margin-top: 3.5vw;
+}
+
+textarea{
+    width:21vw;
+    height: 5vh;
+    margin-top: 1vh;
+    margin-left:2vh;
+    border-radius: 0.5vw;
+    padding:0.5vh;
+}
+
+p{
+    color:#e5d5bc;
+    font-size: 1.1vw;
+    font-family:"Monda",sans-serif ;
+    text-align: left;
+    margin-left:1vw;
+}
+
+#checku
+{
+    width:2.5vw;
+    height:2.5vh;
+    margin-top: 1vw;
+    margin-left:-12vw;
+}
+
+label
+{
+    color:#e5d5bc;
+}
+
+input
+{
+    margin-top:0.75vw;
+    margin-left:1vw;
+    width:20vw;
+    height:2vw;
+    border-radius: 0.5vw;
+    border:none;
+    padding:0.5vw;
+    margin-bottom:1vw;
+}
+
+#signInButton {
+    border: 2px solid white; 
+    color: #282727;
+    position: relative;
+    font-family: "BebasNeue", sans-serif;
+    font-size: 2vw;
+    font-weight: bold;
+    width: 21vw;
+    height: 3.2vw;
+    border-radius: 0.5rem;
+    background-color: #e5d5bc;
+    box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+    margin-left: -1vw;
+    top: -1vw;
+}
+
+#signInButton:hover {
+    border: 2px solid #e5d5bc;
+    background-color: #282727;
+    color: #e5d5bc;
+}
+
+a
+{
+    text-decoration:none;
+    margin-top: 2vw;
+    color:#e5d5bc;
+    font-family: "Monda", sans-serif;
+    display: block;
+    text-align: center;
+    font-size:1vw;
+}
+
+#a2
+{
+    text-decoration:none;
+    margin-top: 0.4vw;
+    color:#e5d5bc;
+    font-family: "Monda", sans-serif;
+    display: block;
+    text-align: center;
+}
+
+.textlow{
+    margin-top: -25vh;
+    margin-left:-21vw;
+}
+
+#Account{
+    z-index: 3;
+    position: absolute;
+    top:-10vh;
+    right:2vw;
+    height: 2.5vw;
+    width: 2.5vw;
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    position:relative;
+}
+
+.AccountDrop {
+    width: 7vw;
+    height: 9vh;
+    z-index: 3;
+    display: none;
+    position: absolute;
+    top: 0%;
+    margin-top: 10vh;
+    margin-right: 2vw;
+    right: -0.25vw;
+    background-color: #eff0ec;
+    box-shadow: 0 1vh 1vw 0 rgba(0,0,0,0.2);
+    border-radius:1vw;
+}
+
+.AccountDrop a {
+    position:relative;
+    display: block;
+    z-index: 3;
+    padding: 0.5vw 1vh;
+    color: #282727;
+    border-radius: 1vw;
+    text-decoration: none;
+    display:block;
+    font-family: "Mukta Vaani", sans-serif;
+    margin-top:-0.5vh;
+    font-size:2vh;
+}
+
+.AccountDrop a:hover {
+    z-index: 3;
+    position: relative;
+    background-color: #e5d5bc;
+    color:#282727;
+}
+
+#textarea {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Help {
+    z-index: 4;
+    position: absolute;
+    margin-top: 13vh;
+    margin-left: 10vw;
+}
+
+.Help img {
+    height: 42vh;
+    width: 37vw;
+}

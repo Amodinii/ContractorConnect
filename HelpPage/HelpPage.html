@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELP CENTRE</title>
+    <link rel="stylesheet" href="HelpPage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mukta+Vaani:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="toppart">
+        <img src="Logo - PNG.png" alt="Logo Image" map="#mymap">
+    <img src="Account Logo Thing.png" alt="Account" id="Account" onclick="toggleDropdown()">
+    <div id="AccountDrop" class="AccountDrop">
+        <a href="">SETTINGS</a>
+        <a href="">LOG OUT</a>
+    </div>
+
+    <div class="navbar">
+            <a href="Homepage.html" id="pehla">HOME</a>
+            <a href="">DASHBOARD</a>
+            <a href="">CONTRACTOR</a>
+            <a href="">ABOUT</a>
+            <a href="">HELP</a>
+    </div>
+    </div>
+    <div class="Background">
+        <img id="Background" src="Background.png" alt="Background">
+    </div>
+
+    <div class="Help">
+        <img src="Help.png"> 
+    </div>
+
+    <div class="contact">
+        <h1>GET IN TOUCH</h1><br>
+        <hr><br>
+        <div class="contactdetails">
+            <p>Phone : +91-1234567890</p>
+            <p>Email : example@example.com</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: customercare@example.com</p>
+        </div>
+
+    </div>
+
+<div class="container">
+    <h1 id="heading">HELP CENTRE</h1>
+    <form id="loginForm">
+        <div class="flexcont">
+            <div class="details">
+                <p>First Name</p>
+                <input type="text" name="naam" id="email" placeholder="First name">
+                <p>Last Name</p>
+                <input type="text" name="name" id="email" placeholder="Last name">
+                <p>Email</p>
+                <input type="text" name="mailu" id="email" placeholder="Email">
+                <p>Phone Number</p>
+                <input type="tel" name="phone" id="phone" placeholder="+91-1234567890">
+                <p>Message</p>
+                <textarea placeholder="Desrcibe your Issue"></textarea>
+            </div> 
+            <div class="imgflex">
+            </div>
+        </div>
+    </form>
+    <button type="button" value="Register" id="signInButton">SEND MESSAGE</button>
+</div>
+
+<script src = "HelpPage.js"></script>
+</body>
+</html>
