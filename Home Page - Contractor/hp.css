@@ -81,11 +81,20 @@ body {
     padding-top:2vh;
 }
 
+.column li
+{
+    padding-bottom:0.5vw;
+}
+.column p
+{
+    margin-bottom:0.5vw;
+}
+
 a {
     color: #e5d5bc;
     text-decoration: none;
     font-family: "Mukta Vaani", sans-serif;
-    font-size:2.3vh;
+    font-size:2.05vh;
 }
 
 #content
@@ -100,6 +109,7 @@ a {
     margin-top: -1vw;
     font-family: "Mukta Vaani", sans-serif;
     font-size:2.5vh;
+    margin-bottom:1vw;
 
 }
 
@@ -314,6 +324,7 @@ p
     width:45vw;
     height:29vw;
     margin-left:1vw;
+    border-radius:3vw;
   }
 
   #subh
@@ -327,6 +338,7 @@ p
 
   .subcont p{
     margin-left:8vw;
+    margin-top:1vw;
     font-size:1.3vw;
     margin-right:7vw;
     color:white;
@@ -336,7 +348,7 @@ p
   #buttu
   {
     margin-left:8vw;
-    margin-top:1vw;
+    margin-top:1.7vw;
     width:15vw;
     height:3vw;
     border-radius:2vw;
@@ -344,7 +356,6 @@ p
     background-color: #e5d5bc;
     font-size:1vw;
   }
-
   #buttu:hover
   {
     background-color:#282727;
@@ -372,6 +383,7 @@ p
   #pararev
   {
     margin-left:20vw;
+    margin-top:1.1vw;
     margin-right:20vw;
     text-align:center;
     font-size: 2.2vh;
@@ -403,7 +415,7 @@ p
   
   #per3
   {
-    height:4.5vw;
+    height:4.8vw;
   }
 
   .revi1
@@ -416,7 +428,7 @@ p
     background-color:#EFF0EC;
     border-radius:2vw;
     font-family: "Mukta Vaani", sans-serif;
-    font-size:1.7vh;
+    font-size:1.9vh;
   }
 
   .revi2
@@ -429,7 +441,7 @@ p
     background-color:#EFF0EC;
     border-radius:2vw;
     font-family: "Mukta Vaani", sans-serif;
-    font-size:1.7vh;
+    font-size:1.9vh;
   }
 
   .revi3
@@ -442,7 +454,7 @@ p
     background-color:#EFF0EC;
     border-radius:2vw;
     font-family: "Mukta Vaani", sans-serif;
-    font-size:1.7vh;
+    font-size:1.9vh;
   }
 .footer li{
     list-style : none;

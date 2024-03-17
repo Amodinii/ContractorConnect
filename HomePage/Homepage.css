@@ -81,14 +81,21 @@ body {
     font-family: "Mukta Vaani", sans-serif;
     padding-top:2vh;
 }
+.column li
+{
+    padding-bottom:0.5vw;
+}
+.column p
+{
+    margin-bottom:0.5vw;
+}
 
 a {
     color: #e5d5bc;
     text-decoration: none;
-    font-family: "Monda";
-    font-size:2.3vh;
+    font-family: "Mukta Vaani", sans-serif;
+    font-size:2.05vh;
 }
-
 #content
 {
     text-align:justify;
@@ -101,7 +108,7 @@ a {
     margin-top: -1vw;
     font-family: "Mukta Vaani", sans-serif;
     font-size:2.5vh;
-
+    margin-bottom:1vw;
 }
 
 p
@@ -327,15 +334,15 @@ p
   #subh
   {
     color:#e5d5bc ;
-    font-size:3vw;
     margin-left:6vw;
-    margin-top:5vw;
+    margin-top:9vw;
     font-family: "Mukta Vaani", sans-serif;
-    font-size:5vw;
+    font-size:4vw;
   }
 
   .subcont p{
     margin-left:6vw;
+    margin-top:0.5vw;
     font-size:1.3vw;
     margin-right:6vw;
     color:white;
@@ -383,12 +390,12 @@ p
   #pararev
   {
     margin-left:20vw;
+    margin-top:1.1vw;
     margin-right:20vw;
     text-align:center;
-    font-size: 2vh;
+    font-size: 2.2vh;
     font-family: "Mukta Vaani", sans-serif;
   }
-
   .revicont img
   {
     width:14vw;
@@ -414,7 +421,7 @@ p
   
   #per3
   {
-    height:4.5vw;
+    height:4.8vw;
   }
 
   .revi1
@@ -427,7 +434,7 @@ p
     background-color:#EFF0EC;
     border-radius:2vw;
     font-family: "Mukta Vaani", sans-serif;
-    font-size:1.7vh;
+    font-size:1.9vh;
   }
 
   .revi2
@@ -440,7 +447,7 @@ p
     background-color:#EFF0EC;
     border-radius:2vw;
     font-family: "Mukta Vaani", sans-serif;
-    font-size:1.7vh;
+    font-size:1.9vh;
   }
 
   .revi3
@@ -453,7 +460,7 @@ p
     background-color:#EFF0EC;
     border-radius:2vw;
     font-family: "Mukta Vaani", sans-serif;
-    font-size:1.7vh;
+    font-size:1.9vh;
   }
   .footer li{
     list-style : none;
@@ -464,29 +471,3 @@ p
     font-family: "Mukta Vaani", sans-serif;
 }
 
-.locations {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    position:absolute;
-    top:200%;
-}
-
-.location-map {
-    flex: 1;
-    margin-right: 20px; /* Adjust as needed */
-}
-
-.location-list {
-    flex: 1;
-}
-
-.location-list ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.location-list ul li {
-    margin-bottom: 10px;
-}
