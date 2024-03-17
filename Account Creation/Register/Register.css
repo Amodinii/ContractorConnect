@@ -130,7 +130,6 @@ input, #userType {
     margin-top: 0.4vw;
     color: #e5d5bc;
     font-family: "Monda", sans-serif;
-    display: block;
     text-align: center;
     font-size: 1vw;
     padding: 0.5vw;
@@ -139,4 +138,5 @@ input, #userType {
 .textlow {
     margin-top: -25vh;
     margin-left: -21vw;
+    color: #e5d5bc;
 }

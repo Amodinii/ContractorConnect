@@ -146,8 +146,10 @@ a
 }
 
 .textlow{
-    margin-top: -25vh;
-    margin-left:-21vw;
+    z-index: 3;
+    position: absolute;    
+    margin-top: -20vh;
+    margin-left: 9vw;
 }
 
 .eye-icon {
