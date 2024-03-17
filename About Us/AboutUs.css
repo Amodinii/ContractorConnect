@@ -1,0 +1,283 @@
+@font-face {
+    font-family: "Monda";
+    src: url("Monda-Regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+img
+{
+    width: 10vw;
+    height: 8vw;
+    float: left;
+}
+
+
+
+body {
+    background-color: white;
+    overflow-x: hidden;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar a {
+    color: black;
+    text-align: center;
+    margin: 1.5vw;
+    text-decoration: none;
+    padding: 1vw;
+    font-size:1.2vw;
+    font-family: "Mukta Vaani", sans-serif;
+}
+
+.navbar a:hover {
+    display: inline-block;
+    color: #e6bc7c;
+    
+}
+
+#pehla
+{
+    margin-left: -5.9vw;
+}
+
+.footer {
+    padding:1vw;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #282727;
+    color: #e5d5bc;
+    position: absolute;
+    top: 237vh;
+    bottom:0;
+    left:0;
+    height: 39vh;
+    font-family: "Mukta Vaani", sans-serif;
+}
+
+.left {
+    flex: 1;
+    text-align: left;
+    padding: 2vw;
+    font-family: "Mukta Vaani", sans-serif;
+}
+
+.column {
+    flex: 1;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    font-size: 2.3vh;
+    font-family: "Mukta Vaani", sans-serif;
+    padding-top:2vh;
+}
+
+a {
+    color: #e5d5bc;
+    text-decoration: none;
+    font-family: "Monda";
+    font-size:2.3vh;
+}
+
+#content
+{
+    text-align:justify;
+    font-family: "Mukta Vaani", sans-serif;
+    font-size:2vh;
+}
+
+#topic
+{
+    margin-top: -1vw;
+    font-family: "Mukta Vaani", sans-serif;
+    font-size:2.5vh;
+
+}
+
+p
+{
+    font-family: "Mukta Vaani", sans-serif;
+}
+
+.contactlist{
+    font-size: 2.3vh;
+}
+
+.contactlist{
+    font-size: 2.3vh;
+}
+
+.text-blk-heading {
+    font-size: 4.5vw; 
+    font-weight: 700;
+    margin-bottom: 1.25vw; 
+    position: absolute;
+    left:40%;
+    top:12%;
+    color: #282727;
+}
+
+.text-blksubHeading {
+    margin:10vh;
+    font-size: 1.5vw;
+    line-height: 2vw; 
+    margin-left:10vw;
+    margin-right: 10vw;
+    text-align: center;
+    padding-top:3vh;
+    color:#282727;
+}
+
+/*Account Info*/
+#Account{
+    height: 2.5vw;
+    width: 2.5vw;
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    padding-top: 3vh;
+    padding-right: 2vw;
+    position:relative;
+}
+
+.AccountDrop {
+    display: none;
+    position: absolute;
+    top: 9vh;
+    right: 1vw;
+    background-color: #eff0ec;
+    min-width: 1vw;
+    box-shadow: 0 1vh 1vw 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius:1vw;
+}
+
+.AccountDrop a {
+    color: #282727;
+    padding: 0.5vw 1vh;
+    text-decoration: none;
+    display: block;
+    font-family: "Mukta Vaani", sans-serif;
+}
+
+.AccountDrop a:hover {
+    border-radius: 1vw;
+    background-color: #e5d5bc;
+    color:#282727;
+}
+
+/* Ensure the whole page takes up the entire viewport */
+html, body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the team section vertically and horizontally */
+.meet-our-team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    padding-right:10vw; /* Adjust padding as needed */
+    padding-left:10vw;
+    background-color: #282727;
+    margin-top:11vh;
+}
+.team-heading{
+    position : absolute;
+    top:95%;
+    font-size:10vh;
+    color : #e5d5bc;
+    font-family: "Mukta Vaani", sans-serif;
+}
+/* Style the team member container */
+.team-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the start of the flex container */
+    width: 100%;
+}
+
+/* Style individual team member */
+.team-member {
+    text-align: center;
+    padding: 0 1vw; /* Adjust padding as needed */
+}
+
+/* Style the images */
+.team-member img {
+    width: 15vw; /* Adjust size as needed */
+    height: auto;
+    padding: 1vw;
+}
+
+/* Style the name and LinkedIn link */
+.team-member a {
+    margin: 0;
+    font-size: 1.5vw; /* Adjust font size as needed */
+    color:#e5d5bc;
+    font-family: "Mukta Vaani", sans-serif;
+}
+
+
+  .footer li{
+    list-style : none;
+    font-family: "Mukta Vaani", sans-serif;
+}
+
+.column a{
+    font-family: "Mukta Vaani", sans-serif;
+}
+
+.locations {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position:absolute;
+    top:168%;
+}
+
+.location-map {
+    flex: 1;
+}
+
+.location-map img{
+    height: 70vh;
+    width: auto;
+    margin-right:19vw;
+    margin-bottom:18vh;
+    margin-top:-3vh;
+}
+
+
+.heading{
+    font-size: 4vh;
+    position:relative;
+    font-family: "Mukta Vaani", sans-serif;
+    color:#282727;
+}
+
+.column1,
+.column2 {
+    font-size: 3vh;
+    font-family: "Mukta Vaani", sans-serif;
+    list-style: none;
+    color: #282727;
+}
+.column2{
+    margin-left:20vw;
+    margin-top:-55vh;
+}
