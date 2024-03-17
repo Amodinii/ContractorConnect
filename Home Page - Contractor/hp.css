@@ -1,10 +1,14 @@
 @font-face {
-    font-family: "Monda";
+    font-family: "Mukta Vaani", sans-serif;
     src: url("Monda-Regular.ttf") format("ttf");
     font-weight: normal;
     font-style: normal;
 }
 
+*{
+    margin:0;
+    padding:0;
+}
 img
 {
     width: 10vw;
@@ -54,16 +58,18 @@ body {
     background-color: #282727;
     color: #e5d5bc;
     position: absolute;
-    top: 249vh;
+    top: 237vh;
     bottom:0;
     left:0;
     height: 39vh;
+    font-family: "Mukta Vaani", sans-serif;
 }
 
 .left {
     flex: 1;
     text-align: left;
     padding: 2vw;
+    font-family: "Mukta Vaani", sans-serif;
 }
 
 .column {
@@ -71,33 +77,35 @@ body {
     margin-right: 2vw;
     margin-left: 2vw;
     font-size: 2.3vh;
+    font-family: "Mukta Vaani", sans-serif;
+    padding-top:2vh;
 }
 
 a {
     color: #e5d5bc;
     text-decoration: none;
-    font-family: "Monda";
+    font-family: "Mukta Vaani", sans-serif;
     font-size:2.3vh;
 }
 
 #content
 {
     text-align:justify;
-    font-family: "Monda";
-    font-size:2.3vh;
+    font-family: "Mukta Vaani", sans-serif;
+    font-size:2vh;
 }
 
 #topic
 {
     margin-top: -1vw;
-    font-family: "Monda";
+    font-family: "Mukta Vaani", sans-serif;
     font-size:2.5vh;
 
 }
 
 p
 {
-    font-family: "Monda";
+    font-family: "Mukta Vaani", sans-serif;
 }
 
 .contactlist{
@@ -314,6 +322,7 @@ p
     font-size:3vw;
     margin-left:8vw;
     margin-top:8.5vw;
+    font-family: "Mukta Vaani", sans-serif;
   }
 
   .subcont p{
@@ -357,6 +366,7 @@ p
     margin-top:4vw;
     margin-left:31vw;
     font-size:3vw;
+    font-family: "Mukta Vaani", sans-serif;
   }
 
   #pararev
@@ -364,6 +374,8 @@ p
     margin-left:20vw;
     margin-right:20vw;
     text-align:center;
+    font-size: 2.2vh;
+    font-family: "Mukta Vaani", sans-serif;
   }
 
   .revicont img
@@ -403,6 +415,8 @@ p
     width:25vw;
     background-color:#EFF0EC;
     border-radius:2vw;
+    font-family: "Mukta Vaani", sans-serif;
+    font-size:1.7vh;
   }
 
   .revi2
@@ -414,6 +428,8 @@ p
     width:25vw;
     background-color:#EFF0EC;
     border-radius:2vw;
+    font-family: "Mukta Vaani", sans-serif;
+    font-size:1.7vh;
   }
 
   .revi3
@@ -425,4 +441,14 @@ p
     width:25vw;
     background-color:#EFF0EC;
     border-radius:2vw;
+    font-family: "Mukta Vaani", sans-serif;
+    font-size:1.7vh;
   }
+.footer li{
+    list-style : none;
+    font-family: "Mukta Vaani", sans-serif;
+}
+
+.column a{
+    font-family: "Mukta Vaani", sans-serif;
+}
