@@ -8,6 +8,21 @@ document.getElementById("signInButton").addEventListener("click", function() {
     } 
 });
 
+// Function to toggle password visibility
+function togglePasswordVisibility() {
+    var passwordInput = document.getElementById("password");
+    var eyeIcon = document.querySelector(".eye-icon");
+
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        eyeIcon.innerHTML = '<i class="fas fa-eye-slash"></i>'; // Change icon to hide password
+    } else {
+        passwordInput.type = "password";
+        eyeIcon.innerHTML = '<i class="fas fa-eye"></i>'; // Change icon to show password
+    }
+}
+
+
 document.addEventListener("DOMContentLoaded", function() {
     var signInButton = document.getElementById("signInButton");
 
