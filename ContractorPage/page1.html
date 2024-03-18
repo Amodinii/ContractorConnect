@@ -7,14 +7,26 @@
 <link rel="stylesheet" href="page1.css">
 </head>
 <body>
-    <img src="Gear.png" alt="gear" id="geartop">
-    <img src="Gear.png" alt="gear" id="gearbottom">
-    <img src="Logo - PNG.png" alt="logo" id="logo">
+    <img src="Logo - PNG.png" alt="Logo Image" map="#mymap">
+    <img src="Account Logo Thing.png" alt="Account" id="Account" onclick="toggleDropdown()">
+    <div id="AccountDrop" class="AccountDrop">
+        <a href="">SETTINGS</a>
+        <a href="">LOG OUT</a>
+    </div>
+
+    <div class="navbar">
+            <a href="Homepage.html" id="pehla">HOME</a>
+            <a href="samp.html">DASHBOARD</a>
+            <a href="page1.html">CONTRACTOR</a>
+            <a href="AboutUs.html">ABOUT</a>
+            <a href="HelpPage.html">HELP</a>
+    </div>
+    <img src="banner.png" alt="Banner" id="bannu">
 <div class="container">
-    <h1>Find Your Vendor!</h1>
     <form id="filterForm">
     <div class="form-group">
-        <label for="manpower">Manpower:</label>
+        <label for="manpower">Manpower</label>
+        <br>
         <select id="manpower">
             <option value="" disabled selected hidden>Select Vendor ManPower</option>
         <option value="lt50">Less than 50</option>
@@ -24,15 +36,18 @@
         </select>
     </div>
     <div class="form-group">
-        <label for="location">Location:</label>
+        <label for="location">Location</label>
+        <br>
         <input type="text" id="location" placeholder="Enter location">
     </div>
     <div class="form-group">
-        <label for="price">Price (in lakhs rupees):</label>
+        <label for="price">Price (in lakhs rupees)</label>
+        <br>
         <input type="range" id="price" min="0" max="100" step="1" value="0" class="slider">
     </div>
     <div class="form-group">
-        <label for="field">Field:</label>
+        <label for="field">Field</label>
+        <br>
         <select id="field">
             <option value="" disabled selected hidden>Select Vendor Domain</option>
         <option value="construction">Construction</option>
@@ -43,10 +58,45 @@
     </div>
     <div class="form-group">
         <label for="time">Completion Time (in weeks):</label>
+        <br>
         <input type="range" id="time" min="0" max="100" step="1" value="1" class="slider">
     </div>
-    <button type="button" value="Register" id="sig">SEARCH VENDORS</button>
+    <button type="button" value="Register" id="sig">SEARCH</button>
     </form>
 </div>
+</div>
+<map name = "mymap">
+    <area shape="rect" coords="2,2,4,4" alt="ContractorConnect" href="Homepage.html">
+</map>
+<footer>
+    <div class="footer">
+        <div class="left">
+            <p id="topic">ABOUT US</p>
+            <p id="content">Elevate your vendor selection process with Contractor Connect! The Ultimate solution for seamless company-agent connections. Our smart matching algorithm, comprehensive vendor database, and user-friendly interface ensure efficient collaborations. Stay informed with real-time updates in a secure, customizable environment. Experience hassle-free vendor hiring today.</p>
+        </div>
+        <div class="column">
+            <p style="font-size: 2.5vh; margin-bottom:1vw;">FOLLOW THE TEAM!</p>
+            <div class="contactlist">
+                <li><a href="https://www.linkedin.com/in/nottpande/"> Aditya Pande</a></li>
+                <li><a href="https://www.linkedin.com/in/amodini-a-p-892aa8265/"> Amodini A P</a></li>
+                <li><a href="https://www.linkedin.com/in/parth-chandel-98880226b/"> Parth Chandel</a></li>
+                <li><a href=""> Mihirchandra Loke</a></li>
+                <li><a href="https://www.linkedin.com/in/isathyam31/"> Sathyam A</a></li>
+            </div>
+        </div>
+        <div class="column">
+            <p style="font-size: 2.5vh; margin-bottom:1vw;">WANT HELP?</p>
+            <li><a href="">Customer Care</a></li>
+            <li><a href="">Email : example@example.com</a></li>
+            <li><a href="">Phone : 1234567890</a></li>
+        </div>
+        <div class="column">
+            <p>HELP US IMPROVE</p>
+            <p>PROVIDE US A FEEDBACK!</p>
+            <li><a href="">feedbacks@example.com</a></li>
+        </div>           
+    </div>
+</footer>
+<script src="page1.js"></script>
 </body>
 </html>
