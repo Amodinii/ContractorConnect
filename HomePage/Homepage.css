@@ -81,21 +81,14 @@ body {
     font-family: "Mukta Vaani", sans-serif;
     padding-top:2vh;
 }
-.column li
-{
-    padding-bottom:0.5vw;
-}
-.column p
-{
-    margin-bottom:0.5vw;
-}
 
 a {
     color: #e5d5bc;
     text-decoration: none;
-    font-family: "Mukta Vaani", sans-serif;
-    font-size:2.05vh;
+    font-family: "Monda";
+    font-size:2.3vh;
 }
+
 #content
 {
     text-align:justify;
@@ -108,7 +101,7 @@ a {
     margin-top: -1vw;
     font-family: "Mukta Vaani", sans-serif;
     font-size:2.5vh;
-    margin-bottom:1vw;
+
 }
 
 p
@@ -124,7 +117,7 @@ p
     font-size: 2.3vh;
 }
 
-/Image Slider/
+/*Image Slider*/
 
 .gallery-wrap
 {
@@ -275,7 +268,7 @@ p
     margin-top:12vh;
 }
 
-/Account Info/
+/*Account Info*/
 #Account{
     height: 2.5vw;
     width: 2.5vw;
@@ -314,7 +307,7 @@ p
     color:#282727;
 }
 
-  /SECOND SECTION/
+  /*SECOND SECTION*/
   .subcont
   {
     display:flex;
@@ -334,15 +327,15 @@ p
   #subh
   {
     color:#e5d5bc ;
+    font-size:3vw;
     margin-left:6vw;
-    margin-top:9vw;
+    margin-top:5vw;
     font-family: "Mukta Vaani", sans-serif;
-    font-size:4vw;
+    font-size:5vw;
   }
 
   .subcont p{
     margin-left:6vw;
-    margin-top:0.5vw;
     font-size:1.3vw;
     margin-right:6vw;
     color:white;
@@ -370,7 +363,7 @@ p
     color:#e5d5bc;
   }
 
-  /REVIEW SECTION/
+  /*REVIEW SECTION*/
   .revicont
   {
     margin-top:-6vw;
@@ -390,12 +383,12 @@ p
   #pararev
   {
     margin-left:20vw;
-    margin-top:1.1vw;
     margin-right:20vw;
     text-align:center;
-    font-size: 2.2vh;
+    font-size: 2vh;
     font-family: "Mukta Vaani", sans-serif;
   }
+
   .revicont img
   {
     width:14vw;
@@ -421,7 +414,7 @@ p
   
   #per3
   {
-    height:4.8vw;
+    height:4.5vw;
   }
 
   .revi1
@@ -434,7 +427,7 @@ p
     background-color:#EFF0EC;
     border-radius:2vw;
     font-family: "Mukta Vaani", sans-serif;
-    font-size:1.9vh;
+    font-size:1.7vh;
   }
 
   .revi2
@@ -447,7 +440,7 @@ p
     background-color:#EFF0EC;
     border-radius:2vw;
     font-family: "Mukta Vaani", sans-serif;
-    font-size:1.9vh;
+    font-size:1.7vh;
   }
 
   .revi3
@@ -460,7 +453,7 @@ p
     background-color:#EFF0EC;
     border-radius:2vw;
     font-family: "Mukta Vaani", sans-serif;
-    font-size:1.9vh;
+    font-size:1.7vh;
   }
   .footer li{
     list-style : none;
