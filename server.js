@@ -104,4 +104,24 @@ app.post('/signin', async (req, res) => {
   }
 });
 
+app.get('/companies', async(req,res)=>{
+  try{
+    const companies = await Companyuser.find().exec();
+    res.status(200).json(companies);
+  }
+  catch(error){
+    res.status(500).send({message: "Internal server error"});
+  }
+});
+
+app.get('/contractors', async(req,res)=> {
+  try{
+    const contractors = await Contractoruser.find().exec();
+    res.status(200).json(contractors);
+  }
+  catch(error){
+    res.status(500).send({message: "Internal server error"});
+  }
+});
+
 app.listen(port, () => console.log(`Server running on port ${port}`));
