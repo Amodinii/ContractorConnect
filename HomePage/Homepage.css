@@ -59,10 +59,10 @@ body {
     background-color: #282727;
     color: #e5d5bc;
     position: absolute;
-    top: 230vh;
+    top: 237vh;
     bottom:0;
     left:0;
-    height: 42vh;
+    height: 39vh;
     font-family: "Mukta Vaani", sans-serif;
 }
 
@@ -80,7 +80,6 @@ body {
     font-size: 2.3vh;
     font-family: "Mukta Vaani", sans-serif;
     padding-top:2vh;
-    text-align: left;
 }
 .column li
 {
@@ -125,7 +124,7 @@ p
     font-size: 2.3vh;
 }
 
-/*Image Slider*/
+/Image Slider/
 
 .gallery-wrap
 {
@@ -276,7 +275,7 @@ p
     margin-top:12vh;
 }
 
-/*Account Info*/
+/Account Info/
 #Account{
     height: 2.5vw;
     width: 2.5vw;
@@ -315,7 +314,7 @@ p
     color:#282727;
 }
 
-  /*SECOND SECTION*/
+  /SECOND SECTION/
   .subcont
   {
     display:flex;
@@ -371,7 +370,7 @@ p
     color:#e5d5bc;
   }
 
-  /*REVIEW SECTION*/
+  /REVIEW SECTION/
   .revicont
   {
     margin-top:-6vw;
@@ -471,4 +470,3 @@ p
 .column a{
     font-family: "Mukta Vaani", sans-serif;
 }
-
