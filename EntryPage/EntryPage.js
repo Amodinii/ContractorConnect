@@ -24,8 +24,13 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('popup').style.display = 'none';
     }
 
-    // Setting timeout to show the pop-up after 30 seconds
-    setTimeout(showPopup, 30000); // 30 seconds in milliseconds
+    let popupShown = false; // Variable to track if pop-up has been shown
+    setTimeout(function() {
+        if (!popupShown) {
+            showPopup();
+            popupShown = true; // Mark pop-up as shown
+        }
+    }, 30000); // 30 seconds in milliseconds
 
     // To toggle the dropdown
     function toggleJoinDropdown() {
@@ -56,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    //To show/hide the dropdown on hover
+    // To show/hide the dropdown on hover
     joinNowBtn.addEventListener("mouseover", function() {
         joinDropdown.classList.add("show");
     });
