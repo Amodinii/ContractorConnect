@@ -25,8 +25,8 @@ body {
     padding:1vw;
     display: flex;
     justify-content: flex-start;
-    background-color: #282727;
-    color: #e5d5bc;
+    background-color: #222831;
+    color: #EEEEEE;
     position: absolute;
     top: 244vh;
     bottom:0;
@@ -52,7 +52,7 @@ body {
 }
 
 a {
-    color: #e5d5bc;
+    color: #EEEEEE;
     text-decoration: none;
     font-family: "Monda";
     font-size:2.3vh;
@@ -285,7 +285,7 @@ p
     width: 57vw;
     height: 59vh; 
     overflow: none;
-    background-color: #282727 ;
+    background-color: #222831 ;
     box-shadow: 0 4vw 8vw rgba(0, 0, 0, 0.1);
     border-radius: 2vw; 
   }
@@ -293,7 +293,7 @@ p
   /* Popup content */
   .popup-content {
     display:flex;
-    background-color: #282727;
+    background-color: #222831;
     background-size: cover;
     padding: 2vw;
     border-radius: 10px; 
@@ -309,7 +309,7 @@ p
 #pop,#lolo {
     margin-top: 2vw; /* Adjusted margin-top */
     margin-left: 0.7vw; /* Adjusted margin-left */
-    color: #e5d5bc;
+    color: #EEEEEE;
     text-align: left;
     font-family: "BebasNeue", sans-serif;
     font-size: 5.2vw; /* Adjusted font-size */
@@ -324,7 +324,7 @@ p
 
 #peeps {
     width: 36vw;
-    height: 60.9vh;
+    height: 61.7vh;
     position: absolute;
     padding-left: 2vw;;
     margin-bottom: 1.6vw;
@@ -333,7 +333,7 @@ p
 }
 
 .slogan {
-    color: #e5d5bc;
+    color: #76ABAE;
     text-align: left;
     font-size: 2.5vw;
     margin-top: 2vw;
@@ -344,18 +344,20 @@ p
 
 .slogan p{
     margin-top: -5vw;
+    padding-top: -10vh;
+    margin-bottom: 2vw;
 }
 
 #reg {
     border: 2px solid white; 
-    color: #282727;
+    color: #76ABAE;
     font-family: "BebasNeue", sans-serif;
     font-size: 2.2vw;
     font-weight: bold;
     width: 8vw;
     height: 3.5vw;
     border-radius: 3rem;
-    background-color: #e5d5bc;
+    background-color: #222831;
     margin-right: 5vw;
     margin-left: 0.7vw;
     margin-top: 5vw;
@@ -364,22 +366,22 @@ p
 
 #sig {
     border: 2px solid white; 
-    color: #282727;
+    color: #76ABAE;
     font-family: "BebasNeue", sans-serif;
     font-size: 2.2vw;
     font-weight: bold;
     width: 8vw;
     height: 3.5vw;
     border-radius: 3rem;
-    background-color: #e5d5bc;
+    background-color: #222831;
     margin-left: -3vw;
 }
 
 #reg:hover, #sig:hover
 {
-    border: 2px solid #e5d5bc;
-    background-color: #282727;
-    color: #e5d5bc;
+    border: 2px solid #76ABAE;
+    background-color: #76ABAE;
+    color: #222831;
 }
 
 .buttons{
@@ -394,7 +396,7 @@ p
   
   /* Close button */
   .close {
-    color: #e5d5bc;
+    color: #76ABAE;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -411,7 +413,7 @@ p
   .subcont
   {
     display:flex;
-    background-color:#282727;
+    background-color:#222831;
     margin-top:8vw;
     height:30vw;
     width:100vw;
@@ -427,7 +429,7 @@ p
 
   #subh
   {
-    color:#e5d5bc;
+    color:#EEEEEE;
     font-size:3vw;
     margin-left:4vw;
     margin-top:3vw;
@@ -440,7 +442,7 @@ p
 
   li
   {
-    color:#e5d5bc;
+    color:#EEEEEE;
     font-size:1.4vw;
     font-family: "Mukta Vaani", sans-serif; 
   }
@@ -485,7 +487,7 @@ p
     margin-top:0.4vw;
     text-align:justify;
     padding:1vw;
-    color:#282727;
+    color:#222831;
     font-size:1vw;
   }
 
@@ -539,12 +541,11 @@ p
     font-size:1.7vh;
   }
 
-  /* Add this to style the JOIN NOW button */
 #joinNowBtn {
     position: fixed;
     top: 4vh;
     right: 2vw;
-    background-color: #282727;
+    background-color: #222831;
     color: white;
     border: none;
     padding: 1vh 2vw;
@@ -554,7 +555,6 @@ p
     margin-bottom:2vh;
 }
 
-/* Add this to style the dropdown */
 .joinDropdown {
     display: none;
     position: fixed;
@@ -576,8 +576,8 @@ p
 }
 
 .joinDropdown a:hover {
-    background-color: #e5d5bc;
-    color:#282727;
+    background-color: #76ABAE;
+    color:#222831;
     border-radius: 1vw;
 }
 
