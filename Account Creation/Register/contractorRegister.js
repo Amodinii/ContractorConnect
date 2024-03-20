@@ -3,7 +3,6 @@ document.getElementById('sig').addEventListener('click', function(e) {
     const userData = {
       Email: email,
       ContractorName: document.getElementById('yourname').value,
-      LicenceNumber: document.getElementById('mailu').value,
       PhoneNumber: document.getElementById('phno').value,
       //attachments ka socho
       Address: document.getElementById('address').value,
