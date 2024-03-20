@@ -1,48 +1,61 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIGN IN</title>
-    <link rel="stylesheet" href="SignPage.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mukta+Vaani:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body>
-<!--<img src="Logo - PNG.png" alt="logo" id="logo">-->
-<div class="container">
-    <h1 id="heading">SIGN IN</h1>
-    <form id="loginForm">
-        <div class="flexcont">
-            <div class="details">
-
-                <p>Email</p>
-                <input type="text" name="mailu" id="email" placeholder="Enter your email">
-                <p>Password</p>
-                
-                <div class="password-container">
-                    <input type="password" name="password" id="password" placeholder="Enter your password">
-                    <span id="showPassword" class="eye-icon" onclick="togglePasswordVisibility()"><i class="fas fa-eye"></i></span>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SIGN IN</title>
+        <link rel="stylesheet" href = "signin.css">
+    </head>
+    <body>
+      <img src="picuu.png" alt="image log" id="picuu">
+      <section class="forms-section">
+        <h1 class="section-title"></h1>
+        <div class="forms">
+          <div class="form-wrapper is-active">
+            <button type="button" class="switcher switcher-login">
+              Login
+              <span class="underline"></span>
+            </button>
+            <form class="form form-login">
+              <fieldset>
+                <legend>Please, enter your email and password for login.</legend>
+                <div class="input-block">
+                  <label for="login-email">E-mail</label>
+                  <input id="login-email" type="email" required>
                 </div>
-                
-
-                <input type="checkbox" id="checku">
-                <label for="checku">Remember Me</label>
-            </div>
-            <div class="imgflex">
-                <img id="photu" src="mainimg.png" alt="Image">
-            </div>
+                <div class="input-block">
+                  <label for="login-password">Password</label>
+                  <input id="login-password" type="password" required>
+                </div>
+              </fieldset>
+              <button type="submit" class="btn-login">LOGIN</button>
+            </form>
+          </div>
+          <div class="form-wrapper">
+            <button type="button" class="switcher switcher-signup">
+              Sign Up
+              <span class="underline"></span>
+            </button>
+            <form class="form form-signup">
+              <fieldset>
+                <legend>Please, enter your email, password and password confirmation for sign up.</legend>
+                <div class="input-block">
+                  <label for="signup-email">E-mail</label>
+                  <input id="signup-email" type="email" required>
+                </div>
+                <p>User Type</p>
+                <div class="dropdown">
+                    <select id="userType" name="userType">
+                        <option value="contractor">Contractor</option>
+                        <option value="company">Company</option>
+                    </select>
+                </div>
+              </fieldset>
+              <button type="submit" class="btn-signup">CONTINUE</button>
+            </form>
+          </div>
         </div>
-    </form>
-    <a href=""><button type="button" value="Register" id="signInButton">SIGN IN</button></a>
-    <div class="textlow">
-        <a href="">Forgot Password?</a>
-        <a id="a2" href="../Register/Register.html">New Here? Register Now!</a>
-    </div>
-</div>
-
-<script src = "SignPage.js"></script>
-</body>
+      </section>
+          <script src="signin.js"></script>
+    </body>
 </html>
