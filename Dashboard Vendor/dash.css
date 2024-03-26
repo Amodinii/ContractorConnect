@@ -149,7 +149,7 @@ a {
 
 .app-body-sidebar {
     right:7vw;
-    position:fixed;
+    position:relative;
 }
 
 .footer {
@@ -855,9 +855,9 @@ button {
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 	z-index: 1;
 	top: 18vh;
-	right: 5vw;
 	border-radius: 2vh;
 	margin-left:14vw;
+	right:5vw;
 }
 
 .dropdown-content ul {
@@ -868,7 +868,9 @@ button {
 .dropdown-content ul li {
 	list-style-type: none;
 	margin: 0;
-	padding:1vw;
+	padding-right:1vw;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
 	font-size:1.5vh;
 }
 
@@ -876,6 +878,10 @@ button {
 	color: black;
 	padding: 1vw;
 	text-decoration: none;
+}
+
+.dropdown-content a:Hover{
+	font-size: 2vh;
 }
 
 .user-profile:hover .dropdown-content,
