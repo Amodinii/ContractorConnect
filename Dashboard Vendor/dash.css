@@ -857,6 +857,7 @@ button {
 	top: 18vh;
 	right: 15vw;
 	border-radius: 2vh;
+	margin-left:14vw;
 }
 
 .dropdown-content ul {
