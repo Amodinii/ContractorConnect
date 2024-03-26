@@ -13,24 +13,42 @@
 }
 
 body {
-    background-color: #f8f9fa; 
+    background-color: #222831; 
+    overflow-x:hidden;
 }
 
+img
+{
+    z-index:0;
+    width: 102vw;
+    margin-top:-2vw;
+    margin-left:-2vw;
+    height:15vw;
+}
+
+label{
+    font-family: "Mukta Vaani", sans-serif;
+    font-size:0.5vw;
+}
 .container {
     text-align: center;
-    background-color: #282727;
+    background-color: #EEEEEE;
     border-radius: 2vw;
     box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1);
-    margin: 3vh auto;
-    padding: 10vh 2vh;
-    max-width: 40vw;
+    margin-top:-20vh;
+    margin-left:17vw;
+    padding: 2vh;
+    padding-right:3vw;
+    padding-left:3vw;
+    max-width: 60vw;
 }
 
 #heading {
     font-family: "Bebas Neue", sans-serif;
-    font-size: 2.5vw;
-    color: #e5d5bc;
+    font-size: 5vw;
+    color: #31363F;
     margin-bottom: 1.5vh;
+    margin-top:2vh;
     font-weight: normal;
 }
 
@@ -45,9 +63,8 @@ body {
 }
 
 .label {
-    font-family: "Monda", sans-serif;
     font-size: 1.25vw;
-    color: #e5d5bc;
+    color: #31363F;
     margin-bottom: 0.1vh;
     display: block;
     text-align: left;
@@ -64,7 +81,7 @@ select {
     border: 0.1vw solid #ced4da;
     padding: 1.5vh;
     margin-bottom: 1vh;
-    font-family: "Monda", sans-serif;
+    font-family: "Mukta Vaani", sans-serif;
     font-size: 1vw;
 }
 
@@ -73,7 +90,7 @@ input[type="email"]::placeholder,
 input[type="tel"]::placeholder,
 input[type="password"]::placeholder,
 select::placeholder {
-    color: #c4c4c2;
+    color: #31363F;
 }
 
 input[type="text"]:focus,
@@ -86,27 +103,25 @@ select:focus {
 }
 
 button {
-    border: 0.1vw solid white;
-    color: #050024;
+    color: #EEEEEE;
     font-family: "Bebas Neue", sans-serif;
-    font-size: 1.25vw;
+    font-size: 1.5vw;
     width: 10vw;
     height: 6vh;
     border-radius: 1vw;
-    background-color: #e5d5bc;
-    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.3);
+    background-color: #76ABAE;
     cursor: pointer;
 }
 
 button:hover {
-    border-color: #13202c;
-    background-color: #13202c;
-    color: white;
+    border-color: #31363F;
+    background-color: #31363F;
+    color: #76ABAE;
 }
 
 .textlow a {
-    color: #e5d5bc;
-    font-family: "Monda", sans-serif;
+    color: #31363F;
+    font-family: "Mukta Vaani", sans-serif;
     display: inline-block;
     margin-top: 1vh;
     text-decoration: none;
@@ -114,7 +129,7 @@ button:hover {
 }
 
 .textlow a:hover {
-    color: #495057;
+    color: #76ABAE;
 }
 
 .selcontainer {
@@ -140,4 +155,11 @@ select {
 option {
     font-size: 1vw;
     text-align: center;
+}
+
+.input-container {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 75%;
 }

@@ -307,3 +307,19 @@ fieldset p{
 	box-shadow: inset 0 0 0 2px #76ABAE;
 	transform: translateX(30%);
 }
+
+.password-toggle {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    color: #a1b4b4;
+    font-size: 20px;
+    display: none; /* Initially hide the eye icon */
+}
+
+.password-toggle:hover {
+    color: #3b4465;
+}
