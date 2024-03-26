@@ -846,3 +846,43 @@ button {
 		box-shadow: 0 0 0 2px var(--c-gray-800), 0 0 0 4px var(--c-gray-300);
 	}
 }
+
+.dropdown-content {
+	display: none; /* Change from 'hidden' to 'none' */
+	position: absolute;
+	background-color: #f9f9f9;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	top: 18vh;
+	right: 15vw;
+	border-radius: 2vh;
+}
+
+.dropdown-content ul {
+	list-style-type: none;
+	margin: 0;
+}
+
+.dropdown-content ul li {
+	list-style-type: none;
+	margin: 0;
+	padding:1vw;
+	font-size:1.5vh;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 1vw;
+	text-decoration: none;
+}
+
+.user-profile:hover .dropdown-content,
+.user-profile:focus .dropdown-content {
+	display: block;
+}
+.user-profile img {
+	width: 60px; /* Adjust the size as needed */
+	height: 60px; /* Adjust the size as needed */
+	border-radius: 50%; /* Makes the image circular */
+	margin-left:1vw;
+}

@@ -39,21 +39,21 @@
         </div>
       </div>
       <div class="app-header-actions">
-        <button class="user-profile">
+        <div class="user-profile">
           <span>UserName</span>
           <span>
             <img src="https://assets.codepen.io/285131/almeria-avatar.jpeg" />
           </span>
-        </button>
-        <div class="app-header-actions-buttons">
-          <button class="icon-button large">
-            <i class="ph-magnifying-glass"></i>
-          </button>
-          <button class="icon-button large">
-            <i class="ph-bell"></i>
-          </button>
+          <div class="dropdown-content">
+            <ul>
+              <li><a href="profile.html">Your Profile</a></li>
+              <li><a href="#">Your Analysis</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </div>
         </div>
       </div>
+      
       <div class="app-header-mobile">
         <button class="icon-button large">
           <i class="ph-list"></i>
@@ -64,7 +64,7 @@
     <div class="app-body">
       <div class="app-body-navigation">
         <nav class="navigation">
-          <a href="#">
+          <a href="samp.html">
             <i class="ph-browsers"></i>
             <span>Dashboard</span>
           </a>
@@ -255,6 +255,16 @@
           </div>
         </section>
       </div>
+      
+      <div id="uploadFormSection" style="display: none;">
+        <form id="uploadForm">
+            <input type="file" id="fileInput" required>
+            <input type="text" id="tagsInput" placeholder="Enter tags related to the document">
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+
+    
       <div class="app-body-sidebar">
         <section class="payment-section">
           <h2>Make Payment</h2>
