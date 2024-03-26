@@ -43,10 +43,12 @@
                     Alternatively, you can select a file by <br/><strong>clicking here</strong>
                 </span>
             </button>
+            <input type="file" id="file-upload" style="display:none;" onchange="displayFileName()">
+            <p id="file-name" style="margin-top: 10px;"></p>
         </div>
         <div class="modal-footer">
             <button class="btn-secondary">Cancel</button>
-            <button class="btn-primary">Upload File</button>
+            <button class="btn-primary">Next</button>
         </div>
     </div>
     <script src="upload.js"></script>
