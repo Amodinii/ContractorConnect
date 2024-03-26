@@ -94,6 +94,7 @@ a {
 
 .app-header-actions {
 	display: flex;
+	margin-left: 15vw;
 	align-items: center;
 	@media (max-width: 1200px) {
 		display: none;
