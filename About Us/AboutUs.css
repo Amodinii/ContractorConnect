@@ -307,11 +307,10 @@ html, body {
 }
 
 .options {
-    display: none;
     position: absolute;
     background-color: #f9f9f9;
-    top: -10vh;
-    left: 50%;
+    top: 40vh;
+    left: 35%;
     right: 50%;
     width: 120px; /* Adjust width as needed */
     border: 1px solid #ccc;
@@ -337,4 +336,8 @@ html, body {
 
 .options a:hover {
     background-color: #f1f1f1;
+}
+
+.options.show {
+    display: block;
 }
