@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link rel="stylesheet" href="dash.css">
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <div class="app-header-logo">
+        <div class="logo">
+          <span class="logo-icon">
+            <img src="https://assets.codepen.io/285131/almeria-logo.svg" />
+          </span>
+          <h1 class="logo-title">
+            <span>Contractor</span>
+            <span>Connect</span>
+          </h1>
+        </div>
+      </div>
+      <div class="app-header-navigation">
+        <div class="tabs">
+          <a href="#"">
+          </a>
+          <a href="#" class="active">
+          </a>
+          <a href="#">
+          </a>
+          <a href="#">
+          </a>
+          <a href="#">
+          </a>
+          <a href="#">
+          </a>
+        </div>
+      </div>
+      <div class="app-header-actions">
+        <div class="user-profile">
+          <span>UserName</span>
+          <span>
+            <img src="https://assets.codepen.io/285131/almeria-avatar.jpeg" />
+          </span>
+          <div class="dropdown-content">
+            <ul>
+              <li><a href="profile.html">Your Profile</a></li>
+              <li><a href="#">Your Analysis</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="app-header-mobile">
+        <button class="icon-button large">
+          <i class="ph-list"></i>
+        </button>
+      </div>
+  
+    </header>
+    <div class="app-body">
+      <div class="app-body-navigation">
+        <nav class="navigation">
+          <a href="samp.html">
+            <i class="ph-browsers"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="#">
+            <i class="ph-check-square"></i>
+            <span>Your Quotations</span>
+          </a>
+          <a href="#">
+            <i class="ph-swap"></i>
+            <span>Current Contracts</span>
+          </a>
+          <a href="#">
+            <i class="ph-file-text"></i>
+            <span>Notification</span>
+          </a>
+          <a href="#">
+            <i class="ph-globe"></i>
+            <span>Previous Contracts</span>
+          </a>
+          <a href="#">
+            <i class="ph-clipboard-text"></i>
+            <span>Logout</span>
+          </a>
+        </nav>
+        <footer class="footer">
+          <h1>Contractor<br>Connect<small>©</small></h1>
+          <div>
+            ContractorConnect©<br />
+            All Rights Reserved 2021
+          </div>
+        </footer>
+      </div>
+      <div class="app-body-main-content">
+        <section class="service-section">
+          <h2>Service</h2>
+          <div class="service-section-header">
+            <div class="search-field">
+              <i class="ph-magnifying-glass"></i>
+              <input type="text" placeholder="Account number">
+            </div>
+            <div class="dropdown-field">
+              <select>
+                <option>Home</option>
+                <option>Work</option>
+              </select>
+              <i class="ph-caret-down"></i>
+            </div>
+            <button class="flat-button">
+              Search
+            </button>
+          </div>
+          <div class="mobile-only">
+            <button class="flat-button">
+              Toggle search
+            </button>
+          </div>
+          <div class="tiles">
+            <article class="tile">
+              <div class="tile-header">
+                <i class="ph-lightning-light"></i>
+                <h3>
+                  <span>Pending Quotations</span>
+                  <span>Number of Quotations yet to be uploaded</span>
+                </h3>
+              </div>
+              <a href="#">
+                <span>View More</span>
+                <span class="icon-button">
+                  <i class="ph-caret-right-bold"></i>
+                </span>
+              </a>
+            </article>
+            <article class="tile">
+              <div class="tile-header">
+                <i class="ph-fire-simple-light"></i>
+                <h3>
+                  <span>Total Quotations</span>
+                  <span>Total number of Quotations posted by you.</span>
+                </h3>
+              </div>
+              <a href="#">
+                <span>View your Quotations</span>
+                <span class="icon-button">
+                  <i class="ph-caret-right-bold"></i>
+                </span>
+              </a>
+            </article>
+            <article class="tile">
+              <div class="tile-header">
+                <i class="ph-file-light"></i>
+                <h3>
+                  <span>Pending Payment</span>
+                  <span>Payment yet to be received.</span>
+                </h3>
+              </div>
+              <a href="#">
+                <span>View Transaction History</span>
+                <span class="icon-button">
+                  <i class="ph-caret-right-bold"></i>
+                </span>
+              </a>
+            </article>
+          </div>
+          <div class="service-section-footer">
+            <p>Services are paid according to the current state of the currency and tariff.</p>
+          </div>
+        </section>
+        <section class="transfer-section">
+          <div class="transfer-section-header">
+            <h2>Your Tenders</h2>
+            <div class="filter-options">
+              <p>Here are all your recently liked tenders.</p>
+              <button class="icon-button">
+                <i class="ph-funnel"></i>
+              </button>
+              <button class="icon-button">
+                <i class="ph-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="transfers">
+            <div class="transfer">
+              <div class="transfer-logo">
+                <img src="https://assets.codepen.io/285131/apple.svg" />
+              </div>
+              <dl class="transfer-details">
+                <div>
+                  <dt>Tender-1</dt>
+                  <dd>See Documentation</dd>
+                </div>
+                <div>
+                  <dt>4012</dt>
+                  <dd>Tender ID</dd>
+                </div>
+                <div>
+                  <dt>28 Oct. 21</dt>
+                  <dd>Release Date</dd>
+                </div>
+              </dl>
+              <div class="transfer-number">
+                SEE DETAILS
+              </div>
+            </div>
+            <div class="transfer">
+              <div class="transfer-logo">
+                <img src="https://assets.codepen.io/285131/pinterest.svg" />
+              </div>
+              <dl class="transfer-details">
+                <div>
+                  <dt>Tender-2</dt>
+                  <dd>See Documentation</dd>
+                </div>
+                <div>
+                  <dt>5214</dt>
+                  <dd>Tender ID</dd>
+                </div>
+                <div>
+                  <dt>26 Oct. 21</dt>
+                  <dd>Release Date</dd>
+                </div>
+              </dl>
+              <div class="transfer-number">
+                SEE DETAILS
+              </div>
+            </div>
+            <div class="transfer">
+              <div class="transfer-logo">
+                <img src="https://assets.codepen.io/285131/warner-bros.svg" />
+              </div>
+              <dl class="transfer-details">
+                <div>
+                  <dt>Tender-3</dt>
+                  <dd>See Documentation</dd>
+                </div>
+                <div>
+                  <dt>2228</dt>
+                  <dd>Tender ID</dd>
+                </div>
+                <div>
+                  <dt>22 Oct. 21</dt>
+                  <dd>Release Date</dd>
+                </div>
+              </dl>
+              <div class="transfer-number">
+                SEE DETAILS
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+<script src="dash.js"></script>
+</body>
+</html>

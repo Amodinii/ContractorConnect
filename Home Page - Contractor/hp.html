@@ -1,99 +1,71 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home</title>
+        <title>ContractorConnect</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="hp.css">
+        <link rel="stylesheet" href="home.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
     </head>
     <body>
-        <img src="iMAGES/Logo - PNG.png" alt="Logo Image" map="#mymap">
-        <img src="iMAGES/Account Logo Thing.png" alt="Account" id="Account" onclick="toggleDropdown()">
-        <div id="AccountDrop" class="AccountDrop">
-            <a href="">SETTINGS</a>
-            <a href="">LOG OUT</a>
+        <img src="Logo.png" alt="Logo Image" map="#mymap">
         </div>
 
         <div class="navbar">
-                <a href="../Home Page - Contractor/hp.html" id="pehla">HOME</a>
-                <a href="../Dashboard - Company/samp.html">DASHBOARD</a>
-                <a href="../About Us/AboutUs.html">ABOUT</a>
-                <a href="../HelpPage/HelpPage.html">HELP</a>
+                <a href="Homepage.html" id="pehla">HOME</a>
+                <a href="">DASHBOARD</a>
+                <a href="">PROFILE</a>
+                <a href="">ABOUT US</a>
+                <a href="">HELP</a>
         </div>
-          
-        <section class="main">
-            <div class="gallery-wrap">
-                <div class="gallery">
-                    <input type="radio" name="radio-btn" id="radio1">
-                    <input type="radio" name="radio-btn" id="radio2">
-                    <input type="radio" name="radio-btn" id="radio3">
-                    <input type="radio" name="radio-btn" id="radio4">
-                    <input type="radio" name="radio-btn" id="radio5">
-                    <div class="im fir">
-                        <img src="iMAGES/1.png" alt="image-1">
-                    </div>
-                    <div class="im sec">
-                        <img src="iMAGES/2.png" alt="image-2">
-                    </div>
-                    <div class="im thir">
-                        <img src="iMAGES/3.png" alt="image-3">
-                    </div>
-                    <div class="im fou">
-                        <img src="iMAGES/4.png" alt="image-4">
-                    </div>
-                    <div class="im fif">
-                        <img src="iMAGES/5.png" alt="image-5">
-                    </div>
-
-                    <!--Automatic navigaion-->
-                    <div class="autonavi">
-                        <div class="auto-btn1"></div>
-                        <div class="auto-btn2"></div>
-                        <div class="auto-btn3"></div>
-                        <div class="auto-btn4"></div>
-                        <div class="auto-btn5"></div>
-                    </div>
-                <!--Manual navigation-->
-                    <div class="manual-navi">
-                        <label for="radio1" class="manual-btn"></label>
-                        <label for="radio2" class="manual-btn"></label>
-                        <label for="radio3" class="manual-btn"></label>
-                        <label for="radio4" class="manual-btn"></label>
-                        <label for="radio5" class="manual-btn"></label>
+        <div class="wrapper">
+            <div class="container">
+                <form role="search" method="get" class="search-form form" action="">
+                    <label>
+                        <span class="screen-reader-text">Search for...</span>
+                            <input type="search" class="search-field" placeholder="Enter the field (eg:Electrical)" value="" name="s" title="" />
+                    </label>
+                    <input type="submit" class="search-submit button" value="&#xf002" />
+                </form>
+            </div>
+        </div>
+        <h1>EXPLORE YOUR TENDERS</h1>
+        <div id="container">
+            <div id="slider-container">
+              <span onclick="slideRight()" class="btn"></span>
+                <div id="slider">
+                  <div class="slide">
+                    <span>
+                        <button class="slide-btn">INTERESTED</button>
+                    </span>
+                    <div class="pop-up">
+                        
                     </div>
                 </div>
+                  <div class="slide"><span><button class="slide-btn">INTERESTED</button></span></div>
+                  <div class="slide"><span><button class="slide-btn">INTERESTED</button><span></div>
+                  <div class="slide"><span><button class="slide-btn">INTERESTED</button></span></div>
+                  <div class="slide"><span><button class="slide-btn">INTERESTED</button></span></div>
+                  <div class="slide"><span><button class="slide-btn">INTERESTED</button></span></div>
+                  <div class="slide"><span><button class="slide-btn">INTERESTED</button></span></div>
+                  <div class="slide"><span><button class="slide-btn">INTERESTED</button></span></div>
+                  <div class="slide"><span><button class="slide-btn">INTERESTED</button></span></div>
+                  <div class="slide"><span><button class="slide-btn">INTERESTED</button></span></div>
+              </div>
+              <span onclick="slideLeft()" class="btn"></span>
             </div>
-        </section>
-        <div class="subcont">
-            <div class="subflim">
-                <img src="iMages/gtd.png" alt="Contractors" id="findy">
-            </div>
-            <div class="flexsub">
-                <h1 id="subh">GO TO YOUR DASHBOARD</h1>
-                <p id="sec">Visit your dashboard for detailed analytics and insights into your performance. Explore comprehensive data on your activities and engagement. Gain valuable insights to optimize your strategies and maximize results.</p>
-                <a href="../Dashboard - Company/samp.html"> <button id="buttu">GO TO DASHBOARD NOW!</button> </a>
-            </div>
-        </div>
-        <h1 id="revih">What They Say About Us?</h1>
-        <p id="pararev">Let's tune in to what our users have to say about their experience with us. Their voices paint a vivid picture of satisfaction and trust. From contractors to clients, our platform has become the cornerstone of seamless connections. Here's a glimpse into their thoughts, echoing the sentiment of a community built on reliability, efficiency, and success.</p>
-        <div class="revicont">
-            <div class="revi1">
-                <img src="iMAGES/per1.png" alt="Image1" id="per1">
-                <p>Joining this platform has been a game-changer for my business. Not only have I found new clients, but it's also provided consistent employment opportunities. The vetting process ensures quality, and the support team is always there when I need assistance.</p>
-            </div>
-            <div class="revi2">
-                <img src="iMAGES/per2.png" alt="Image2" id="per2">
-                <p>As a vendor, I appreciate the seamless experience this platform offers. It's incredibly easy to showcase my services and connect with potential clients. Plus, the variety of job opportunities available ensures steady income.</p>
-            </div>
-            <div class="revi3">
-                <img src="iMAGES/per3.png" alt="Image3" id="per3">
-                <p>Finding vendors through the platform has streamlined our operations significantly. The transparency and efficiency of the platform make it easy to identify and engage with skilled professionals. It's become an invaluable resource for sourcing talent and completing projects.</p>
-            </div>
-        </div>
-        <map name = "mymap">
-            <area shape="rect" coords="2,2,4,4" alt="ContractorConnect" href="hp.html">
-        </map>
-        <footer>
+          </div>
+
+          <footer>
             <div class="footer">
                 <div class="left">
                     <p id="topic">ABOUT US</p>
@@ -122,6 +94,7 @@
                 </div>           
             </div>
         </footer>
-        <script src = "hp.js"></script>
-    </body>
+            
+    <script src="home.js"></script>
+  </body>
 </html>

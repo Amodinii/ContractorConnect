@@ -39,21 +39,21 @@
         </div>
       </div>
       <div class="app-header-actions">
-        <button class="user-profile">
+        <div class="user-profile">
           <span>UserName</span>
           <span>
             <img src="https://assets.codepen.io/285131/almeria-avatar.jpeg" />
           </span>
-        </button>
-        <div class="app-header-actions-buttons">
-          <button class="icon-button large">
-            <i class="ph-magnifying-glass"></i>
-          </button>
-          <button class="icon-button large">
-            <i class="ph-bell"></i>
-          </button>
+          <div class="dropdown-content">
+            <ul>
+              <li><a href="profile.html">Your Profile</a></li>
+              <li><a href="#">Your Analysis</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </div>
         </div>
       </div>
+      
       <div class="app-header-mobile">
         <button class="icon-button large">
           <i class="ph-list"></i>
@@ -64,7 +64,7 @@
     <div class="app-body">
       <div class="app-body-navigation">
         <nav class="navigation">
-          <a href="#">
+          <a href="samp.html">
             <i class="ph-browsers"></i>
             <span>Dashboard</span>
           </a>
@@ -255,6 +255,70 @@
           </div>
         </section>
       </div>
+      
+      <div id="uploadFormSection" style="display: none;">
+        <form id="uploadForm">
+            <h2>Upload your Tender (in PDF Format)</h2>
+            <input type="file" id="fileInput" required>
+            <br>
+            <div class="fields">
+              <h2>Select the field</h2>
+            <label>
+              <input type="checkbox" id="constructionCheckbox" name="field" value="Construction and Engineering"> Construction and Engineering
+          </label>
+          <label>
+              <input type="checkbox" id="ConsultingCheckbox" name="field" value="Consulting and Professional Services"> Consulting and Professional Services
+          </label>
+          <label>
+              <input type="checkbox" id="ITCheckbox" name="field" value="Information Technology (IT) Services"> Information Technology (IT) Services
+          </label>
+          <label>
+              <input type="checkbox" id="marketingCheckbox" name="field" value="Marketing and Advertising"> Marketing and Advertising
+          </label>
+          <label>
+              <input type="checkbox" id="healthcareCheckbox" name="field" value="Healthcare and Medical Services"> Healthcare and Medical Services
+          </label>
+          <label>
+              <input type="checkbox" id="architectureCheckbox" name="field" value="Architecture and Design"> Architecture and Design
+          </label>
+          <label>
+              <input type="checkbox" id="transportationCheckbox" name="field" value="Transportation and Logistics"> Transportation and Logistics
+          </label>
+          <label>
+              <input type="checkbox" id="manufacturingCheckbox" name="field" value="Manufacturing and Production"> Manufacturing and Production
+          </label>
+          <label>
+              <input type="checkbox" id="maintenanceCheckbox" name="field" value="Maintenance and Facilities Management"> Maintenance and Facilities Management
+          </label>
+          <label>
+              <input type="checkbox" id="hospitalityCheckbox" name="field" value="Hospitality and Events Management"> Hospitality and Events Management
+          </label>
+          <label>
+              <input type="checkbox" id="securityCheckbox" name="field" value="Security Services"> Security Services
+          </label>
+          <label>
+              <input type="checkbox" id="hrCheckbox" name="field" value="Human Resources and Recruitment"> Human Resources and Recruitment
+          </label>
+          <label>
+              <input type="checkbox" id="realestateCheckbox" name="field" value="Real Estate and Property Management"> Real Estate and Property Management
+          </label>
+          <label>
+              <input type="checkbox" id="energyCheckbox" name="field" value="Energy and Utilities"> Energy and Utilities
+          </label>
+          <label> 
+            <input type="checkbox" id="otherCheckbox" name="field" value="Other"> Other
+        </label>
+            <div class="other-field" style="display: none;">
+              <p>If other, then please specify</p>
+              <input type="text" placeholder="Write the field of Tender here" name="field">
+            </div>
+            </div>
+            <br><br>
+            <button type="submit" onclick="uploadTender()">Upload</button>
+        </form>
+    </div>
+
+    
       <div class="app-body-sidebar">
         <section class="payment-section">
           <h2>Make Payment</h2>

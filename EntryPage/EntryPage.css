@@ -135,7 +135,7 @@ p
 
 .manual-btn
 {
-    border: 2px solid rgb(165, 42, 42) ;
+    border: 2px solid #76ABAE ;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -149,7 +149,7 @@ p
 
 .manual-btn:hover
 {
-    background-color:rgb(90, 90, 95);
+    background-color:#EEEEEE;
 }
 
 #radio1:checked ~ .fir
@@ -190,7 +190,7 @@ p
 
 .autonavi div
 {
-    border: 2px solid rgb(165, 42, 42) ;
+    border: 2px solid #76ABAE ;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -204,27 +204,27 @@ p
 
 #radio1:checked ~.autonavi .auto-btn1
 {
-    background-color: rgb(90, 90, 95);
+    background-color: #EEEEEE;
 }
 
 #radio2:checked ~.autonavi .auto-btn2
 {
-    background-color: rgb(90, 90, 95);
+    background-color: #EEEEEE;
 }
 
 #radio3:checked ~.autonavi .auto-btn3
 {
-    background-color: rgb(90, 90, 95);
+    background-color: #EEEEEE;
 }
 
 #radio4:checked ~.autonavi .auto-btn4
 {
-    background-color: rgb(90, 90, 95);
+    background-color: #EEEEEE;
 }
 
 #radio5:checked ~.autonavi .auto-btn5
 {
-    background-color: rgb(90, 90, 95);
+    background-color: #EEEEEE;
 }
 
 
@@ -487,7 +487,6 @@ p
     margin-top:0.4vw;
     text-align:justify;
     padding:1vw;
-    color:#222831;
     font-size:1vw;
   }
 
@@ -509,7 +508,8 @@ p
     margin-right:3vw;
     margin-bottom:3vw;
     width:25vw;
-    background-color:#EFF0EC;
+    background-color:#76ABAE;
+    color:#EEEEEE;
     border-radius:2vw;
     font-family: "Mukta Vaani", sans-serif;
     font-size:1.7vh;
@@ -522,7 +522,8 @@ p
     margin-right:3vw;
     margin-bottom:3vw;
     width:25vw;
-    background-color:#EFF0EC;
+    background-color:#76ABAE;
+    color:#EEEEEE;
     border-radius:2vw;
     font-family: "Mukta Vaani", sans-serif;
     font-size:1.7vh;
@@ -535,7 +536,8 @@ p
     margin-right:3vw;
     margin-bottom:3vw;
     width:25vw;
-    background-color:#EFF0EC;
+    background-color:#76ABAE;
+    color:#EEEEEE;
     border-radius:2vw;
     font-family: "Mukta Vaani", sans-serif;
     font-size:1.7vh;

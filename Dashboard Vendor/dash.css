@@ -94,6 +94,7 @@ a {
 
 .app-header-actions {
 	display: flex;
+	margin-left: 15vw;
 	align-items: center;
 	@media (max-width: 1200px) {
 		display: none;
@@ -147,6 +148,7 @@ a {
 }
 
 .app-body-sidebar {
+    right:7vw;
     position:relative;
 }
 
@@ -847,64 +849,48 @@ button {
 }
 
 .dropdown-content {
-	display: none; 
+	display: none; /* Change from 'hidden' to 'none' */
 	position: absolute;
-	background-color: #eeeeee;
+	background-color: #f9f9f9;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 	z-index: 1;
 	top: 18vh;
-	right: 15vw;
 	border-radius: 2vh;
-	MARGIN:0;
-	PADDING:0;
+	margin-left:14vw;
+	right:5vw;
 }
 
+.dropdown-content ul {
+	list-style-type: none;
+	margin: 0;
+}
 
 .dropdown-content ul li {
 	list-style-type: none;
 	margin: 0;
-	padding-top:1vw;
 	padding-right:1vw;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
 	font-size:1.5vh;
 }
 
 .dropdown-content a {
-	color: #222831;
+	color: black;
+	padding: 1vw;
 	text-decoration: none;
 }
 
-.dropdown-content a:hover {
-	font-size:2vh;
+.dropdown-content a:Hover{
+	font-size: 2vh;
 }
 
-
+.user-profile:hover .dropdown-content,
+.user-profile:focus .dropdown-content {
+	display: block;
+}
 .user-profile img {
 	width: 60px; /* Adjust the size as needed */
 	height: 60px; /* Adjust the size as needed */
 	border-radius: 50%; /* Makes the image circular */
 	margin-left:1vw;
-}
-
-label {
-	display: block;
-	margin-bottom: 10px;
-	cursor: pointer;
-	font-size: 16px;
-}
-
-input[type="checkbox"] {
-	margin-right: 5px;
-}
-
-button[type="submit"] {
-	padding: 10px 20px;
-	font-size: 16px;
-	background-color: #007bff;
-	color: #fff;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-}
-
-button[type="submit"]:hover {
-	background-color: #0056b3;
 }
