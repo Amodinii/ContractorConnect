@@ -26,3 +26,7 @@ document.getElementById('sig').addEventListener('click', function(e) {
     });
   });
   
+document.getElementById("sig").addEventListener("click", function() {
+    // Redirect to a different page
+    window.location.href = "../../HomePage - Vendor/index.html"; // Replace this URL with your desired destination
+});

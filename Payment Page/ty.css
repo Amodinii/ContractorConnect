@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: #222831;
 }
 
 .container {
@@ -10,34 +10,34 @@ body {
     margin: 10vh auto;
     padding: 5vw;
     text-align: center;
-    background-color: #282727;
+    background-color: #76ABAE;
     border-radius: 5vw;
     box-shadow: 0 2vw 3vw rgba(0, 0, 0, 0.1);
 }
 
 .thank-you-heading {
     font-size: 4vw;
-    color: #e5d5bc;
+    color: #EEEEEE;
     margin-bottom: 2vw;
 }
 
 .thank-you-message {
     font-size: 2vw;
-    color: white;
+    color: #31363F;
     margin-bottom: 2vw;
 }
 
 .additional-message {
     font-size: 1.5vw;
-    color: aliceblue;
+    color: #EEEEEE;
     margin-bottom: 3vw;
 }
 
 .btn {
     display: inline-block;
     padding: 2vw 4vw;
-    background-color: #e5d5bc;
-    color: #282727;
+    background-color: #EEEEEE;
+    color: #31363F;
     text-decoration: none;
     border-radius: 1vw;
     transition: background-color 0.5s;
@@ -45,9 +45,9 @@ body {
 }
 
 .btn:hover {
-    background-color:#282727;
-    color:#e5d5bc;
-    border-color: #e5d5bc;
+    background-color:#31363F;
+    color:#EEEEEE;
+    border-color: #EEEEEE;
 }
 
 @keyframes slideIn {
