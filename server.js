@@ -218,6 +218,7 @@ app.get('/contractorProfilePage', async (req, res) => {
 })*/
 
 // Sign-in route
+// Sign-in route
 app.post('/signin', async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -227,9 +228,9 @@ app.post('/signin', async (req, res) => {
     const contractorUser = await Contractoruser.findOne({ Email: email }).exec();
 
     if (companyUser && await bcrypt.compare(password, companyUser.Password)) {
-      res.status(200).send({ message: "Company User signed in successfully", user: companyUser });
+      res.status(200).send({ message: "Company User signed in successfully", userType: "Company" });
     } else if (contractorUser && await bcrypt.compare(password, contractorUser.Password)) {
-      res.status(200).send({ message: "Contractor signed in successfully", user: contractorUser });
+      res.status(200).send({ message: "Contractor signed in successfully", userType: "Contractor" });
     } else {
       res.status(401).send({ message: "Invalid email or password" });
     }
@@ -237,6 +238,7 @@ app.post('/signin', async (req, res) => {
     res.status(500).send({ message: "Internal server error" });
   }
 });
+
 
 app.get('/companies', async(req,res)=>{
   try{

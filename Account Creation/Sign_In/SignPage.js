@@ -29,22 +29,22 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
     // Form Submission Event Listener for Signup Form
-    document.getElementById("signupForm").addEventListener("submit", function(event) {
-        event.preventDefault();
-        var emailInput = document.getElementById("signup-email");
-        var email = emailInput.value.trim();
+document.getElementById("signupForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var emailInput = document.getElementById("signup-email");
+    var email = emailInput.value.trim();
 
-        // Email validation
-        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(email)) {
-            alert("Please enter a valid email address.");
-            event.preventDefault(); // Prevent form submission
-            return false;
-        }
+    // Email validation
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return false; // Prevent form submission
+    }
 
-        // If email is valid, continue with form submission
-        return true;
-    });
+    // If email is valid, continue with form submission
+    return true;
+});
+
 
     // Password Toggle Event Listener
     var passwordInput = document.getElementById("login-password");
@@ -91,7 +91,6 @@ document.addEventListener("DOMContentLoaded", function() {
         // Get user input (email and password)
         var email = document.getElementById("login-email").value;
         var password = document.getElementById("login-password").value;
-        
 
         // Construct the request body
         var requestBody = {
@@ -114,24 +113,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Check if the response was successful (200)
             if (response.ok) {
-                // Sign-in successful, handle accordingly (redirecting to the user profile)
-                console.log(responseData.message);
-                console.log(responseData.user);
+                // Redirect based on user type
+                if (responseData.userType === 'Company') {
+                    window.location.href = '../../Dashboard - Company/samp.html ';
+                } else if (responseData.userType === 'Contractor') {
+                    window.location.href = '../../Dashboard Vendor/dash.html';
+                } else {
+                    console.error('Invalid user type');
+                }
             } else {
                 // Sign-in failed- error message
                 console.error(responseData.message);
+                alert("Invalid email or password");
             }
         } catch (error) {
             console.error('Error during sign-in:', error);
         }
     });
-});
-
-document.getElementById("signInButton").addEventListener("click", function() {
-    if(userType === "company"){
-    // Redirect to a different page
-    window.location.href = "../../Dashboard - Company/samp.html"; // Replace this URL with your desired destination
-    }else if(userType === "contractor"){
-    window.location.href = "../../HomePage - Vendor/index.html"; // Replace this URL with your desired destination
-    }
 });
