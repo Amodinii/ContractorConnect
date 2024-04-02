@@ -30,7 +30,7 @@ img
 .navbar {
     z-index: 0;
     position: absolute;
-    background-color: #e5d5bc;
+    background-color: #76ABAE;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,7 +48,7 @@ img
     padding: 1vw;
     font-size:1.2vw;
     font-family: "Mukta Vaani", sans-serif;
-    background-color: #e5d5bc;
+    background-color: #76ABAE;
     top:0;
 }
 
@@ -64,13 +64,13 @@ img
     padding: 1vw;
     font-size:1.2vw;
     font-family: "Mukta Vaani", sans-serif;
-    background-color: #e5d5bc;
+    background-color: #76ABAE;
     top:0;
     
 }
 
 body{
-    background-color: white;
+    background-color: #EEEEEE;
     /*overflow-x: hidden;*/
 }
 
@@ -84,7 +84,7 @@ body{
 
 .container {
     text-align: center;
-    background-color: #282727;
+    background-color: #222831;
     border-radius:1vw;
     box-shadow: 
     0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.01),  /* Right */
@@ -102,7 +102,7 @@ body{
     z-index: 4;
     position: absolute;
     text-align: center;
-    background-color: #eff0ec;
+    background-color: #EEEEEE;
     border-radius: 1vw;
     margin-top: 57vh;
     margin-left: 24vh;
@@ -117,7 +117,7 @@ body{
 
 .contactdetails p{
     font-family: "Mukta Vaani", sans-serif;
-    color: #282727;
+    color: #222831;
     padding: 0.3vh;
 }
 
@@ -128,7 +128,7 @@ body{
     padding-top: 0vw;
     font-family: "BebasNeue", sans-serif;
     font-size: 4vw;
-    color:#e5d5bc;
+    color:#EEEEEE;
 }
 
 .flexcont
@@ -161,7 +161,7 @@ textarea{
 }
 
 p{
-    color:#e5d5bc;
+    color:#EEEEEE;
     font-size: 1.1vw;
     font-family:"Monda",sans-serif ;
     text-align: left;
@@ -178,7 +178,7 @@ p{
 
 label
 {
-    color:#e5d5bc;
+    color:#EEEEEE;
 }
 
 input
@@ -194,7 +194,7 @@ input
 }
 
 #signInButton {
-    border: 2px solid white; 
+    border: 2px solid #EEEEEE; 
     color: #282727;
     position: relative;
     font-family: "BebasNeue", sans-serif;
@@ -203,23 +203,23 @@ input
     width: 21vw;
     height: 3.2vw;
     border-radius: 0.5rem;
-    background-color: #e5d5bc;
+    background-color: #EEEEEE;
     box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
     margin-left: -1vw;
     top: -1vw;
 }
 
 #signInButton:hover {
-    border: 2px solid #e5d5bc;
-    background-color: #282727;
-    color: #e5d5bc;
+    border: 2px solid #EEEEEE;
+    background-color: #222831;
+    color: #EEEEEE;
 }
 
 a
 {
     text-decoration:none;
     margin-top: 2vw;
-    color:#e5d5bc;
+    color:#EEEEEE;
     font-family: "Monda", sans-serif;
     display: block;
     text-align: center;
@@ -230,7 +230,7 @@ a
 {
     text-decoration:none;
     margin-top: 0.4vw;
-    color:#e5d5bc;
+    color:#EEEEEE;
     font-family: "Monda", sans-serif;
     display: block;
     text-align: center;
@@ -286,7 +286,7 @@ a
 .AccountDrop a:hover {
     z-index: 3;
     position: relative;
-    background-color: #e5d5bc;
+    background-color: #EEEEEE;
     color:#282727;
 }
 
