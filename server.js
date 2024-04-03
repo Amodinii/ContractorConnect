@@ -53,14 +53,14 @@ const contractorUserSchema = new mongoose.Schema({
 });
 
 const tenderSchema = new mongoose.Schema({
-  company: {
+  /*company: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Companyuser'
-  },
+  },*/
   title: String,
   description: String,
   category: String,
-  created_at: {
+  /*created_at: {
     type: Date,
     default: Date.now
   },
@@ -72,7 +72,7 @@ const tenderSchema = new mongoose.Schema({
   vendor: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Contractoruser'
-  }
+  }*/
 });
 
 const quotationSchema = new mongoose.Schema({
