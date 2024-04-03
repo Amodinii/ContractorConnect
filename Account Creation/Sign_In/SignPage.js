@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (responseData.userType === 'Company') {
                     window.location.href = '../../Dashboard - Company/samp.html ';
                 } else if (responseData.userType === 'Contractor') {
-                    window.location.href = '../../Dashboard Vendor/dash.html';
+                    window.location.href = '../../HomePage - Vendor/index.html';
                 } else {
                     console.error('Invalid user type');
                 }

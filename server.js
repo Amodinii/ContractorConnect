@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const bcrypt = require('bcryptjs');
+const crypto = require('crypto');
+const session = require('express-session');
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -88,6 +90,15 @@ const quotationSchema = new mongoose.Schema({
   }
 });
 
+//Generating a secret key to keep a teack of user id.
+const secretKey = crypto.randomBytes(32).toString('hex');
+
+// Add session middleware
+app.use(session({
+  secret: secretKey,
+  resave: false,
+  saveUninitialized: true
+}));
 // Middleware for hashing password before saving
 companyUserSchema.pre("save", async function(next) {
   const user = this;
@@ -150,6 +161,8 @@ app.post('/companyRegister', async (req, res) => {
     const { Email, ...companyData } = req.body; // Extract email from request body
     const companyUser = new Companyuser({ ...companyData, Email: Email }); // Include email in user data
     await companyUser.save();
+    req.session.userId = companyUser._id;
+    console.log(req.session.userId);
     res.status(201).send({ message: "Company User registered successfully", companyUser });
   } catch (error) {
     res.status(400).send(error);
@@ -162,6 +175,8 @@ app.post('/contractorRegister', async (req, res) => {
     const { Email, ...contractorData } = req.body; // Extract email from request body
     const contractorUser = new Contractoruser({ ...contractorData, Email: Email }); // Include email in user data
     await contractorUser.save();
+    req.session.userId = contractorUser._id;
+    console.log(req.session.userId);
     res.status(201).send({ message: "Contractor registered successfully", contractorUser});
   }
   catch(error) {
@@ -222,14 +237,20 @@ app.get('/contractorProfilePage', async (req, res) => {
 app.post('/signin', async (req, res) => {
   try {
     const { email, password } = req.body;
-
+    let user;
     // Check if the user exists in either collection
     const companyUser = await Companyuser.findOne({ Email: email }).exec();
     const contractorUser = await Contractoruser.findOne({ Email: email }).exec();
 
     if (companyUser && await bcrypt.compare(password, companyUser.Password)) {
+      // Store user ID in session object
+      req.session.userId = companyUser._id; // Assigning companyUser's ID
+      console.log(req.session.userId);
       res.status(200).send({ message: "Company User signed in successfully", userType: "Company" });
     } else if (contractorUser && await bcrypt.compare(password, contractorUser.Password)) {
+      // Store user ID in session object
+      req.session.userId = contractorUser._id; // Assigning contractorUser's ID
+      console.log(req.session.userId);
       res.status(200).send({ message: "Contractor signed in successfully", userType: "Contractor" });
     } else {
       res.status(401).send({ message: "Invalid email or password" });
@@ -307,35 +328,31 @@ app.get('/contractor/tenders/:contractorId', async (req, res) => {
   }
 });
 
-// Setting the view engine to EJS
-  app.set('view engine', 'ejs');
+//getting the profile data from the database.
+app.get('/profile', async (req, res) => {
+  try {
+    // Retrieve the user ID from the session
+    const userId = req.session.userId;
 
-  // Displaying the profile page
-  app.get('/getcompanydetails', (req, res) => {
-    // Fetching data from MongoDB
-    db.collection('companyusers').find({}).toArray((err, data) => {
-      if (err) {
-        console.error(err);
-        return;
-      }
-      // Rendering the profile page with the fetched data
-      res.render('profile', { data });
-    });
-  });
+    // Query the database to find the user by ID
+    const user = await User.findById(userId);
 
-  app.get('/getcontractordetails', (req, res) => {
-    // Fetching data from MongoDB
-    db.collection('contractorusers').find({}).toArray((err, data) => {
-      if (err) {
-        console.error(err);
-        return;
-      }
-      // Rendering the profile page with the fetched data
-      res.render('profile', { data });
-    });
-  });
-
-
-
+    // Check if the user exists
+    if (user) {
+      //printing to see if the details will be retrieved or not
+      console.log("User details:", user);
+      
+      // If the user exists, render the profile page with the user data
+      res.render('ProfilePage', { user });
+    } else {
+      // If the user doesn't exist, handle the error accordingly
+      res.status(404).send({ message: "User not found" });
+    }
+  } catch (error) {
+    // Handle any errors that occur during the process
+    console.error("Error fetching user data:", error);
+    res.status(500).send({ message: "Internal server error" });
+  }
+});
 
 app.listen(port, () => console.log(`Server running on port ${port}`));

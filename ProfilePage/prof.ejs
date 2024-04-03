@@ -9,9 +9,9 @@
 <body>
     <div class="container mt-5 mb-5">
         <h3>PROFILE</h3>
-        <% data.forEach(function(item) { %>
+        <% Object.keys(user).forEach(function(key) { %>
             <div class="row mt-2">
-                <div class="col-md-6"><label class="labels"><%= item.label %></label><input type="text" class="form-control" value="<%= item.value %>"><i class="fas fa-edit edit-icon"></i></div>
+                <div class="col-md-6"><label class="labels"><%= key %></label><input type="text" class="form-control" value="<%= user[key] %>"><i class="fas fa-edit edit-icon"></i></div>
             </div>
         <% }); %>
     </div>
