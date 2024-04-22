@@ -5,6 +5,8 @@ const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
 const session = require('express-session');
+const multer = require('multer');
+
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -184,28 +186,29 @@ app.post('/contractorRegister', async (req, res) => {
   }
 });
 
-// The route for POST /postTender
-app.post('/postTender', async (req, res) => {
+// Multer storage configuration
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/'); // Destination directory for file uploads
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname); // Use original filename
+  }
+});
+
+// Create multer middleware instance
+const upload = multer({ storage: storage });
+
+// Route for posting tender with file upload
+app.post('/postTender', upload.single('file'), async (req, res) => {
   try {
-    const { title, description, categories } = req.body; // Adjust to receive an array of categories
-    const company_id = req.user._id; // Assuming you have user authentication middleware to get user details
-
-    // Save the tender details in the database
-    const tender = new Tender({
-      company: company_id,
-      title: title,
-      description: description,
-      categories: categories, // Save the array of categories
-    });
-
-    await tender.save();
-    res.status(201).send({ message: "Tender posted successfully", tender });
+    // Your route handler logic here
+    // Ensure that 'upload' variable is properly accessible in this scope
   } catch (error) {
     console.error("Error posting tender:", error);
     res.status(500).send({ message: "Internal server error" });
   }
 });
-
 
 // Handle quotation submission route
 app.post('/submitQuotation', async (req, res) => {

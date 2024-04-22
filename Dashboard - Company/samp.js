@@ -1,3 +1,4 @@
+
 function setCookie(cookieName, cookieValue, expirationDays) {
   var d = new Date();
   d.setTime(d.getTime() + (expirationDays * 24 * 60 * 60 * 1000));
@@ -79,50 +80,3 @@ document.addEventListener("DOMContentLoaded", function() {
   otherCheckbox.addEventListener('click', function() {
     otherField.style.display = this.checked ? 'block' : 'none';
 });
-
-function uploadTender() {
-  const fileInput = document.getElementById('fileInput');
-  const selectedField = document.querySelector('input[name="field"]:checked');
-  if (!fileInput.files[0]) {
-      alert("Please select a file to upload.");
-      return;
-  }
-  if (!selectedField) {
-      alert("Please select a field.");
-      return;
-  }
-
-  //popup display
-  const tenderId = 'TENDER_' + Date.now();
-  const fileName = fileInput.files[0].name;
-  const field = selectedField.value;
-  alert("Tender ID: " + tenderId + "\nUploaded File: " + fileName + "\nSelected Field: " + field);
-
-  //post in database
-  const formData = new FormData();
-  formData.append('file', fileInput.files[0]);
-  formData.append('title', "Tender Title"); // You can replace this with the actual title
-  formData.append('description', "Tender Description"); // You can replace this with the actual description
-  formData.append('categories', selectedField.value);
-
-  fetch('/postTender', {
-    method: 'POST',
-    body: formData,
-  })
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
-  })
-  .then(data => {
-    // Handle success response here
-    console.log(data);
-    alert("Tender posted successfully");
-  })
-  .catch(error => {
-    // Handle error here
-    console.error('Error posting tender:', error);
-    alert("Failed to post tender. Please try again later.");
-  });
-}
