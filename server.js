@@ -13,6 +13,11 @@ const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static('public'))
+app.use("/uploads",express.static('uploads'))
+
+
+
 
 // MongoDB Connection
 mongoose.connect('mongodb://localhost:27017/RegistrationDetails', {
@@ -21,6 +26,8 @@ mongoose.connect('mongodb://localhost:27017/RegistrationDetails', {
 })
 .then(() => console.log('MongoDB connected'))
 .catch((err) => console.log(err));
+
+//--------------------------------------------------------------------------------------------------//
 
 // Schema definitions for Companyuser and Contractoruser
 const companyUserSchema = new mongoose.Schema({
@@ -57,7 +64,7 @@ const contractorUserSchema = new mongoose.Schema({
 const tenderSchema = new mongoose.Schema({
   company: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Companyuser'
+    ref: 'companyuserSchema'
   },
   title: String,
   description: String,
@@ -73,7 +80,7 @@ const tenderSchema = new mongoose.Schema({
   },
   vendor: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Contractoruser'
+    ref: 'contractoruserSchema'
   }
 });
 
@@ -186,13 +193,16 @@ app.post('/contractorRegister', async (req, res) => {
   }
 });
 
+
+//------------------------------------------------------------------------------------//
+
 // Multer storage configuration
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'uploads/'); // Destination directory for file uploads
   },
   filename: function (req, file, cb) {
-    cb(null, file.originalname); // Use original filename
+    cb(null, Date.now()+ file.originalname ); // Use original filename
   }
 });
 
@@ -200,16 +210,36 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 // Route for posting tender with file upload
-app.post('/postTender', upload.single('file'), async (req, res) => {
+app.post('/postTender', upload.single('tenderFile'), async (req, res) => {
+  console.log("Entered the tender posting");
   try {
-    // Your route handler logic here
-    // Ensure that 'upload' variable is properly accessible in this scope
+    const { title, description, category } = req.body;
+
+    // Get the filename of the uploaded file
+    const file = req.file;
+    const fileName = file ? file.filename : null;
+    if (!file) res.status(400).send({message: "Tender file missing"});
+
+    // Save the tender details in the database
+    const tender = new Tender({
+      title: fileName,
+      description: description,
+      category: category,
+
+    });
+
+    await tender.save();
+    res.status(201).send({ message: "Tender posted successfully", tender });
   } catch (error) {
     console.error("Error posting tender:", error);
     res.status(500).send({ message: "Internal server error" });
   }
 });
 
+
+
+
+//------------------------------------------------------------------------------------------------//
 // Handle quotation submission route
 app.post('/submitQuotation', async (req, res) => {
   try {
