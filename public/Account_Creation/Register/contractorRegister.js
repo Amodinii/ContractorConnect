@@ -30,7 +30,7 @@ document.getElementById("sig").addEventListener("click", function (e) {
     .then((response) => response.json())
     .then((data) => {
       console.log(data); // Log the response data
-      window.location.href = "../../HomePage - Vendor/index.html"; // Redirect to the homepage
+      window.location.href = "../../HomePage_Vendor/index.html"; // Redirect to the homepage
     })
     .catch((error) => {
       console.error("Error:", error);

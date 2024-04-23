@@ -33,5 +33,5 @@ document.getElementById("sig").addEventListener("click", function (e) {
 
 document.getElementById("sig").addEventListener("click", function () {
   // Redirect to a different page
-  window.location.href = "../../Dashboard - Company/samp.html"; // Replace this URL with your desired destination
+  window.location.href = "../../Dashboard_Company/samp.html"; // Replace this URL with your desired destination
 });
