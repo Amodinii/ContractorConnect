@@ -1,17 +1,19 @@
 import { Router } from "express";
 import { CompanyUser } from "../models/companyUser.js";
 import { ContractorUser } from "../models/contractorUser.js";
+import * as bcrypt from "bcrypt";
 
 const router = Router();
 
 // Company registration route
 router.post("/companyRegister", async (req, res) => {
+  console.log("route");
   try {
     const { Email, ...companyData } = req.body; // Extract email from request body
     const companyUser = new CompanyUser({ ...companyData, Email: Email }); // Include email in user data
     await companyUser.save();
-    req.session.userId = companyUser._id;
-    console.log(req.session.userId);
+    //req.session.userId = companyUser._id;
+    //console.log(req.session.userId);
     res
       .status(201)
       .send({ message: "Company User registered successfully", companyUser });
@@ -22,6 +24,7 @@ router.post("/companyRegister", async (req, res) => {
 
 // Contractor registration route
 router.post("/contractorRegister", async (req, res) => {
+  console.log("hello");
   try {
     const { Email, ...contractorData } = req.body; // Extract email from request body
     const contractorUser = new ContractorUser({
@@ -29,13 +32,14 @@ router.post("/contractorRegister", async (req, res) => {
       Email: Email,
     }); // Include email in user data
     await contractorUser.save();
-    req.session.userId = contractorUser._id;
-    console.log(req.session.userId);
+   // req.session.userId = contractorUser._id;
+    // console.log(req.session.userId);
     res
       .status(201)
       .send({ message: "Contractor registered successfully", contractorUser });
   } catch (error) {
     res.status(400).send(error);
+    console.log(error);
   }
 });
 

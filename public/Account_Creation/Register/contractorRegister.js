@@ -1,4 +1,4 @@
-document.getElementById("sig").addEventListener("click", function (e) {
+document.getElementById("sig").addEventListener("click", async function (e) {
   const email = localStorage.getItem("email"); // Retrieve email from localStorage
   const password = document.getElementById("password").value;
   const confirmPassword = document.getElementById("password-confirm").value;
@@ -20,7 +20,7 @@ document.getElementById("sig").addEventListener("click", function (e) {
     ConfirmPassword: confirmPassword,
   };
 
-  fetch("/auth/contractorRegister", {
+  await fetch("/auth/contractorRegister", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

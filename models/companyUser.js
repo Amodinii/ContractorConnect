@@ -1,4 +1,5 @@
 import { Schema, model } from "mongoose";
+import * as bcrypt from "bcrypt";
 
 export const companyUserSchema = new Schema({
   CompanyName: String,

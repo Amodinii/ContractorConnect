@@ -1,4 +1,4 @@
-document.getElementById("sig").addEventListener("click", function (e) {
+document.getElementById("sig").addEventListener("click", async function (e) {
   const email = localStorage.getItem("email");
   const userData = {
     Email: email,
@@ -12,12 +12,12 @@ document.getElementById("sig").addEventListener("click", function (e) {
     ConfirmPassword: document.getElementById("password-confirm").value,
   };
 
-  if (password !== confirmPassword) {
+  if (userData.Password !== userData.ConfirmPassword) {
     alert("Passwords do not match! Please re-enter your password.");
     return;
   }
-
-  fetch("/auth/companyRegister", {
+  console.log("ppohuch");
+  await fetch("/auth/companyRegister", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -25,13 +25,11 @@ document.getElementById("sig").addEventListener("click", function (e) {
     body: JSON.stringify(userData),
   })
     .then((response) => response.json())
-    .then((data) => console.log(data))
+    .then((data) => {
+      console.log(data);
+      window.location.href = "../../Dashboard_Company/samp.html"; // Replace this URL with your desired destination
+    })
     .catch((error) => {
       console.error("Error:", error);
     });
-});
-
-document.getElementById("sig").addEventListener("click", function () {
-  // Redirect to a different page
-  window.location.href = "../../Dashboard_Company/samp.html"; // Replace this URL with your desired destination
 });
