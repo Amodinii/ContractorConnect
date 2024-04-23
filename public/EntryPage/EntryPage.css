@@ -1,391 +1,366 @@
 @font-face {
-    font-family: "Monda";
-    src: url("Monda-Regular.ttf") format("ttf");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Monda";
+  src: url("Monda-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 
-*{
-    margin:0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-img
-{
-    width: 10vw;
-    height: 8vw;
+img {
+  width: 10vw;
+  height: 8vw;
 }
-
 
 body {
-    background-color: white;
-    overflow-x: hidden;
+  background-color: white;
+  overflow-x: hidden;
 }
 
 .footer {
-    padding:1vw;
-    display: flex;
-    justify-content: flex-start;
-    background-color: #222831;
-    color: #EEEEEE;
-    position: absolute;
-    top: 244vh;
-    bottom:0;
-    left:0;
-    height: 42vh;
-    font-family: "Mukta Vaani", sans-serif;
+  padding: 1vw;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #222831;
+  color: #eeeeee;
+  position: absolute;
+  top: 244vh;
+  bottom: 0;
+  left: 0;
+  height: 42vh;
+  font-family: "Mukta Vaani", sans-serif;
 }
 
 .left {
-    flex: 1;
-    text-align: left;
-    padding: 2vw;
-    font-family: "Mukta Vaani", sans-serif;
+  flex: 1;
+  text-align: left;
+  padding: 2vw;
+  font-family: "Mukta Vaani", sans-serif;
 }
 
 .column {
-    flex: 1;
-    margin-right: 2vw;
-    margin-left: 2vw;
-    font-size: 2.3vh;
-    font-family: "Mukta Vaani", sans-serif;
-    padding-top:2vh;
+  flex: 1;
+  margin-right: 2vw;
+  margin-left: 2vw;
+  font-size: 2.3vh;
+  font-family: "Mukta Vaani", sans-serif;
+  padding-top: 2vh;
 }
 
 a {
-    color: #EEEEEE;
-    text-decoration: none;
-    font-family: "Monda";
-    font-size:2.3vh;
+  color: #eeeeee;
+  text-decoration: none;
+  font-family: "Monda";
+  font-size: 2.3vh;
 }
 
-#content
-{
-    text-align:justify;
-    font-family: "Mukta Vaani", sans-serif;
-    font-size:2vh;
+#content {
+  text-align: justify;
+  font-family: "Mukta Vaani", sans-serif;
+  font-size: 2vh;
 }
 
-#topic
-{
-    margin-top: -1vw;
-    font-family: "Mukta Vaani", sans-serif;
-    font-size:2.5vh;
-
+#topic {
+  margin-top: -1vw;
+  font-family: "Mukta Vaani", sans-serif;
+  font-size: 2.5vh;
 }
 
-p
-{
-    font-family: "Mukta Vaani", sans-serif;
+p {
+  font-family: "Mukta Vaani", sans-serif;
 }
 
-.contactlist{
-    font-size: 2.3vh;
+.contactlist {
+  font-size: 2.3vh;
 }
 
 /*Image Slider*/
 
-.gallery-wrap
-{
-    margin-top: -4vw;
-    margin-left: 10vw;
-    width: 80vw;
-    height: 50vh;
-    border-radius: 10px;
+.gallery-wrap {
+  margin-top: -4vw;
+  margin-left: 10vw;
+  width: 80vw;
+  height: 50vh;
+  border-radius: 10px;
 }
 
-.gallery
-{
-    width: 300% ;
-    height: 50vh;
-    display: flex;
+.gallery {
+  width: 300%;
+  height: 50vh;
+  display: flex;
 }
 
-.gallery input
-{
-    display: none;
+.gallery input {
+  display: none;
 }
 
-.im
-{
-    width: 40% ;
-    transition: 2s;
-    margin-right: 10vw;
+.im {
+  width: 40%;
+  transition: 2s;
+  margin-right: 10vw;
 }
 
-.gallery img
-{
-    width: 80vw;
-    height: 50vh;
+.gallery img {
+  width: 80vw;
+  height: 50vh;
 }
 
-.gallery::-webkit-scrollbar{
-    display:none;
+.gallery::-webkit-scrollbar {
+  display: none;
 }
 
 /* Manual navigation */
-.manual-navi
-{
-    position:absolute;
-    width: 70vw;
-    margin-top: 45vh;
-    margin-left: 5vw;
-    display: flex;
-    justify-content: center;
+.manual-navi {
+  position: absolute;
+  width: 70vw;
+  margin-top: 45vh;
+  margin-left: 5vw;
+  display: flex;
+  justify-content: center;
 }
 
-.manual-btn
-{
-    border: 2px solid #76ABAE ;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
+.manual-btn {
+  border: 2px solid #76abae;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
 }
 
-.manual-btn:not(:last-child)
-{
-    margin-right: 0.8vw;
+.manual-btn:not(:last-child) {
+  margin-right: 0.8vw;
 }
 
-.manual-btn:hover
-{
-    background-color:#EEEEEE;
+.manual-btn:hover {
+  background-color: #eeeeee;
 }
 
-#radio1:checked ~ .fir
-{
-    margin-left: 0;
+#radio1:checked ~ .fir {
+  margin-left: 0;
 }
 
-#radio2:checked ~ .sec
-{
-    margin-left: -37%;
+#radio2:checked ~ .sec {
+  margin-left: -37%;
 }
 
-#radio3:checked ~ .thir
-{
-    margin-left: -74%;
+#radio3:checked ~ .thir {
+  margin-left: -74%;
 }
 
-#radio4:checked ~ .fou
-{
-    margin-left: -132%;
+#radio4:checked ~ .fou {
+  margin-left: -132%;
 }
 
-#radio5:checked ~ .fif
-{
-    margin-left: -177%;
+#radio5:checked ~ .fif {
+  margin-left: -177%;
 }
 
 /* Automatic Navig */
-.autonavi
-{
-    position:absolute;
-    width: 70vw;
-    margin-top: 45vh;
-    margin-left: 5vw;
-    display: flex;
-    justify-content: center;
+.autonavi {
+  position: absolute;
+  width: 70vw;
+  margin-top: 45vh;
+  margin-left: 5vw;
+  display: flex;
+  justify-content: center;
 }
 
-.autonavi div
-{
-    border: 2px solid #76ABAE ;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
+.autonavi div {
+  border: 2px solid #76abae;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
 }
 
-.autonavi div:not(:last-child)
-{
-    margin-right: 0.8vw; 
+.autonavi div:not(:last-child) {
+  margin-right: 0.8vw;
 }
 
-#radio1:checked ~.autonavi .auto-btn1
-{
-    background-color: #EEEEEE;
+#radio1:checked ~ .autonavi .auto-btn1 {
+  background-color: #eeeeee;
 }
 
-#radio2:checked ~.autonavi .auto-btn2
-{
-    background-color: #EEEEEE;
+#radio2:checked ~ .autonavi .auto-btn2 {
+  background-color: #eeeeee;
 }
 
-#radio3:checked ~.autonavi .auto-btn3
-{
-    background-color: #EEEEEE;
+#radio3:checked ~ .autonavi .auto-btn3 {
+  background-color: #eeeeee;
 }
 
-#radio4:checked ~.autonavi .auto-btn4
-{
-    background-color: #EEEEEE;
+#radio4:checked ~ .autonavi .auto-btn4 {
+  background-color: #eeeeee;
 }
 
-#radio5:checked ~.autonavi .auto-btn5
-{
-    background-color: #EEEEEE;
+#radio5:checked ~ .autonavi .auto-btn5 {
+  background-color: #eeeeee;
 }
 
-
-.main
-{
-    margin-top:12vh;
+.main {
+  margin-top: 12vh;
 }
 
 /*Account Info*/
-#Account{
-    height: 2.5vw;
-    width: 2.5vw;
-    float: right;
-    display: flex;
-    justify-content: flex-end;
-    align-self: flex-end;
-    padding-top: 3vh;
-    padding-right: 2vw;
-    position:relative;
+#Account {
+  height: 2.5vw;
+  width: 2.5vw;
+  float: right;
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+  padding-top: 3vh;
+  padding-right: 2vw;
+  position: relative;
 }
 
 .AccountDrop {
-    display: none;
-    position: absolute;
-    top: 8vh;
-    right: 0;
-    background-color: #fcfef1;
-    min-width: 1vw;
-    box-shadow: 0 1vh 1vw 0 rgba(0,0,0,0.2);
-    z-index: 1;
+  display: none;
+  position: absolute;
+  top: 8vh;
+  right: 0;
+  background-color: #fcfef1;
+  min-width: 1vw;
+  box-shadow: 0 1vh 1vw 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .AccountDrop a {
-    color: black;
-    padding: 1vw 1vh;
-    text-decoration: none;
-    display: block;
+  color: black;
+  padding: 1vw 1vh;
+  text-decoration: none;
+  display: block;
 }
 
 .AccountDrop a:hover {
-    background-color: #fcfef1;
+  background-color: #fcfef1;
 }
 
 /*POP UP*/
 @keyframes fadeInOut {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .popup {
-    display: none; /*Hidden by default */
-    position: fixed; 
-    z-index: 1; 
-    left: 43%; 
-    top: 50%; 
-    transform: translate(-50%, -50%); /*Place the pop-up beech mein */
-    width: 57vw;
-    height: 59vh; 
-    overflow: none;
-    background-color: #222831 ;
-    box-shadow: 0 4vw 8vw rgba(0, 0, 0, 0.1);
-    border-radius: 2vw; 
-  }
-  
-  /* Popup content */
-  .popup-content {
-    display:flex;
-    background-color: #222831;
-    background-size: cover;
-    padding: 2vw;
-    border-radius: 10px; 
-  }
-
-  @font-face {
-    font-family: "BebasNeue";
-    src: url("BebasNeue.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
+  display: none; /*Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 43%;
+  top: 50%;
+  transform: translate(-50%, -50%); /*Place the pop-up beech mein */
+  width: 57vw;
+  height: 59vh;
+  overflow: none;
+  background-color: #222831;
+  box-shadow: 0 4vw 8vw rgba(0, 0, 0, 0.1);
+  border-radius: 2vw;
 }
 
-#pop,#lolo {
-    margin-top: 2vw; /* Adjusted margin-top */
-    margin-left: 0.7vw; /* Adjusted margin-left */
-    color: #EEEEEE;
-    text-align: left;
-    font-family: "BebasNeue", sans-serif;
-    font-size: 5.2vw; /* Adjusted font-size */
-
+/* Popup content */
+.popup-content {
+  display: flex;
+  background-color: #222831;
+  background-size: cover;
+  padding: 2vw;
+  border-radius: 10px;
 }
 
-#lolo
-{
-    position:relative;
-    top:-3vw;
+@font-face {
+  font-family: "BebasNeue";
+  src: url("BebasNeue.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#pop,
+#lolo {
+  margin-top: 2vw; /* Adjusted margin-top */
+  margin-left: 0.7vw; /* Adjusted margin-left */
+  color: #eeeeee;
+  text-align: left;
+  font-family: "BebasNeue", sans-serif;
+  font-size: 5.2vw; /* Adjusted font-size */
+}
+
+#lolo {
+  position: relative;
+  top: -3vw;
 }
 
 #peeps {
-    width: 36vw;
-    height: 61.7vh;
-    position: absolute;
-    padding-left: 2vw;;
-    margin-bottom: 1.6vw;
-    margin-top:-2vw;
-    border-radius:1vw;
+  width: 36vw;
+  height: 61.7vh;
+  position: absolute;
+  padding-left: 2vw;
+  margin-bottom: 1.6vw;
+  margin-top: -2vw;
+  border-radius: 1vw;
 }
 
 .slogan {
-    color: #76ABAE;
-    text-align: left;
-    font-size: 2.5vw;
-    margin-top: 2vw;
-    margin-left: 0.7vw; /* Adjusted margin-left */
-    font-family: "Mukta Vaani", sans-serif;
-    font-weight: bold;
+  color: #76abae;
+  text-align: left;
+  font-size: 2.5vw;
+  margin-top: 2vw;
+  margin-left: 0.7vw; /* Adjusted margin-left */
+  font-family: "Mukta Vaani", sans-serif;
+  font-weight: bold;
 }
 
-.slogan p{
-    margin-top: -5vw;
-    padding-top: -10vh;
-    margin-bottom: 2vw;
+.slogan p {
+  margin-top: -5vw;
+  padding-top: -10vh;
+  margin-bottom: 2vw;
 }
 
 #reg {
-    border: 2px solid white; 
-    color: #76ABAE;
-    font-family: "BebasNeue", sans-serif;
-    font-size: 2.2vw;
-    font-weight: bold;
-    width: 8vw;
-    height: 3.5vw;
-    border-radius: 3rem;
-    background-color: #222831;
-    margin-right: 5vw;
-    margin-left: 0.7vw;
-    margin-top: 5vw;
-    margin-bottom:2vw;
+  border: 2px solid white;
+  color: #76abae;
+  font-family: "BebasNeue", sans-serif;
+  font-size: 2.2vw;
+  font-weight: bold;
+  width: 8vw;
+  height: 3.5vw;
+  border-radius: 3rem;
+  background-color: #222831;
+  margin-right: 5vw;
+  margin-left: 0.7vw;
+  margin-top: 5vw;
+  margin-bottom: 2vw;
 }
 
 #sig {
-    border: 2px solid white; 
-    color: #76ABAE;
-    font-family: "BebasNeue", sans-serif;
-    font-size: 2.2vw;
-    font-weight: bold;
-    width: 8vw;
-    height: 3.5vw;
-    border-radius: 3rem;
-    background-color: #222831;
-    margin-left: -3vw;
+  border: 2px solid white;
+  color: #76abae;
+  font-family: "BebasNeue", sans-serif;
+  font-size: 2.2vw;
+  font-weight: bold;
+  width: 8vw;
+  height: 3.5vw;
+  border-radius: 3rem;
+  background-color: #222831;
+  margin-left: -3vw;
 }
 
-#reg:hover, #sig:hover
-{
-    border: 2px solid #76ABAE;
-    background-color: #76ABAE;
-    color: #222831;
+#reg:hover,
+#sig:hover {
+  border: 2px solid #76abae;
+  background-color: #76abae;
+  color: #222831;
 }
 
-.buttons{
-    margin-top: -5.2vw;
+.buttons {
+  margin-top: -5.2vw;
 }
 
 /*#logo {
@@ -393,205 +368,191 @@ p
     height: 11%;
     position: absolute;
     top: 1vw; Position at the bottom */
-  
-  /* Close button */
-  .close {
-    color: #76ABAE;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
 
-  /*SECOND SECTION*/
-  .subcont
-  {
-    display:flex;
-    background-color:#222831;
-    margin-top:8vw;
-    height:30vw;
-    width:100vw;
-  }
+/* Close button */
+.close {
+  color: #76abae;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
 
-  #doosrapic
-  {
-    margin-top:2vw;
-    width:40vw;
-    height:25vw;
-    margin-right:-1.8vw;
-  }
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 
-  #subh
-  {
-    color:#EEEEEE;
-    font-size:3vw;
-    margin-left:4vw;
-    margin-top:3vw;
-    font-family: "Mukta Vaani", sans-serif;
-  }
+/*SECOND SECTION*/
+.subcont {
+  display: flex;
+  background-color: #222831;
+  margin-top: 8vw;
+  height: 30vw;
+  width: 100vw;
+}
 
-  ul{
-    margin-left:2.7vw;
-  }
+#doosrapic {
+  margin-top: 2vw;
+  width: 40vw;
+  height: 25vw;
+  margin-right: -1.8vw;
+}
 
-  li
-  {
-    color:#EEEEEE;
-    font-size:1.4vw;
-    font-family: "Mukta Vaani", sans-serif; 
-  }
+#subh {
+  color: #eeeeee;
+  font-size: 3vw;
+  margin-left: 4vw;
+  margin-top: 3vw;
+  font-family: "Mukta Vaani", sans-serif;
+}
 
-  /*REVIEW SECTION*/
-  .revicont
-  {
-    margin-top:-6vw;
-    display:flex;
-    background-color:white;
-    height:30vw;
-  }
+ul {
+  margin-left: 2.7vw;
+}
 
-  #revih
-  {
-    margin-top:4vw;
-    margin-left:31vw;
-    font-size:3vw;
-    font-family: "Mukta Vaani", sans-serif;
-  }
+li {
+  color: #eeeeee;
+  font-size: 1.4vw;
+  font-family: "Mukta Vaani", sans-serif;
+}
 
-  #pararev
-  {
-    margin-left:20vw;
-    margin-right:20vw;
-    text-align:center;
-    font-size: 2.2vh;
-    font-family: "Mukta Vaani", sans-serif;
-  }
+/*REVIEW SECTION*/
+.revicont {
+  margin-top: -6vw;
+  display: flex;
+  background-color: white;
+  height: 30vw;
+}
 
-  .revicont img
-  {
-    width:14vw;
-    height:5vw;
-    margin-left:5vw;
-    padding-right:5vw;
-    margin-top:0.6vw;
-  }
+#revih {
+  margin-top: 4vw;
+  margin-left: 31vw;
+  font-size: 3vw;
+  font-family: "Mukta Vaani", sans-serif;
+}
 
-  .revicont p
-  {
-    margin-top:0.4vw;
-    text-align:justify;
-    padding:1vw;
-    font-size:1vw;
-  }
+#pararev {
+  margin-left: 20vw;
+  margin-right: 20vw;
+  text-align: center;
+  font-size: 2.2vh;
+  font-family: "Mukta Vaani", sans-serif;
+}
 
-  #per2
-  {
-    width:12vw;
-    margin-left:6vw;
-  }
-  
-  #per3
-  {
-    height:4.5vw;
-  }
+.revicont img {
+  width: 14vw;
+  height: 5vw;
+  margin-left: 5vw;
+  padding-right: 5vw;
+  margin-top: 0.6vw;
+}
 
-  .revi1
-  {
-    margin-left:5vw;
-    margin-top:9vw;
-    margin-right:3vw;
-    margin-bottom:3vw;
-    width:25vw;
-    background-color:#76ABAE;
-    color:#EEEEEE;
-    border-radius:2vw;
-    font-family: "Mukta Vaani", sans-serif;
-    font-size:1.7vh;
-  }
+.revicont p {
+  margin-top: 0.4vw;
+  text-align: justify;
+  padding: 1vw;
+  font-size: 1vw;
+}
 
-  .revi2
-  {
-    margin-top:9vw;
-    margin-left:3vw;
-    margin-right:3vw;
-    margin-bottom:3vw;
-    width:25vw;
-    background-color:#76ABAE;
-    color:#EEEEEE;
-    border-radius:2vw;
-    font-family: "Mukta Vaani", sans-serif;
-    font-size:1.7vh;
-  }
+#per2 {
+  width: 12vw;
+  margin-left: 6vw;
+}
 
-  .revi3
-  {
-    margin-top:9vw;
-    margin-left:3vw;
-    margin-right:3vw;
-    margin-bottom:3vw;
-    width:25vw;
-    background-color:#76ABAE;
-    color:#EEEEEE;
-    border-radius:2vw;
-    font-family: "Mukta Vaani", sans-serif;
-    font-size:1.7vh;
-  }
+#per3 {
+  height: 4.5vw;
+}
+
+.revi1 {
+  margin-left: 5vw;
+  margin-top: 9vw;
+  margin-right: 3vw;
+  margin-bottom: 3vw;
+  width: 25vw;
+  background-color: #76abae;
+  color: #eeeeee;
+  border-radius: 2vw;
+  font-family: "Mukta Vaani", sans-serif;
+  font-size: 1.7vh;
+}
+
+.revi2 {
+  margin-top: 9vw;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  margin-bottom: 3vw;
+  width: 25vw;
+  background-color: #76abae;
+  color: #eeeeee;
+  border-radius: 2vw;
+  font-family: "Mukta Vaani", sans-serif;
+  font-size: 1.7vh;
+}
+
+.revi3 {
+  margin-top: 9vw;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  margin-bottom: 3vw;
+  width: 25vw;
+  background-color: #76abae;
+  color: #eeeeee;
+  border-radius: 2vw;
+  font-family: "Mukta Vaani", sans-serif;
+  font-size: 1.7vh;
+}
 
 #joinNowBtn {
-    position: fixed;
-    top: 4vh;
-    right: 2vw;
-    background-color: #222831;
-    color: white;
-    border: none;
-    padding: 1vh 2vw;
-    cursor: pointer;
-    border-radius: 2vw;
-    font-size: 1.2vw;
-    margin-bottom:2vh;
+  position: fixed;
+  top: 4vh;
+  right: 2vw;
+  background-color: #222831;
+  color: white;
+  border: none;
+  padding: 1vh 2vw;
+  cursor: pointer;
+  border-radius: 2vw;
+  font-size: 1.2vw;
+  margin-bottom: 2vh;
 }
 
 .joinDropdown {
-    display: none;
-    position: fixed;
-    top: 9vh;
-    right: 2.5vw;
-    background-color: #EFF0EC;
-    border-radius: 1vw;
-    box-shadow: 0.3vw 0.8vh 1.6vw 0 rgba(0,0,0,0.2);
-    z-index: 1;
+  display: none;
+  position: fixed;
+  top: 9vh;
+  right: 2.5vw;
+  background-color: #eff0ec;
+  border-radius: 1vw;
+  box-shadow: 0.3vw 0.8vh 1.6vw 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .joinDropdown a {
-    display: block;
-    color: black;
-    padding: 1.2vh 1.6vw;
-    text-decoration: none;
-    border-radius: 1vw;
-    font-family: "Mukta Vaani", sans-serif;
+  display: block;
+  color: black;
+  padding: 1.2vh 1.6vw;
+  text-decoration: none;
+  border-radius: 1vw;
+  font-family: "Mukta Vaani", sans-serif;
 }
 
 .joinDropdown a:hover {
-    background-color: #76ABAE;
-    color:#222831;
-    border-radius: 1vw;
+  background-color: #76abae;
+  color: #222831;
+  border-radius: 1vw;
 }
 
 .show {
-    display: block;
+  display: block;
 }
 
-.footer li{
-    list-style : none;
-    font-family: "Mukta Vaani", sans-serif;
+.footer li {
+  list-style: none;
+  font-family: "Mukta Vaani", sans-serif;
 }
 
-.column a{
-    font-family: "Mukta Vaani", sans-serif;
+.column a {
+  font-family: "Mukta Vaani", sans-serif;
 }

@@ -1,509 +1,607 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin Dashboard | Contractor Connect</title>
+    <link rel="stylesheet" href="admin.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Admin Dashboard | Contractor Connect</title>
-  <link rel="stylesheet" href="admin.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class="bx bxl-c-plus-plus icon"></i>
+        <div class="logo_name">ContractorConnect</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <i class="bx bx-search"></i>
+          <input type="text" placeholder="Search..." />
+          <span class="tooltip">Search</span>
+        </li>
 
-<body>
-  <div class="sidebar">
-    <div class="logo-details">
-      <i class="bx bxl-c-plus-plus icon"></i>
-      <div class="logo_name">ContractorConnect</div>
-      <i class="bx bx-menu" id="btn"></i>
+        <li>
+          <a href="#" id="dashboard-link">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+          <span class="tooltip">Dashboard</span>
+        </li>
+        <li>
+          <a href="#" id="companies-link">
+            <i class="bx bx-building-house"></i>
+            <span class="links_name">Companies</span>
+          </a>
+          <span class="tooltip">Companies</span>
+        </li>
+        <li>
+          <a href="#" id="contractors-link">
+            <i class="bx bx-user"></i>
+            <span class="links_name">Contractors</span>
+          </a>
+          <span class="tooltip">Contractors</span>
+        </li>
+        <li>
+          <a href="#" id="orders-link">
+            <i class="bx bx-cart"></i>
+            <span class="links_name">Orders</span>
+          </a>
+          <span class="tooltip">Orders</span>
+        </li>
+        <li>
+          <a href="#" id="revenue-analytics-link">
+            <i class="bx bx-line-chart"></i>
+            <span class="links_name">Revenue Analytics</span>
+          </a>
+          <span class="tooltip">Revenue Analytics</span>
+        </li>
+        <li>
+          <a href="#" id="messages-link">
+            <i class="bx bx-message-square"></i>
+            <span class="links_name">Messages</span>
+          </a>
+          <span class="tooltip">Messages</span>
+        </li>
+        <li>
+          <a href="#" id="reports-link">
+            <i class="bx bx-file"></i>
+            <span class="links_name">Reports</span>
+          </a>
+          <span class="tooltip">Reports</span>
+        </li>
+        <li>
+          <a href="#" id="settings-link">
+            <i class="bx bx-cog"></i>
+            <span class="links_name">Settings</span>
+          </a>
+          <span class="tooltip">Settings</span>
+        </li>
+        <li class="profile">
+          <div class="profile-details">
+            <img src="logo.jpg" alt="logo" />
+            <div class="name_job">
+              <div class="name">Admin</div>
+              <div class="job">ContractorConnect</div>
+            </div>
+          </div>
+          <i class="bx bx-log-out" id="log_out"></i>
+        </li>
+      </ul>
     </div>
-    <ul class="nav-list">
-      <li>
-        <i class="bx bx-search"></i>
-        <input type="text" placeholder="Search..." />
-        <span class="tooltip">Search</span>
-      </li>
+    <section class="home-section">
+      <!-- Container for Dashboard -->
+      <!--Note that examples have been provided for what content i want to display in a glance-->
+      <div id="dashboard-section" class="data-section">
+        <div class="text">Dashboard</div>
+        <!-- Summary Cards -->
+        <div class="summary-cards">
+          <div class="summary-card">
+            <h3>Total Orders</h3>
+            <p>1000</p>
+          </div>
+          <div class="summary-card">
+            <h3>Revenue Generated</h3>
+            <p>$50,000</p>
+          </div>
+          <div class="summary-card">
+            <h3>Active Contractors</h3>
+            <p>50</p>
+          </div>
+          <!-- Add more summary cards as needed -->
+        </div>
 
-      <li>
-        <a href="#" id="dashboard-link">
-          <i class="bx bx-grid-alt"></i>
-          <span class="links_name">Dashboard</span>
-        </a>
-        <span class="tooltip">Dashboard</span>
-      </li>
-      <li>
-        <a href="#" id="companies-link">
-          <i class="bx bx-building-house"></i>
-          <span class="links_name">Companies</span>
-        </a>
-        <span class="tooltip">Companies</span>
-      </li>
-      <li>
-        <a href="#" id="contractors-link">
-          <i class="bx bx-user"></i>
-          <span class="links_name">Contractors</span>
-        </a>
-        <span class="tooltip">Contractors</span>
-      </li>
-      <li>
-        <a href="#" id="orders-link">
-          <i class="bx bx-cart"></i>
-          <span class="links_name">Orders</span>
-        </a>
-        <span class="tooltip">Orders</span>
-      </li>
-      <li>
-        <a href="#" id="revenue-analytics-link">
-          <i class="bx bx-line-chart"></i>
-          <span class="links_name">Revenue Analytics</span>
-        </a>
-        <span class="tooltip">Revenue Analytics</span>
-      </li>
-      <li>
-        <a href="#" id="messages-link">
-          <i class="bx bx-message-square"></i>
-          <span class="links_name">Messages</span>
-        </a>
-        <span class="tooltip">Messages</span>
-      </li>
-      <li>
-        <a href="#" id="reports-link">
-          <i class="bx bx-file"></i>
-          <span class="links_name">Reports</span>
-        </a>
-        <span class="tooltip">Reports</span>
-      </li>
-      <li>
-        <a href="#" id="settings-link">
-          <i class="bx bx-cog"></i>
-          <span class="links_name">Settings</span>
-        </a>
-        <span class="tooltip">Settings</span>
-      </li>
-      <li class="profile">
-        <div class="profile-details">
-          <img src="logo.jpg" alt="logo" />
-          <div class="name_job">
-            <div class="name">Admin</div>
-            <div class="job">ContractorConnect</div>
+        <!-- Graphs and Charts -->
+        <div class="graphs-charts">
+          <h2>Order Volume</h2>
+          <div id="order-volume-chart"></div>
+          <!-- Add more charts as needed -->
+        </div>
+
+        <!-- Map Visualization -->
+        <div class="map-visualization">
+          <h2>Geographical Distribution</h2>
+          <div id="map"></div>
+        </div>
+
+        <!-- Performance Metrics -->
+        <div class="performance-metrics">
+          <h2>Contractor Performance</h2>
+          <div class="contractor-performance">
+            <p>Completion Rate: 85%</p>
+            <p>Average Rating: 4.5</p>
+          </div>
+          <!-- Add more performance metrics as needed -->
+        </div>
+
+        <!-- Activity Feed -->
+        <div class="activity-feed">
+          <h2>Recent Activity</h2>
+          <div class="activity-item">
+            <p>New order placed by Company X</p>
+            <span>2 hours ago</span>
+          </div>
+          <!-- Add more activity items as needed -->
+        </div>
+      </div>
+
+      <!-- Container for Companies -->
+      <div id="companies-section" class="data-section">
+        <div class="text">Companies</div>
+      </div>
+
+      <!-- Container for Contractors -->
+      <div id="contractors-section" class="data-section">
+        <div class="text">Contractors</div>
+        <!-- Contractors data will be displayed here -->
+      </div>
+
+      <!-- Container for Orders -->
+      <div id="orders-section" class="data-section">
+        <div class="text">Orders</div>
+        <!-- Orders will be displayed here -->
+        <div class="orders-container">
+          <h2>Orders</h2>
+
+          <!-- Placeholder for Total Orders -->
+          <div id="total-orders" class="order-item">
+            <h3>Total Orders</h3>
+            <p>This section will display the total number of orders placed.</p>
+          </div>
+
+          <!-- Placeholder for Pending Orders -->
+          <div id="pending-orders" class="order-item">
+            <h3>Pending Orders</h3>
+            <p>
+              This section will display orders that are pending processing or
+              approval.
+            </p>
+          </div>
+
+          <!-- Placeholder for Completed Orders -->
+          <div id="completed-orders" class="order-item">
+            <h3>Completed Orders</h3>
+            <p>
+              This section will display orders that have been successfully
+              completed.
+            </p>
+          </div>
+
+          <!-- Placeholder for Revenue from Orders -->
+          <div id="revenue-from-orders" class="order-item">
+            <h3>Revenue from Orders</h3>
+            <p>
+              This section will display the total revenue generated from orders.
+            </p>
+          </div>
+
+          <!-- Placeholder for Order Trends -->
+          <div id="order-trends" class="order-item">
+            <h3>Order Trends</h3>
+            <p>
+              This section will display trends in order placement over time.
+            </p>
+          </div>
+
+          <!-- Placeholder for Top Products/Services -->
+          <div id="top-products" class="order-item">
+            <h3>Top Products/Services</h3>
+            <p>
+              This section will highlight the top-selling products or services.
+            </p>
+          </div>
+
+          <!-- Placeholder for Order Status -->
+          <div id="order-status" class="order-item">
+            <h3>Order Status</h3>
+            <p>
+              This section will display the status of orders, including pending,
+              processing, and completed orders.
+            </p>
+          </div>
+
+          <!-- Placeholder for Order Details -->
+          <div id="order-details" class="order-item">
+            <h3>Order Details</h3>
+            <p>
+              This section will provide detailed information about individual
+              orders.
+            </p>
+          </div>
+
+          <!-- Placeholder for Order Distribution -->
+          <div id="order-distribution" class="order-item">
+            <h3>Order Distribution</h3>
+            <p>
+              This section will show the distribution of orders across different
+              categories or types.
+            </p>
+          </div>
+
+          <!-- Placeholder for Monthly/Quarterly/Annual Reports -->
+          <div id="order-reports" class="order-item">
+            <h3>Order Reports</h3>
+            <p>
+              This section will offer options to view order analytics on
+              different time intervals.
+            </p>
+          </div>
+
+          <!-- Placeholder for Order Tracking -->
+          <div id="order-tracking" class="order-item">
+            <h3>Order Tracking</h3>
+            <p>
+              This section will allow users to track the status of their orders.
+            </p>
+          </div>
+
+          <!-- Placeholder for Order History -->
+          <div id="order-history" class="order-item">
+            <h3>Order History</h3>
+            <p>This section will display the history of orders placed.</p>
+          </div>
+
+          <!-- Placeholder for Order Feedback -->
+          <div id="order-feedback" class="order-item">
+            <h3>Order Feedback</h3>
+            <p>
+              This section will allow users to provide feedback on their orders.
+            </p>
+          </div>
+
+          <!-- Placeholder for Order Management -->
+          <div id="order-management" class="order-item">
+            <h3>Order Management</h3>
+            <p>
+              This section will provide tools for managing orders, including
+              editing, canceling, or updating orders.
+            </p>
           </div>
         </div>
-        <i class="bx bx-log-out" id="log_out"></i>
-      </li>
-    </ul>
-  </div>
-  <section class="home-section">
-    <!-- Container for Dashboard -->
-    <!--Note that examples have been provided for what content i want to display in a glance-->
-<div id="dashboard-section" class="data-section">
-  <div class="text">Dashboard</div>
-  <!-- Summary Cards -->
-  <div class="summary-cards">
-    <div class="summary-card">
-      <h3>Total Orders</h3>
-      <p>1000</p>
-    </div>
-    <div class="summary-card">
-      <h3>Revenue Generated</h3>
-      <p>$50,000</p>
-    </div>
-    <div class="summary-card">
-      <h3>Active Contractors</h3>
-      <p>50</p>
-    </div>
-    <!-- Add more summary cards as needed -->
-  </div>
-
-  <!-- Graphs and Charts -->
-  <div class="graphs-charts">
-    <h2>Order Volume</h2>
-    <div id="order-volume-chart"></div>
-    <!-- Add more charts as needed -->
-  </div>
-
-  <!-- Map Visualization -->
-  <div class="map-visualization">
-    <h2>Geographical Distribution</h2>
-    <div id="map"></div>
-  </div>
-
-  <!-- Performance Metrics -->
-  <div class="performance-metrics">
-    <h2>Contractor Performance</h2>
-    <div class="contractor-performance">
-      <p>Completion Rate: 85%</p>
-      <p>Average Rating: 4.5</p>
-    </div>
-    <!-- Add more performance metrics as needed -->
-  </div>
-
-  <!-- Activity Feed -->
-  <div class="activity-feed">
-    <h2>Recent Activity</h2>
-    <div class="activity-item">
-      <p>New order placed by Company X</p>
-      <span>2 hours ago</span>
-    </div>
-    <!-- Add more activity items as needed -->
-  </div>
-</div>
-
-
-    <!-- Container for Companies -->
-    <div id="companies-section" class="data-section">
-      <div class="text">Companies</div>  
-    </div>
-
-    <!-- Container for Contractors -->
-    <div id="contractors-section" class="data-section">  
-      <div class="text">Contractors</div>
-      <!-- Contractors data will be displayed here -->
-    </div>
-
-    <!-- Container for Orders -->
-<div id="orders-section" class="data-section">
-  <div class="text">Orders</div>
-  <!-- Orders will be displayed here -->
-  <div class="orders-container">
-    <h2>Orders</h2>
-
-    <!-- Placeholder for Total Orders -->
-    <div id="total-orders" class="order-item">
-      <h3>Total Orders</h3>
-      <p>This section will display the total number of orders placed.</p>
-    </div>
-
-    <!-- Placeholder for Pending Orders -->
-    <div id="pending-orders" class="order-item">
-      <h3>Pending Orders</h3>
-      <p>This section will display orders that are pending processing or approval.</p>
-    </div>
-
-    <!-- Placeholder for Completed Orders -->
-    <div id="completed-orders" class="order-item">
-      <h3>Completed Orders</h3>
-      <p>This section will display orders that have been successfully completed.</p>
-    </div>
-
-    <!-- Placeholder for Revenue from Orders -->
-    <div id="revenue-from-orders" class="order-item">
-      <h3>Revenue from Orders</h3>
-      <p>This section will display the total revenue generated from orders.</p>
-    </div>
-
-    <!-- Placeholder for Order Trends -->
-    <div id="order-trends" class="order-item">
-      <h3>Order Trends</h3>
-      <p>This section will display trends in order placement over time.</p>
-    </div>
-
-    <!-- Placeholder for Top Products/Services -->
-    <div id="top-products" class="order-item">
-      <h3>Top Products/Services</h3>
-      <p>This section will highlight the top-selling products or services.</p>
-    </div>
-
-    <!-- Placeholder for Order Status -->
-    <div id="order-status" class="order-item">
-      <h3>Order Status</h3>
-      <p>This section will display the status of orders, including pending, processing, and completed orders.</p>
-    </div>
-
-    <!-- Placeholder for Order Details -->
-    <div id="order-details" class="order-item">
-      <h3>Order Details</h3>
-      <p>This section will provide detailed information about individual orders.</p>
-    </div>
-
-    <!-- Placeholder for Order Distribution -->
-    <div id="order-distribution" class="order-item">
-      <h3>Order Distribution</h3>
-      <p>This section will show the distribution of orders across different categories or types.</p>
-    </div>
-
-    <!-- Placeholder for Monthly/Quarterly/Annual Reports -->
-    <div id="order-reports" class="order-item">
-      <h3>Order Reports</h3>
-      <p>This section will offer options to view order analytics on different time intervals.</p>
-    </div>
-
-    <!-- Placeholder for Order Tracking -->
-    <div id="order-tracking" class="order-item">
-      <h3>Order Tracking</h3>
-      <p>This section will allow users to track the status of their orders.</p>
-    </div>
-
-    <!-- Placeholder for Order History -->
-    <div id="order-history" class="order-item">
-      <h3>Order History</h3>
-      <p>This section will display the history of orders placed.</p>
-    </div>
-
-    <!-- Placeholder for Order Feedback -->
-    <div id="order-feedback" class="order-item">
-      <h3>Order Feedback</h3>
-      <p>This section will allow users to provide feedback on their orders.</p>
-    </div>
-
-    <!-- Placeholder for Order Management -->
-    <div id="order-management" class="order-item">
-      <h3>Order Management</h3>
-      <p>This section will provide tools for managing orders, including editing, canceling, or updating orders.</p>
-    </div>
-  </div>
-</div>
-
-
-    <!-- Container for Revenue Analytics -->
-<div id="revenue-analytics-section" class="data-section">
-  <div class="text">Revenue Analytics</div>
-  <!-- Revenue analytics will be displayed here -->
-  <div class="revenue-analytics-container">
-    <h2>Revenue Analytics</h2>
-
-    <!-- Placeholder for Total Revenue -->
-    <div id="total-revenue" class="analytics-item">
-      <h3>Total Revenue</h3>
-      <p>This section will display the total revenue generated by the platform.</p>
-    </div>
-
-    <!-- Placeholder for Revenue Trends -->
-    <div id="revenue-trends" class="analytics-item">
-      <h3>Revenue Trends</h3>
-      <p>This section will display trends in revenue over time.</p>
-    </div>
-
-    <!-- Placeholder for Revenue by Company -->
-    <div id="revenue-by-company" class="analytics-item">
-      <h3>Revenue by Company</h3>
-      <p>This section will provide a breakdown of revenue by company.</p>
-    </div>
-
-    <!-- Placeholder for Revenue by Contractor -->
-    <div id="revenue-by-contractor" class="analytics-item">
-      <h3>Revenue by Contractor</h3>
-      <p>This section will provide a breakdown of revenue by contractor.</p>
-    </div>
-
-    <!-- Placeholder for Revenue Comparison -->
-    <div id="revenue-comparison" class="analytics-item">
-      <h3>Revenue Comparison</h3>
-      <p>This section will compare revenue generated from different services or categories.</p>
-    </div>
-
-    <!-- Placeholder for Top Performing Companies/Contractors -->
-    <div id="top-performing" class="analytics-item">
-      <h3>Top Performing Companies/Contractors</h3>
-      <p>This section will highlight the top-performing companies or contractors based on revenue generated.</p>
-    </div>
-
-    <!-- Placeholder for Revenue Forecasting -->
-    <div id="revenue-forecasting" class="analytics-item">
-      <h3>Revenue Forecasting</h3>
-      <p>This section will provide forecasts for future revenue based on current trends.</p>
-    </div>
-
-    <!-- Placeholder for Payment Status -->
-    <div id="payment-status" class="analytics-item">
-      <h3>Payment Status</h3>
-      <p>This section will display the status of payments, including pending, completed, and overdue payments.</p>
-    </div>
-
-    <!-- Placeholder for Revenue Growth Rate -->
-    <div id="revenue-growth-rate" class="analytics-item">
-      <h3>Revenue Growth Rate</h3>
-      <p>This section will calculate and display the growth rate of revenue over time.</p>
-    </div>
-
-    <!-- Placeholder for Monthly/Quarterly/Annual Reports -->
-    <div id="report-options" class="analytics-item">
-      <h3>Report Options</h3>
-      <p>This section will offer options to view revenue analytics on different time intervals.</p>
-    </div>
-
-    <!-- Placeholder for Customer Lifetime Value -->
-    <div id="customer-lifetime-value" class="analytics-item">
-      <h3>Customer Lifetime Value</h3>
-      <p>This section will analyze the lifetime value of customers.</p>
-    </div>
-
-    <!-- Placeholder for Churn Rate -->
-    <div id="churn-rate" class="analytics-item">
-      <h3>Churn Rate</h3>
-      <p>This section will monitor the churn rate of companies or contractors.</p>
-    </div>
-
-    <!-- Placeholder for Profit Margins -->
-    <div id="profit-margins" class="analytics-item">
-      <h3>Profit Margins</h3>
-      <p>This section will calculate and visualize profit margins associated with different orders or services.</p>
-    </div>
-
-    <!-- Placeholder for Geographical Revenue Distribution -->
-    <div id="geo-revenue-distribution" class="analytics-item">
-      <h3>Geographical Revenue Distribution</h3>
-      <p>This section will show revenue distribution across different regions or geographical areas.</p>
-    </div>
-
-    <!-- Placeholder for Subscription Revenue -->
-    <div id="subscription-revenue" class="analytics-item">
-      <h3>Subscription Revenue</h3>
-      <p>This section will analyze and display revenue generated from subscriptions.</p>
-    </div>
-  </div>
-</div>
-
-
-    <!-- Container for Messages -->
-<div id="messages-section" class="data-section">
-  <div class="text">Messages</div>
-  <div class="content">
-    <!-- New Messages/Inbox -->
-    <h2>New Messages/Inbox</h2>
-    <div class="message-list">
-      <!-- Display list of new messages or inbox messages -->
-      <!-- Each message should include sender, subject, and date -->
-    </div>
-
-    <!-- New Contractor Registrations -->
-    <h2>New Contractor Registrations (Pending Approval)</h2>
-    <div class="contractor-registration-list">
-      <!-- Display list of new contractor registrations awaiting approval -->
-      <!-- Each registration should include contractor details and approval button -->
-    </div>
-
-    <!-- Send Message to Contractors -->
-    <h2>Send Message to Contractors</h2>
-    <label for="recipient">Select Contractor:</label>
-    <select id="recipient" name="recipient">
-      <!-- Populate dropdown with registered contractors -->
-    </select><br>
-    <label for="message">Message:</label><br>
-    <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
-    <button id="sendMessage">Send Message</button>
-
-    <!-- Forward Payments/Requests to Contractors -->
-    <h2>Forward Payments/Requests to Contractors</h2>
-    <div class="payment-request-list">
-      <!-- Display list of payments or service requests to be forwarded to contractors -->
-      <!-- Each request should include details and forward button -->
-    </div>
-  </div>
-</div>
-
-
-    <!-- Container for Reports -->
-    <div id="reports-section" class="data-section">
-      <div class="text">Reports</div>
-      <!-- Reports content -->
-      <div class="reports-container">
-        <h2>Order Reports</h2>
-        <div id="order-reports" class="report-section"></div>
-
-        <h2>Contractor Performance Reports</h2>
-        <div id="contractor-performance-reports" class="report-section"></div>
-
-        <h2>Revenue Reports</h2>
-        <div id="revenue-reports" class="report-section"></div>
-
-        <h2>Payment Reports</h2>
-        <div id="payment-reports" class="report-section"></div>
-
-        <h2>Company Engagement Reports</h2>
-        <div id="company-engagement-reports" class="report-section"></div>
-
-        <h2>Contractor Engagement Reports</h2>
-        <div id="contractor-engagement-reports" class="report-section"></div>
-
-        <h2>Service Type Reports</h2>
-        <div id="service-type-reports" class="report-section"></div>
-
-        <h2>Geographical Reports</h2>
-        <div id="geographical-reports" class="report-section"></div>
-
-        <h2>Feedback and Rating Reports</h2>
-        <div id="feedback-rating-reports" class="report-section"></div>
-
-        <h2>Financial Reports</h2>
-        <div id="financial-reports" class="report-section"></div>
-
-        <h2>User Activity Reports</h2>
-        <div id="user-activity-reports" class="report-section"></div>
       </div>
-    </div>
 
-   <!-- Container for Settings -->
-<div id="settings-section" class="data-section">
-  <div class="text">Settings</div>
-  <div class="content">
-    <!-- Account Settings -->
-    <h2>Account Settings</h2>
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" placeholder="Enter your username"><br>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="Enter your email"><br>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" placeholder="Enter your password"><br>
-    <!-- Add more account settings fields as needed -->
+      <!-- Container for Revenue Analytics -->
+      <div id="revenue-analytics-section" class="data-section">
+        <div class="text">Revenue Analytics</div>
+        <!-- Revenue analytics will be displayed here -->
+        <div class="revenue-analytics-container">
+          <h2>Revenue Analytics</h2>
 
-    <!-- Notification Settings -->
-    <h2>Notification Settings</h2>
-    <input type="checkbox" id="orderNotifications" name="orderNotifications">
-    <label for="orderNotifications">Receive email notifications for new orders</label><br>
-    <input type="checkbox" id="messageNotifications" name="messageNotifications">
-    <label for="messageNotifications">Receive email notifications for new messages</label><br>
-    <!-- Add more notification settings options as needed -->
+          <!-- Placeholder for Total Revenue -->
+          <div id="total-revenue" class="analytics-item">
+            <h3>Total Revenue</h3>
+            <p>
+              This section will display the total revenue generated by the
+              platform.
+            </p>
+          </div>
 
-    <!-- Theme Settings -->
-    <h2>Theme Settings</h2>
-    <label for="theme">Select Theme:</label>
-    <select id="theme" name="theme">
-      <option value="light">Light</option>
-      <option value="dark">Dark</option>
-    </select><br>
-    <!-- Add more theme settings options as needed -->
+          <!-- Placeholder for Revenue Trends -->
+          <div id="revenue-trends" class="analytics-item">
+            <h3>Revenue Trends</h3>
+            <p>This section will display trends in revenue over time.</p>
+          </div>
 
-    <!-- Email Configuration -->
-    <h2>Email Configuration</h2>
-    <label for="smtpServer">SMTP Server:</label>
-    <input type="text" id="smtpServer" name="smtpServer" placeholder="Enter SMTP server"><br>
-    <!-- Add more email configuration settings fields as needed -->
+          <!-- Placeholder for Revenue by Company -->
+          <div id="revenue-by-company" class="analytics-item">
+            <h3>Revenue by Company</h3>
+            <p>This section will provide a breakdown of revenue by company.</p>
+          </div>
 
-    <!-- Contractor Settings -->
-    <h2>Contractor Settings</h2>
-    <label for="contractorType">Contractor Type:</label>
-    <select id="contractorType" name="contractorType">
-      <option value="construction">Construction</option>
-      <option value="plumbing">Plumbing</option>
-      <option value="electrical">Electrical</option>
-      <!-- Add more contractor types as needed -->
-    </select><br>
-    <label for="skills">Skills:</label>
-    <input type="text" id="skills" name="skills" placeholder="Enter your skills"><br>
-    <!-- Add more contractor settings fields as needed -->
+          <!-- Placeholder for Revenue by Contractor -->
+          <div id="revenue-by-contractor" class="analytics-item">
+            <h3>Revenue by Contractor</h3>
+            <p>
+              This section will provide a breakdown of revenue by contractor.
+            </p>
+          </div>
 
-    <!-- Payment Settings -->
-    <h2>Payment Settings</h2>
-    <label for="paymentMethod">Preferred Payment Method:</label>
-    <select id="paymentMethod" name="paymentMethod">
-      <option value="paypal">PayPal</option>
-      <option value="bankTransfer">Bank Transfer</option>
-      <!-- Add more payment methods as needed -->
-    </select><br>
-    <!-- Add more payment settings options as needed -->
+          <!-- Placeholder for Revenue Comparison -->
+          <div id="revenue-comparison" class="analytics-item">
+            <h3>Revenue Comparison</h3>
+            <p>
+              This section will compare revenue generated from different
+              services or categories.
+            </p>
+          </div>
 
-    <!-- About and Help -->
-    <h2>About and Help</h2>
-    <p>Version: 1.0</p>
-    <p>For help and support, visit our <a href="#">documentation</a>.</p>
-  </div>
-</div>
+          <!-- Placeholder for Top Performing Companies/Contractors -->
+          <div id="top-performing" class="analytics-item">
+            <h3>Top Performing Companies/Contractors</h3>
+            <p>
+              This section will highlight the top-performing companies or
+              contractors based on revenue generated.
+            </p>
+          </div>
 
+          <!-- Placeholder for Revenue Forecasting -->
+          <div id="revenue-forecasting" class="analytics-item">
+            <h3>Revenue Forecasting</h3>
+            <p>
+              This section will provide forecasts for future revenue based on
+              current trends.
+            </p>
+          </div>
 
+          <!-- Placeholder for Payment Status -->
+          <div id="payment-status" class="analytics-item">
+            <h3>Payment Status</h3>
+            <p>
+              This section will display the status of payments, including
+              pending, completed, and overdue payments.
+            </p>
+          </div>
 
-  </section>
+          <!-- Placeholder for Revenue Growth Rate -->
+          <div id="revenue-growth-rate" class="analytics-item">
+            <h3>Revenue Growth Rate</h3>
+            <p>
+              This section will calculate and display the growth rate of revenue
+              over time.
+            </p>
+          </div>
 
-  <script src="admin.js"></script>
-</body>
+          <!-- Placeholder for Monthly/Quarterly/Annual Reports -->
+          <div id="report-options" class="analytics-item">
+            <h3>Report Options</h3>
+            <p>
+              This section will offer options to view revenue analytics on
+              different time intervals.
+            </p>
+          </div>
 
+          <!-- Placeholder for Customer Lifetime Value -->
+          <div id="customer-lifetime-value" class="analytics-item">
+            <h3>Customer Lifetime Value</h3>
+            <p>This section will analyze the lifetime value of customers.</p>
+          </div>
+
+          <!-- Placeholder for Churn Rate -->
+          <div id="churn-rate" class="analytics-item">
+            <h3>Churn Rate</h3>
+            <p>
+              This section will monitor the churn rate of companies or
+              contractors.
+            </p>
+          </div>
+
+          <!-- Placeholder for Profit Margins -->
+          <div id="profit-margins" class="analytics-item">
+            <h3>Profit Margins</h3>
+            <p>
+              This section will calculate and visualize profit margins
+              associated with different orders or services.
+            </p>
+          </div>
+
+          <!-- Placeholder for Geographical Revenue Distribution -->
+          <div id="geo-revenue-distribution" class="analytics-item">
+            <h3>Geographical Revenue Distribution</h3>
+            <p>
+              This section will show revenue distribution across different
+              regions or geographical areas.
+            </p>
+          </div>
+
+          <!-- Placeholder for Subscription Revenue -->
+          <div id="subscription-revenue" class="analytics-item">
+            <h3>Subscription Revenue</h3>
+            <p>
+              This section will analyze and display revenue generated from
+              subscriptions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Container for Messages -->
+      <div id="messages-section" class="data-section">
+        <div class="text">Messages</div>
+        <div class="content">
+          <!-- New Messages/Inbox -->
+          <h2>New Messages/Inbox</h2>
+          <div class="message-list">
+            <!-- Display list of new messages or inbox messages -->
+            <!-- Each message should include sender, subject, and date -->
+          </div>
+
+          <!-- New Contractor Registrations -->
+          <h2>New Contractor Registrations (Pending Approval)</h2>
+          <div class="contractor-registration-list">
+            <!-- Display list of new contractor registrations awaiting approval -->
+            <!-- Each registration should include contractor details and approval button -->
+          </div>
+
+          <!-- Send Message to Contractors -->
+          <h2>Send Message to Contractors</h2>
+          <label for="recipient">Select Contractor:</label>
+          <select id="recipient" name="recipient">
+            <!-- Populate dropdown with registered contractors --></select
+          ><br />
+          <label for="message">Message:</label><br />
+          <textarea id="message" name="message" rows="4" cols="50"></textarea
+          ><br />
+          <button id="sendMessage">Send Message</button>
+
+          <!-- Forward Payments/Requests to Contractors -->
+          <h2>Forward Payments/Requests to Contractors</h2>
+          <div class="payment-request-list">
+            <!-- Display list of payments or service requests to be forwarded to contractors -->
+            <!-- Each request should include details and forward button -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Container for Reports -->
+      <div id="reports-section" class="data-section">
+        <div class="text">Reports</div>
+        <!-- Reports content -->
+        <div class="reports-container">
+          <h2>Order Reports</h2>
+          <div id="order-reports" class="report-section"></div>
+
+          <h2>Contractor Performance Reports</h2>
+          <div id="contractor-performance-reports" class="report-section"></div>
+
+          <h2>Revenue Reports</h2>
+          <div id="revenue-reports" class="report-section"></div>
+
+          <h2>Payment Reports</h2>
+          <div id="payment-reports" class="report-section"></div>
+
+          <h2>Company Engagement Reports</h2>
+          <div id="company-engagement-reports" class="report-section"></div>
+
+          <h2>Contractor Engagement Reports</h2>
+          <div id="contractor-engagement-reports" class="report-section"></div>
+
+          <h2>Service Type Reports</h2>
+          <div id="service-type-reports" class="report-section"></div>
+
+          <h2>Geographical Reports</h2>
+          <div id="geographical-reports" class="report-section"></div>
+
+          <h2>Feedback and Rating Reports</h2>
+          <div id="feedback-rating-reports" class="report-section"></div>
+
+          <h2>Financial Reports</h2>
+          <div id="financial-reports" class="report-section"></div>
+
+          <h2>User Activity Reports</h2>
+          <div id="user-activity-reports" class="report-section"></div>
+        </div>
+      </div>
+
+      <!-- Container for Settings -->
+      <div id="settings-section" class="data-section">
+        <div class="text">Settings</div>
+        <div class="content">
+          <!-- Account Settings -->
+          <h2>Account Settings</h2>
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter your username"
+          /><br />
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+          /><br />
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+          /><br />
+          <!-- Add more account settings fields as needed -->
+
+          <!-- Notification Settings -->
+          <h2>Notification Settings</h2>
+          <input
+            type="checkbox"
+            id="orderNotifications"
+            name="orderNotifications"
+          />
+          <label for="orderNotifications"
+            >Receive email notifications for new orders</label
+          ><br />
+          <input
+            type="checkbox"
+            id="messageNotifications"
+            name="messageNotifications"
+          />
+          <label for="messageNotifications"
+            >Receive email notifications for new messages</label
+          ><br />
+          <!-- Add more notification settings options as needed -->
+
+          <!-- Theme Settings -->
+          <h2>Theme Settings</h2>
+          <label for="theme">Select Theme:</label>
+          <select id="theme" name="theme">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option></select
+          ><br />
+          <!-- Add more theme settings options as needed -->
+
+          <!-- Email Configuration -->
+          <h2>Email Configuration</h2>
+          <label for="smtpServer">SMTP Server:</label>
+          <input
+            type="text"
+            id="smtpServer"
+            name="smtpServer"
+            placeholder="Enter SMTP server"
+          /><br />
+          <!-- Add more email configuration settings fields as needed -->
+
+          <!-- Contractor Settings -->
+          <h2>Contractor Settings</h2>
+          <label for="contractorType">Contractor Type:</label>
+          <select id="contractorType" name="contractorType">
+            <option value="construction">Construction</option>
+            <option value="plumbing">Plumbing</option>
+            <option value="electrical">Electrical</option>
+            <!-- Add more contractor types as needed --></select
+          ><br />
+          <label for="skills">Skills:</label>
+          <input
+            type="text"
+            id="skills"
+            name="skills"
+            placeholder="Enter your skills"
+          /><br />
+          <!-- Add more contractor settings fields as needed -->
+
+          <!-- Payment Settings -->
+          <h2>Payment Settings</h2>
+          <label for="paymentMethod">Preferred Payment Method:</label>
+          <select id="paymentMethod" name="paymentMethod">
+            <option value="paypal">PayPal</option>
+            <option value="bankTransfer">Bank Transfer</option>
+            <!-- Add more payment methods as needed --></select
+          ><br />
+          <!-- Add more payment settings options as needed -->
+
+          <!-- About and Help -->
+          <h2>About and Help</h2>
+          <p>Version: 1.0</p>
+          <p>For help and support, visit our <a href="#">documentation</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="admin.js"></script>
+  </body>
 </html>
