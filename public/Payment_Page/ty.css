@@ -1,64 +1,64 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #222831;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #222831;
 }
 
 .container {
-    max-width: 80vw;
-    margin: 10vh auto;
-    padding: 5vw;
-    text-align: center;
-    background-color: #76ABAE;
-    border-radius: 5vw;
-    box-shadow: 0 2vw 3vw rgba(0, 0, 0, 0.1);
+  max-width: 80vw;
+  margin: 10vh auto;
+  padding: 5vw;
+  text-align: center;
+  background-color: #76abae;
+  border-radius: 5vw;
+  box-shadow: 0 2vw 3vw rgba(0, 0, 0, 0.1);
 }
 
 .thank-you-heading {
-    font-size: 4vw;
-    color: #EEEEEE;
-    margin-bottom: 2vw;
+  font-size: 4vw;
+  color: #eeeeee;
+  margin-bottom: 2vw;
 }
 
 .thank-you-message {
-    font-size: 2vw;
-    color: #31363F;
-    margin-bottom: 2vw;
+  font-size: 2vw;
+  color: #31363f;
+  margin-bottom: 2vw;
 }
 
 .additional-message {
-    font-size: 1.5vw;
-    color: #EEEEEE;
-    margin-bottom: 3vw;
+  font-size: 1.5vw;
+  color: #eeeeee;
+  margin-bottom: 3vw;
 }
 
 .btn {
-    display: inline-block;
-    padding: 2vw 4vw;
-    background-color: #EEEEEE;
-    color: #31363F;
-    text-decoration: none;
-    border-radius: 1vw;
-    transition: background-color 0.5s;
-    font-size:1.2vw;
+  display: inline-block;
+  padding: 2vw 4vw;
+  background-color: #eeeeee;
+  color: #31363f;
+  text-decoration: none;
+  border-radius: 1vw;
+  transition: background-color 0.5s;
+  font-size: 1.2vw;
 }
 
 .btn:hover {
-    background-color:#31363F;
-    color:#EEEEEE;
-    border-color: #EEEEEE;
+  background-color: #31363f;
+  color: #eeeeee;
+  border-color: #eeeeee;
 }
 
 @keyframes slideIn {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .container {
-    animation: slideIn 0.5s forwards;
+  animation: slideIn 0.5s forwards;
 }

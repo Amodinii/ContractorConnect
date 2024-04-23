@@ -1,303 +1,291 @@
 @font-face {
-    font-family: "BebasNeue";
-    src: url("BebasNeue.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "BebasNeue";
+  src: url("BebasNeue.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "Monda";
-    src: url("Monda-Regular.ttf") format("ttf");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Monda";
+  src: url("Monda-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 
-*{
-    margin:0;
-    padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
-img
-{
-    width: 10vw;
-    height: 8vw;
-    float: left;
+img {
+  width: 10vw;
+  height: 8vw;
+  float: left;
 }
-
-
 
 body {
-    background-color: white;
-    overflow-x: hidden;
+  background-color: white;
+  overflow-x: hidden;
 }
 
 .navbar {
-    overflow: hidden;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar a {
-    color: black;
-    text-align: center;
-    margin: 1.5vw;
-    text-decoration: none;
-    padding: 1vw;
-    font-size:1.2vw;
-    font-family: "Mukta Vaani", sans-serif;
+  color: black;
+  text-align: center;
+  margin: 1.5vw;
+  text-decoration: none;
+  padding: 1vw;
+  font-size: 1.2vw;
+  font-family: "Mukta Vaani", sans-serif;
 }
 
 .navbar a:hover {
-    display: inline-block;
-    color: #e6bc7c;
-    
+  display: inline-block;
+  color: #e6bc7c;
 }
 
-#pehla
-{
-    margin-left: -5.9vw;
+#pehla {
+  margin-left: -5.9vw;
 }
 
 .footer {
-    padding:1vw;
-    display: flex;
-    justify-content: flex-start;
-    background-color: #282727;
-    color: #e5d5bc;
-    position: absolute;
-    top: 170vh;
-    bottom:0;
-    left:0;
-    height: 39vh;
-    font-family: "Mukta Vaani", sans-serif;
+  padding: 1vw;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #282727;
+  color: #e5d5bc;
+  position: absolute;
+  top: 170vh;
+  bottom: 0;
+  left: 0;
+  height: 39vh;
+  font-family: "Mukta Vaani", sans-serif;
 }
 
 .left {
-    flex: 1;
-    text-align: left;
-    padding: 2vw;
-    font-family: "Mukta Vaani", sans-serif;
+  flex: 1;
+  text-align: left;
+  padding: 2vw;
+  font-family: "Mukta Vaani", sans-serif;
 }
 
 .column {
-    flex: 1;
-    margin-right: 2vw;
-    margin-left: 2vw;
-    font-size: 2.3vh;
-    font-family: "Mukta Vaani", sans-serif;
-    padding-top:2vh;
+  flex: 1;
+  margin-right: 2vw;
+  margin-left: 2vw;
+  font-size: 2.3vh;
+  font-family: "Mukta Vaani", sans-serif;
+  padding-top: 2vh;
 }
-.column li
-{
-    padding-bottom:0.5vw;
+.column li {
+  padding-bottom: 0.5vw;
 }
-.column p
-{
-    margin-bottom:0.5vw;
+.column p {
+  margin-bottom: 0.5vw;
 }
 
 a {
-    color: #e5d5bc;
-    text-decoration: none;
-    font-family: "Mukta Vaani", sans-serif;
-    font-size:2.05vh;
+  color: #e5d5bc;
+  text-decoration: none;
+  font-family: "Mukta Vaani", sans-serif;
+  font-size: 2.05vh;
 }
-#content
-{
-    text-align:justify;
-    font-family: "Mukta Vaani", sans-serif;
-    font-size:2vh;
-}
-
-#topic
-{
-    margin-top: -1vw;
-    font-family: "Mukta Vaani", sans-serif;
-    font-size:2.5vh;
-    margin-bottom:1vw;
+#content {
+  text-align: justify;
+  font-family: "Mukta Vaani", sans-serif;
+  font-size: 2vh;
 }
 
-p
-{
-    font-family: "Mukta Vaani", sans-serif;
+#topic {
+  margin-top: -1vw;
+  font-family: "Mukta Vaani", sans-serif;
+  font-size: 2.5vh;
+  margin-bottom: 1vw;
 }
 
-.contactlist{
-    font-size: 2.3vh;
+p {
+  font-family: "Mukta Vaani", sans-serif;
 }
 
-.contactlist{
-    font-size: 2.3vh;
+.contactlist {
+  font-size: 2.3vh;
+}
+
+.contactlist {
+  font-size: 2.3vh;
 }
 
 /*Account Info*/
-#Account{
-    height: 2.5vw;
-    width: 2.5vw;
-    float: right;
-    display: flex;
-    justify-content: flex-end;
-    align-self: flex-end;
-    padding-top: 3vh;
-    padding-right: 2vw;
-    position:relative;
+#Account {
+  height: 2.5vw;
+  width: 2.5vw;
+  float: right;
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+  padding-top: 3vh;
+  padding-right: 2vw;
+  position: relative;
 }
 
 .AccountDrop {
-    display: none;
-    position: absolute;
-    top: 9vh;
-    right: 1vw;
-    background-color: #eff0ec;
-    min-width: 1vw;
-    box-shadow: 0 1vh 1vw 0 rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius:1vw;
+  display: none;
+  position: absolute;
+  top: 9vh;
+  right: 1vw;
+  background-color: #eff0ec;
+  min-width: 1vw;
+  box-shadow: 0 1vh 1vw 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 1vw;
 }
 
 .AccountDrop a {
-    color: #282727;
-    padding: 0.5vw 1vh;
-    text-decoration: none;
-    display: block;
-    font-family: "Mukta Vaani", sans-serif;
+  color: #282727;
+  padding: 0.5vw 1vh;
+  text-decoration: none;
+  display: block;
+  font-family: "Mukta Vaani", sans-serif;
 }
 
 .AccountDrop a:hover {
-    border-radius: 1vw;
-    background-color: #e5d5bc;
-    color:#282727;
+  border-radius: 1vw;
+  background-color: #e5d5bc;
+  color: #282727;
 }
 
-#bannu
-{
-    margin-top:2vw;
-    margin-left:7vw;
-    width:70vw;
-    height:27vw;
+#bannu {
+  margin-top: 2vw;
+  margin-left: 7vw;
+  width: 70vw;
+  height: 27vw;
 }
 
 .container {
-    width: 100vw;
-    margin: 10vh auto;
-    padding: 5vh;
-    background-color: #fff;
-    /*border-radius: 2vh;
+  width: 100vw;
+  margin: 10vh auto;
+  padding: 5vh;
+  background-color: #fff;
+  /*border-radius: 2vh;
     box-shadow: 0 0 1vh rgba(0, 0, 0, 0.1);*/
-    position: relative;
-    z-index: 0; 
-    border:none;
-    margin-left:24vw;
-    margin-top:33vw;
+  position: relative;
+  z-index: 0;
+  border: none;
+  margin-left: 24vw;
+  margin-top: 33vw;
 }
 
 .form-group {
-    margin-bottom: 2vh;
+  margin-bottom: 2vh;
 }
 
-label,option {
-    font-size: 1.3vw;
-    font-family:"Monda",sans-serif ;
-    text-align: left;
-    margin-left:1vw;
-    margin-bottom:1vw;
+label,
+option {
+  font-size: 1.3vw;
+  font-family: "Monda", sans-serif;
+  text-align: left;
+  margin-left: 1vw;
+  margin-bottom: 1vw;
 }
 
-#location,#price,#time
-{
-    margin-top:1vw;
+#location,
+#price,
+#time {
+  margin-top: 1vw;
 }
 
 input[type="text"],
 select,
 input[type="range"] {
-    font-family: "Monda",sans-serif;
-    width: calc(50% - 2vh);
-    padding: 2vh;
-    font-size: 2vh;
-    border-radius: 2vw;
-    stroke: white;
-    margin-bottom:1vw;
+  font-family: "Monda", sans-serif;
+  width: calc(50% - 2vh);
+  padding: 2vh;
+  font-size: 2vh;
+  border-radius: 2vw;
+  stroke: white;
+  margin-bottom: 1vw;
 }
-
 
 .range-value {
-    text-align: center;
-    font-size: 1.8vh;
-    margin-top: 1vh;
+  text-align: center;
+  font-size: 1.8vh;
+  margin-top: 1vh;
 }
 #sig {
-    border: 2px solid white; /* Use border instead of stroke */
-    color: #e5d5bc;
-    font-family: "BebasNeue", sans-serif;
-    font-size: 2vw;
-    font-weight: bold;
-    width: 20vw;
-    height: 5vw;
-    border-radius: 4rem;
-    background-color: #282727;
-    box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
-    margin-left: 15vw;
-    margin-top: 1.2vh;
+  border: 2px solid white; /* Use border instead of stroke */
+  color: #e5d5bc;
+  font-family: "BebasNeue", sans-serif;
+  font-size: 2vw;
+  font-weight: bold;
+  width: 20vw;
+  height: 5vw;
+  border-radius: 4rem;
+  background-color: #282727;
+  box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+  margin-left: 15vw;
+  margin-top: 1.2vh;
 }
 
 #sig:hover {
-    border: 2px solid #282727;
-    background-color: #e5d5bc;
-    color: #282727;
+  border: 2px solid #282727;
+  background-color: #e5d5bc;
+  color: #282727;
 }
 
-select
-{
-    
-    width:50vw;
-    height:4vw;
-    border-radius: 2vw;
-    box-shadow: 
-    0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.01),  /* Right */
-    -0.3rem 0.3rem 0.2rem rgba(0, 0, 0, 0.03), /* Left */
-    0 0.3rem 0.5rem rgba(0, 0, 0, 0.1); /* Bottom */
-    border:none;
-    background-color:white;
-    margin-top: 1vh;
-    padding: 2vh;
-    font-size: 2vh;
-    font-family: "Monda",sans-serif;
+select {
+  width: 50vw;
+  height: 4vw;
+  border-radius: 2vw;
+  box-shadow:
+    0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.01),
+    /* Right */ -0.3rem 0.3rem 0.2rem rgba(0, 0, 0, 0.03),
+    /* Left */ 0 0.3rem 0.5rem rgba(0, 0, 0, 0.1); /* Bottom */
+  border: none;
+  background-color: white;
+  margin-top: 1vh;
+  padding: 2vh;
+  font-size: 2vh;
+  font-family: "Monda", sans-serif;
 }
 
-input[type="range"]{
-    color: #282727;
+input[type="range"] {
+  color: #282727;
 }
 .slider {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 32vw;
-    height: 0.025vw;
-    border-radius: 3vw;  
-    background: #282727;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 32vw;
+  height: 0.025vw;
+  border-radius: 3vw;
+  background: #282727;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
 }
 
 .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 1vw;
-    height: 1vw;
-    border-radius: 50%; 
-    background: #e5d5bc;
-    cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+  background: #e5d5bc;
+  cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 1vw;
-    height: 1vw;
-    border-radius: 50%; 
-    background:#e5d5bc;
-    cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+  background: #e5d5bc;
+  cursor: pointer;
 }

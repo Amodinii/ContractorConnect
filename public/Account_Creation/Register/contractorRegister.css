@@ -1,73 +1,73 @@
 @font-face {
-    font-family: "BebasNeue";
-    src: url("BebasNeue.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "BebasNeue";
+  src: url("BebasNeue.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "Monda";
-    src: url("Monda-Regular.ttf") format("ttf");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Monda";
+  src: url("Monda-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-    background-color: #222831; 
-    overflow-x:hidden;
+  background-color: #222831;
+  overflow-x: hidden;
 }
 
-img
-{
-    z-index:0;
-    width: 102vw;
-    margin-top:-2vw;
-    margin-left:-2vw;
-    height:15vw;
+img {
+  z-index: 0;
+  width: 102vw;
+  margin-top: -2vw;
+  margin-left: -2vw;
+  height: 15vw;
 }
 
-label{
-    font-family: "Mukta Vaani", sans-serif;
-    font-size:0.5vw;
+label {
+  font-family: "Mukta Vaani", sans-serif;
+  font-size: 0.5vw;
 }
 .container {
-    text-align: center;
-    background-color: #EEEEEE;
-    border-radius: 2vw;
-    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1);
-    margin-top:-20vh;
-    margin-left:17vw;
-    padding: 2vh;
-    padding-right:3vw;
-    padding-left:3vw;
-    max-width: 60vw;
+  text-align: center;
+  background-color: #eeeeee;
+  border-radius: 2vw;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1);
+  margin-top: -20vh;
+  margin-left: 17vw;
+  padding: 2vh;
+  padding-right: 3vw;
+  padding-left: 3vw;
+  max-width: 60vw;
 }
 
 #heading {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 5vw;
-    color: #31363F;
-    margin-bottom: 1.5vh;
-    margin-top:2vh;
-    font-weight: normal;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 5vw;
+  color: #31363f;
+  margin-bottom: 1.5vh;
+  margin-top: 2vh;
+  font-weight: normal;
 }
 
 .detailscont {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1vh;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1vh;
 }
 
-.deta1, .deta2 {
-    width: 48%;
+.deta1,
+.deta2 {
+  width: 48%;
 }
 
 .label {
-    font-size: 1.25vw;
-    color: #31363F;
-    margin-bottom: 0.1vh;
-    display: block;
-    text-align: left;
+  font-size: 1.25vw;
+  color: #31363f;
+  margin-bottom: 0.1vh;
+  display: block;
+  text-align: left;
 }
 
 input[type="text"],
@@ -75,14 +75,14 @@ input[type="email"],
 input[type="tel"],
 input[type="password"],
 select {
-    width: 75%;
-    height: 2vh;
-    border-radius: 1vw;
-    border: 0.1vw solid #ced4da;
-    padding: 1.5vh;
-    margin-bottom: 1vh;
-    font-family: "Mukta Vaani", sans-serif;
-    font-size: 1vw;
+  width: 75%;
+  height: 2vh;
+  border-radius: 1vw;
+  border: 0.1vw solid #ced4da;
+  padding: 1.5vh;
+  margin-bottom: 1vh;
+  font-family: "Mukta Vaani", sans-serif;
+  font-size: 1vw;
 }
 
 input[type="text"]::placeholder,
@@ -90,7 +90,7 @@ input[type="email"]::placeholder,
 input[type="tel"]::placeholder,
 input[type="password"]::placeholder,
 select::placeholder {
-    color: #31363F;
+  color: #31363f;
 }
 
 input[type="text"]:focus,
@@ -98,68 +98,68 @@ input[type="email"]:focus,
 input[type="tel"]:focus,
 input[type="password"]:focus,
 select:focus {
-    outline: none;
-    border-color: #495057;
+  outline: none;
+  border-color: #495057;
 }
 
 button {
-    color: #EEEEEE;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 1.5vw;
-    width: 10vw;
-    height: 6vh;
-    border-radius: 1vw;
-    background-color: #76ABAE;
-    cursor: pointer;
+  color: #eeeeee;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5vw;
+  width: 10vw;
+  height: 6vh;
+  border-radius: 1vw;
+  background-color: #76abae;
+  cursor: pointer;
 }
 
 button:hover {
-    border-color: #31363F;
-    background-color: #31363F;
-    color: #76ABAE;
+  border-color: #31363f;
+  background-color: #31363f;
+  color: #76abae;
 }
 
 .textlow a {
-    color: #31363F;
-    font-family: "Mukta Vaani", sans-serif;
-    display: inline-block;
-    margin-top: 1vh;
-    text-decoration: none;
-    transition: color 0.3s;
+  color: #31363f;
+  font-family: "Mukta Vaani", sans-serif;
+  display: inline-block;
+  margin-top: 1vh;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .textlow a:hover {
-    color: #76ABAE;
+  color: #76abae;
 }
 
 .selcontainer {
-    position: relative;
-    width: 100%;
-    margin-top: -0.5vh;
+  position: relative;
+  width: 100%;
+  margin-top: -0.5vh;
 }
 
 .selcontainer::after {
-    content: '\25BC';
-    position: absolute;
-    top: 50%;
-    right: 1vw;
-    transform: translateY(-50%);
-    pointer-events: none;
+  content: "\25BC";
+  position: absolute;
+  top: 50%;
+  right: 1vw;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
 select {
-    appearance: none;
-    -webkit-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 option {
-    font-size: 1vw;
-    text-align: center;
+  font-size: 1vw;
+  text-align: center;
 }
 
 .input-container {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-    width: 75%;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 75%;
 }
