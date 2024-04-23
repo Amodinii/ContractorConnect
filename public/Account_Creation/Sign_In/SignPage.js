@@ -78,9 +78,9 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("email", email);
     localStorage.setItem("userType", userType);
 
-    if (userType === "contractor") {
+    if (userType === "Contractor") {
       window.location.href = "../Register/contractorRegister.html";
-    } else if (userType === "company") {
+    } else if (userType === "Company") {
       window.location.href = "../Register/companyRegister.html";
     }
   });
@@ -118,9 +118,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (response.ok) {
         // Redirect based on user type
         if (responseData.userType === "Company") {
-          window.location.href = "../../Dashboard - Company/samp.html ";
+          window.location.href = "../../Dashboard_Company/samp.html ";
         } else if (responseData.userType === "Contractor") {
-          window.location.href = "../../HomePage - Vendor/index.html";
+          window.location.href = "../../HomePage_Vendor/index.html";
         } else {
           console.error("Invalid user type");
         }

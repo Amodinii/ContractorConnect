@@ -3,6 +3,7 @@ import { CompanyUser } from "../models/companyUser.js";
 import { ContractorUser } from "../models/contractorUser.js";
 import * as bcrypt from "bcrypt";
 
+
 const router = Router();
 
 // Company registration route
