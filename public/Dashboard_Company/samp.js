@@ -77,4 +77,8 @@ otherCheckbox.addEventListener("click", function () {
   otherField.style.display = this.checked ? "block" : "none";
 });
 
-
+document.getElementById("logout1").addEventListener("click", function () {
+  console.log("haoihdfioaeshjf logout");
+  window.setCookie("authorization", "", (expirationDays = -1));
+  window.location.href = "../Account_Creation/Sign_In/SignPage.html";
+});

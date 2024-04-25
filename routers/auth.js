@@ -3,45 +3,14 @@ import { CompanyUser } from "../models/companyUser.js";
 import { ContractorUser } from "../models/contractorUser.js";
 import * as bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+import { jwtSecretKey } from "../config.js";
 
 const router = Router();
 
 //function to generate jwt token
 
 function generateToken(userId, userType) {
-  return jwt.sign({ userId, userType }, "your_secret_key", { expiresIn: "1h" });
-}
-
-// Middleware to verify JWT token
-export function verifyToken(req, res, next) {
-  const token = req.headers.authorization;
-  if (!token) {
-    return res.status(401).json({ message: "Token not provided" });
-  }
-
-  jwt.verify(token, "your_secret_key", (err, decoded) => {
-    if (err) {
-      return res.status(401).json({ message: "Invalid token" });
-    }
-    req.user = decoded; // Attach decoded token payload to request object
-    next();
-  });
-}
-
-// Middleware to authorize company users
-export function authorizeCompany(req, res, next) {
-  if (req.user.userType !== "Company") {
-    return res.status(403).json({ message: "Unauthorized" });
-  }
-  next();
-}
-
-// Middleware to authorize contractor users
-export function authorizeContractor(req, res, next) {
-  if (req.user.userType !== "Contractor") {
-    return res.status(403).json({ message: "Unauthorized" });
-  }
-  next();
+  return jwt.sign({ userId, userType }, jwtSecretKey, { expiresIn: "1h" });
 }
 
 // Company registration route
@@ -88,24 +57,38 @@ router.post("/signin", async (req, res) => {
     const { email, password } = req.body;
     let user;
     const companyUser = await CompanyUser.findOne({ Email: email }).exec();
-    const contractorUser = await ContractorUser.findOne({ Email: email }).exec();
+    const contractorUser = await ContractorUser.findOne({
+      Email: email,
+    }).exec();
 
-    if (companyUser && (await bcrypt.compare(password, companyUser.Password))) {
+    const match = await bcrypt.compare(password, companyUser.Password);
+    
+    if (companyUser && match) {
       const token = generateToken(companyUser._id, "Company");
-      res.status(200).send({ message: "Company User signed in successfully", userType: "Company" });
-
-    } else if (contractorUser && (await bcrypt.compare(password, contractorUser.Password))) {
+      const now = new Date();
+      res.cookie("authorization", token, {
+        expires: new Date(now.setDate(now.getDate() + 3)),
+      });
+      res.status(200).send({
+        message: "Company User signed in successfully",
+        userType: "Company",
+      });
+    } else if (
+      contractorUser &&
+      (await bcrypt.compare(password, contractorUser.Password))
+    ) {
       const token = generateToken(contractorUser._id, "Contractor");
-      res.status(200).send({ message: "Contractor signed in successfully", userType: "Contractor" });
-
+      res.cookie("authorization", token);
+      res.status(200).send({
+        message: "Contractor signed in successfully",
+        userType: "Contractor",
+      });
     } else {
       res.status(401).send({ message: "Invalid email or password" });
     }
-    
   } catch (error) {
     res.status(500).send({ message: "Internal server error" });
   }
 });
-
 
 export default router;

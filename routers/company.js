@@ -1,7 +1,8 @@
 // routers/company.js
 import { Router } from "express";
-import { verifyToken, authorizeCompany } from "./auth.js";
 import { CompanyUser } from "../models/companyUser.js";
+import { verifyToken } from "../middlewares/verifyToken.js";
+import { authorizeCompany } from "../middlewares/roleCheck.js";
 
 const router = Router();
 
