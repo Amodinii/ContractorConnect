@@ -79,6 +79,6 @@ otherCheckbox.addEventListener("click", function () {
 
 document.getElementById("logout1").addEventListener("click", function () {
   console.log("haoihdfioaeshjf logout");
-  window.setCookie("authorization", "");
+  window.setCookie("authorization", "", (expirationDays = -1));
   window.location.href = "../Account_Creation/Sign_In/SignPage.html";
 });

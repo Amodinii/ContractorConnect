@@ -61,9 +61,14 @@ router.post("/signin", async (req, res) => {
       Email: email,
     }).exec();
 
-    if (companyUser && (await bcrypt.compare(password, companyUser.Password))) {
+    const match = await bcrypt.compare(password, companyUser.Password);
+    
+    if (companyUser && match) {
       const token = generateToken(companyUser._id, "Company");
-      res.cookie("authorization", token);
+      const now = new Date();
+      res.cookie("authorization", token, {
+        expires: new Date(now.setDate(now.getDate() + 3)),
+      });
       res.status(200).send({
         message: "Company User signed in successfully",
         userType: "Company",

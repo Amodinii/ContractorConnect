@@ -4,6 +4,7 @@ import upload from "../utils/storage.js";
 import { Tender } from "../models/tender.js";
 import { verifyToken } from "../middlewares/verifyToken.js";
 import { authorizeCompany } from "../middlewares/roleCheck.js";
+import { CompanyUser } from "../models/companyUser.js";
 
 const router = Router();
 
@@ -32,6 +33,9 @@ router.post(
       });
 
       await tender.save();
+      const user = await CompanyUser.findById(req.user.userId);
+      user.tenders.push(tender._id);
+      await user.save();
       res.status(201).send({ message: "Tender posted successfully", tender });
     } catch (error) {
       console.error("Error posting tender:", error);
