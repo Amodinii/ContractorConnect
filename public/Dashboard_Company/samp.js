@@ -76,3 +76,5 @@ userProfile.addEventListener("click", function (event) {
 otherCheckbox.addEventListener("click", function () {
   otherField.style.display = this.checked ? "block" : "none";
 });
+
+

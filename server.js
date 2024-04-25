@@ -1,7 +1,7 @@
 import express from "express";
 import { connect } from "mongoose";
 import cors from "cors";
-import * as crypto from "node:crypto";
+import jwt from "jsonwebtoken";
 
 import authRouter from "./routers/auth.js";
 import companyRouter from "./routers/company.js";
@@ -19,7 +19,6 @@ app.use(express.static("public"));
 app.use("/uploads", express.static("uploads"));
 
 // MongoDB Connection
-
 connect("mongodb://localhost:27017/ContractorConnect", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -27,14 +26,28 @@ connect("mongodb://localhost:27017/ContractorConnect", {
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.log(err));
 
-//Generating a secret key to keep a teack of user id.
-const secretKey = crypto.randomBytes(32).toString("hex");
+// Secret key for JWT token
+const secretKey = "your_secret_key";
 
+// JWT middleware to authenticate requests
+function authenticateToken(req, res, next) {
+  const authHeader = req.headers["authorization"];
+  const token = authHeader && authHeader.split(" ")[1];
+  if (token == null) return res.sendStatus(401);
+
+  jwt.verify(token, secretKey, (err, user) => {
+    if (err) return res.sendStatus(403);
+    req.user = user;
+    next();
+  });
+}
+
+// Routes
 app.use("/auth", authRouter);
-app.use("/company", companyRouter);
-app.use("/contractor", contractorRouter);
-app.use("/quotation", quotationRouter);
-app.use("/tender", tenderRouter);
-app.use("/users", userRouter);
+app.use("/company", authenticateToken, companyRouter);
+app.use("/contractor", authenticateToken, contractorRouter);
+app.use("/quotation", authenticateToken, quotationRouter);
+app.use("/tender", authenticateToken, tenderRouter);
+app.use("/users", authenticateToken, userRouter);
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
