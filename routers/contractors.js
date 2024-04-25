@@ -1,7 +1,8 @@
 // routers/contractors.js
 import { Router } from "express";
-import { verifyToken, authorizeContractor } from "./auth.js";
 import { ContractorUser } from "../models/contractorUser.js";
+import { verifyToken } from "../middlewares/verifyToken.js";
+import { authorizeContractor } from "../middlewares/roleCheck.js";
 
 const router = Router();
 

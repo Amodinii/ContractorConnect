@@ -6,7 +6,8 @@ const router = Router();
 router.get("/profile", async (req, res) => {
   try {
     // Retrieve the user ID from the session
-    const userId = req.session.userId;
+    // const userId = req.session.userId;
+    
 
     // Query the database to find the user by ID
     const user = await User.findById(userId);
