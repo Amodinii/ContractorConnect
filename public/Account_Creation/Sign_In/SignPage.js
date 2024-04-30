@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   switchers.forEach((item) => {
     item.addEventListener("click", function () {
       switchers.forEach((item) =>
-        item.parentElement.classList.remove("is-active"),
+        item.parentElement.classList.remove("is-active")
       );
       this.parentElement.classList.add("is-active");
     });
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     try {
       // Send a POST request to the server
-      var response = await fetch("http://localhost:5000/signin", {
+      var response = await fetch("/auth/signin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

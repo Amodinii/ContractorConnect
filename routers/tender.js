@@ -1,34 +1,48 @@
+// router/tender.js
 import { Router } from "express";
-
 import upload from "../utils/storage.js";
 import { Tender } from "../models/tender.js";
+import { verifyToken } from "../middlewares/verifyToken.js";
+import { authorizeCompany } from "../middlewares/roleCheck.js";
+import { CompanyUser } from "../models/companyUser.js";
+
 const router = Router();
 
 // Route for posting tender with file upload
-router.post("/postTender", upload.single("tenderFile"), async (req, res) => {
-  console.log("Entered the tender posting");
-  try {
-    const { title, description, category } = req.body;
+router.post(
+  "/postTender",
+  verifyToken,
+  authorizeCompany,
+  upload.single("tenderFile"),
+  async (req, res) => {
+    try {
+      const { title, description, category } = req.body;
+      const userId = req.user.userId; // Extract user ID from the authenticated request
 
-    // Get the filename of the uploaded file
-    const file = req.file;
-    const fileName = file ? file.filename : null;
-    if (!file) res.status(400).send({ message: "Tender file missing" });
+      // Get the filename of the uploaded file
+      const file = req.file;
+      const fileName = file ? file.filename : null;
+      if (!file) res.status(400).send({ message: "Tender file missing" });
 
-    // Save the tender details in the database
-    const tender = new Tender({
-      title: fileName,
-      description: description,
-      category: category,
-    });
+      // Save the tender details in the database, associated with the authenticated company user
+      const tender = new Tender({
+        company: userId, // Associate tender with company user
+        title: fileName,
+        description: description,
+        category: category,
+      });
 
-    await tender.save();
-    res.status(201).send({ message: "Tender posted successfully", tender });
-  } catch (error) {
-    console.error("Error posting tender:", error);
-    res.status(500).send({ message: "Internal server error" });
+      await tender.save();
+      const user = await CompanyUser.findById(req.user.userId);
+      user.tenders.push(tender._id);
+      await user.save();
+      res.status(201).send({ message: "Tender posted successfully", tender });
+    } catch (error) {
+      console.error("Error posting tender:", error);
+      res.status(500).send({ message: "Internal server error" });
+    }
   }
-});
+);
 
 router.get("/tender/quotations/:tenderId", async (req, res) => {
   try {

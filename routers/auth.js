@@ -2,9 +2,16 @@ import { Router } from "express";
 import { CompanyUser } from "../models/companyUser.js";
 import { ContractorUser } from "../models/contractorUser.js";
 import * as bcrypt from "bcrypt";
-
+import jwt from "jsonwebtoken";
+import { jwtSecretKey } from "../config.js";
 
 const router = Router();
+
+//function to generate jwt token
+
+function generateToken(userId, userType) {
+  return jwt.sign({ userId, userType }, jwtSecretKey, { expiresIn: "1h" });
+}
 
 // Company registration route
 router.post("/companyRegister", async (req, res) => {
@@ -33,7 +40,7 @@ router.post("/contractorRegister", async (req, res) => {
       Email: Email,
     }); // Include email in user data
     await contractorUser.save();
-   // req.session.userId = contractorUser._id;
+    // req.session.userId = contractorUser._id;
     // console.log(req.session.userId);
     res
       .status(201)
@@ -45,21 +52,23 @@ router.post("/contractorRegister", async (req, res) => {
 });
 
 // Sign-in route
-// Sign-in route
 router.post("/signin", async (req, res) => {
   try {
     const { email, password } = req.body;
     let user;
-    // Check if the user exists in either collection
     const companyUser = await CompanyUser.findOne({ Email: email }).exec();
     const contractorUser = await ContractorUser.findOne({
       Email: email,
     }).exec();
 
-    if (companyUser && (await bcrypt.compare(password, companyUser.Password))) {
-      // Store user ID in session object
-      req.session.userId = companyUser._id; // Assigning companyUser's ID
-      console.log(req.session.userId);
+    const match = await bcrypt.compare(password, companyUser.Password);
+    
+    if (companyUser && match) {
+      const token = generateToken(companyUser._id, "Company");
+      const now = new Date();
+      res.cookie("authorization", token, {
+        expires: new Date(now.setDate(now.getDate() + 3)),
+      });
       res.status(200).send({
         message: "Company User signed in successfully",
         userType: "Company",
@@ -68,9 +77,8 @@ router.post("/signin", async (req, res) => {
       contractorUser &&
       (await bcrypt.compare(password, contractorUser.Password))
     ) {
-      // Store user ID in session object
-      req.session.userId = contractorUser._id; // Assigning contractorUser's ID
-      console.log(req.session.userId);
+      const token = generateToken(contractorUser._id, "Contractor");
+      res.cookie("authorization", token);
       res.status(200).send({
         message: "Contractor signed in successfully",
         userType: "Contractor",
