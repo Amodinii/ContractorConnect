@@ -79,4 +79,37 @@ router.put("/tender/:tenderId", async (req, res) => {
   }
 });
 
+/* 
+main pending work flow-
+
+1) make a route to get the posted tenders to the vendors dashboard
+prefarably, we have to give an option to the vendor to choose his category to display those tenders matching that particular category
+so we need to add another field called category in the vendor's page; depending on the category he selects, tenders will be displayed
+ accordingly in his page; and the tenders displayed on his page 
+
+ 2) in the home page, when the user clicks on the find tenders, he will be able to view the tenders of that particular category(2 options
+  either assign the category and fix it or make it dynamic, user can select and view any tenders of category he selects)
+
+ 3) now beside each tender we give view tender option- he will be able to view the tender, interested/not interested option
+  upon clicking on interested, user will be prompted to submit a quotation document
+  upon clicking on not interested, the particular tender vanishes/gets hidden/nothing really happens
+
+  4) after quotation submission, this quotation forwards and routes to the company person who posted that particular tender
+
+  5) now in the company page, person will be able to view the list of interested vendors for the tender he has posted; among these,
+  he will accept/reject the vendors
+
+  6) upon accept, vendor recieves a notification of his contract success/approval and contract is sealed
+    upon reject, vendor recieves a notification of his contract rejecton
+    by default, in the notifs page, the status of a particular tender-quotation for the vendor's perspective is pending..
+
+  7) assigning roles and access control, admin 
+
+  small parts of work- profile page rendering and connecting backend route(already ready) with frontend(company side); profile needs
+  to be shown on contractor side as well;
+  displaying tenders on the company page below(again chota kaam; already post tender and displaying them via urls is all ready; 
+    just connect to frontend dashboard)
+
+*/
+
 export default router;
