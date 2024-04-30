@@ -79,4 +79,15 @@ router.put("/tender/:tenderId", async (req, res) => {
   }
 });
 
+router.get('/data', async (req, res) => {
+  console.log("Hello Mihir");
+  try {
+      // Fetch all documents from the collection
+      const documents = await Tender.find();
+      res.json(documents); // Send the documents as JSON response
+  } catch (error) {
+      console.error('Error fetching data:', error);
+      res.status(500).send('Internal Server Error');
+  }
+});
 export default router;
