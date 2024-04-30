@@ -79,6 +79,7 @@ router.put("/tender/:tenderId", async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
 /* 
 main pending work flow-
 
@@ -112,4 +113,17 @@ so we need to add another field called category in the vendor's page; depending 
 
 */
 
+=======
+router.get('/data', async (req, res) => {
+  console.log("Hello Mihir");
+  try {
+      // Fetch all documents from the collection
+      const documents = await Tender.find();
+      res.json(documents); // Send the documents as JSON response
+  } catch (error) {
+      console.error('Error fetching data:', error);
+      res.status(500).send('Internal Server Error');
+  }
+});
+>>>>>>> 5132f7cbff6789aa59de73fbbe3cfe25b765e6e0
 export default router;
