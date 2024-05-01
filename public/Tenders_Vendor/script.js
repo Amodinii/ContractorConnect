@@ -10,6 +10,7 @@ fetch('/tender/data')
                         <td>${entry.category}</td>
                         <td>${entry.status}</td>
                         <td>><a href="http://localhost:5000/uploads/${entry.title}">View Tender</a></td>
+                        <td><button>Submit Quotation</button></td>
                     `;
                     document.getElementById('data-table-body').appendChild(row);
                 });

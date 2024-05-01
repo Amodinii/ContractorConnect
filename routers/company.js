@@ -33,4 +33,21 @@ router.get(
   }
 );
 
+router.get('/userdetails', async (req, res) => {
+  console.log("We are extracting the details")
+  try {
+    const user = await CompanyUser.findOne({ _id: req.user.id }); // Assuming req.user.id contains the user's ID after authentication
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+    // Extract necessary user details and send as response
+    res.json({
+      companyName: user.CompanyName,
+    });
+  } catch (err) {
+    console.error('Error fetching user details:', err);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
 export default router;
