@@ -53,13 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
     uploadFormSection.style.display = "block";
   });
 });
-//this is used to show the dropdown, when we hover over the profile side.
-/*userProfile.addEventListener('mouseenter', function(event) {
-      dropdownContent.style.display = 'block';
-    });
-    userProfile.addEventListener('mouseleave', function(event) {
-      dropdownContent.style.display = 'none';
-    });*/
 
 //this is used to show the dropdown, when we click on the profile side.
 function toggleDropdown() {

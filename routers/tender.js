@@ -99,19 +99,6 @@ router.get('/gettenders', verifyToken, authorizeCompany, async (req, res) => {
   console.log(tenders);
   res.json(tenders);
 });
-  /*try {
-      const tenderIds = req.query.tenderIds;
-      console.log(tenderIds);
-      const tenders = await Tender.find({ _id: { $in: tenderIds } });
-      console.log(tenders);
-      res.status(200).json(tenders);
-      // Fetch details for each tender ID
-      console.log(tenders);
-      res.status(200).json(tenders);
-  } catch (error) {
-      res.status(500).json({ message: error.message });
-  }
-});*/
 
 async function getTenderDetailsById(tenderId) {
   try {
