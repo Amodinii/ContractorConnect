@@ -20,13 +20,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="../HomePage_Vendor/index.html">Home</a>
+                    <a class="nav-link" href="../Dashboard_Company/samp.html">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../Dashboard_Vendor/dash.html">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../Account_Creation/Sign_In/SignPage.html">Logout</a>
+                    <button id="logout1">Logout</button>
                 </li>
             </ul>
         </div>
@@ -40,8 +37,17 @@
                     <h4 class="text-right">Profile Settings</h4>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">Company Name</label><input type="text" class="form-control" value=""><i class="fas fa-edit edit-icon"></i></div>
-                    <div class="col-md-6"><label class="labels">Company Website</label><input type="text" class="form-control" value=""><i class="fas fa-edit edit-icon"></i></div>
+                    <div class="col-md-6">
+                        <label class="labels">Company Name</label>
+                        <input id="companyName" type="text" class="form-control" value="">
+                        <i class="fas fa-edit edit-icon"></i>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="labels">Company Website</label>
+                        <input id="companyWebsite" type="text" class="form-control" value="">
+                        <i class="fas fa-edit edit-icon"></i>
+                    </div>
+                    
                 </div>
                 <!-- Add edit icons and edit mode toggle logic -->
                 <script>
@@ -60,17 +66,33 @@
                         });
                 </script>
                 <div class="row mt-3">
-                    <div class="col-md-12"><label class="labels">Phone Number</label><input type="text" class="form-control" placeholder="enter phone number" value=""><i class="fas fa-edit edit-icon"></i></div>
-                    <div class="col-md-12"><label class="labels">Address</label><input type="text" class="form-control" 
-                    <div class="col-md-12"><label class="labels">State</label><input type="text" class="form-control" placeholder="enter state" value=""><i class="fas fa-edit edit-icon"></i></div>
-                    <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder="enter email id" value=""><i class="fas fa-edit edit-icon"></i></div>
-                    <div class="col-md-12"><label class="labels">Password</label><input type="text" class="form-control" placeholder="enter email id" value=""><i class="fas fa-edit edit-icon"></i></div>
+                    <div class="col-md-12">
+                        <label class="labels">Company Phone</label>
+                        <input id="companyPhone" type="text" class="form-control" value="">
+                        <i class="fas fa-edit edit-icon"></i>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="labels">Company State</label>
+                        <input id="companyState" type="text" class="form-control" value="">
+                        <i class="fas fa-edit edit-icon"></i>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="labels">Company Address</label>
+                        <input id="companyAddress" type="text" class="form-control" value="">
+                        <i class="fas fa-edit edit-icon"></i>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="labels">Company Email</label>
+                        <input id="companyEmail" type="text" class="form-control" value="">
+                        <i class="fas fa-edit edit-icon"></i>
+                    </div>
                 </div>
                 <div class="mt-3 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
             </div>
         </div>
     </div>
 </div>
+<script src="ProfilePage.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

@@ -33,4 +33,26 @@ router.get(
   }
 );
 
+router.get('/vendordetails',verifyToken, authorizeContractor, async (req, res) => {
+  console.log("We are extracting the details");
+  try {
+    console.log(req.user.userId)
+    const user = await ContractorUser.findById(req.user.userId); // Assuming req.user.id contains the user's ID after authentication
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+    // Extract necessary user details and send as response
+    res.json({
+      CompanyName: user.ContractorName,
+      companyphone : user.PhoneNumber,
+      companystate : user.State,
+      companyaddress : user.Address,
+      companymail : user.Email,
+    });
+  } catch (err) {
+    console.error('Error fetching user details:', err);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
 export default router;

@@ -4,7 +4,7 @@ fetch('/tender/data')
                 // Loop through each entry and generate table rows
                 data.forEach(entry => {
                     const row = document.createElement('tr');
-                    row.innerHTML = `
+                    row.innerHTML = `   
                         <td>${entry.company}</td>
                         <td>${entry.title}</td>
                         <td>${entry.category}</td>
