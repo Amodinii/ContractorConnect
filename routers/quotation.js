@@ -26,12 +26,12 @@ router.post("/submitQuotation", async (req, res) => {
 export default router;*/
 
 router.post(
-  "/submitQuotation",
+  "/postquotation",
   verifyToken,
   authorizeContractor,
-  upload.single("tenderFile"),
+  upload.single("quotationFile"),
   async (req, res) => {
-    console.log("helloooo")
+    console.log("This is in quotation posting route");
     try {
       const { title, tender_id, contractor_id } = req.body;
       const userId = req.user.userId; // Extract user ID from the authenticated request

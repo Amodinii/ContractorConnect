@@ -9,12 +9,12 @@ fetch("/tender/data")
                     <td>${entry.title}</td>
                     <td>${entry.category}</td>
                     <td>${entry.status}</td>
-                    <td><a href="http://localhost:5000/uploads/${entry.title}">View Tender</a></td>
-                    <form id="quotationForm" action="/quotation/submitQuotation" method="POST" enctype="multipart/form-data">
+                    <td><a href="http://localhost:5000/uploads/Tenders/${entry.title}">View Tender</a></td>
+                    <td><form id="quotationForm" method="POST" enctype="multipart/form-data" action="/quotation/postquotation">
     <button class="submit-quotation" style="background-color:#222831; border-radius:2px;color:#eeeeee;">Upload Quotation</button>
     <input type="file" name="quotationFile" style="display: none;" onchange="document.querySelector('.file-title').innerText = this.files[0].name;">
     <button type="submit" class="submit-btn" style="display: none;background-color:#222831; border-radius:2px;color:#eeeeee;margin-top:5px;">Submit</button>
-    <span class="file-title" style="display: none;"></span>
+    <span class="file-title" style="display: none;"></span></td>
 </form>
 
                 `;

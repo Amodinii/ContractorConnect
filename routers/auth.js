@@ -75,7 +75,7 @@ router.post("/signin", async (req, res) => {
       });
     } else if (
       contractorUser &&
-      (await bcrypt.compare(password, contractorUser.Password))
+      bcrypt.compare(password, contractorUser.Password)
     ) {
       const token = generateToken(contractorUser._id, "Contractor");
       res.cookie("authorization", token);

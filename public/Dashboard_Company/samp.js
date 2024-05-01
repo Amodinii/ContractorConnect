@@ -120,6 +120,13 @@ fetch('/company/userdetails')
                 statusCell.textContent = status;
                 row.appendChild(statusCell);
 
+                const viewtender = document.createElement('td');
+                const link = document.createElement('a');
+                link.href = 'http://localhost:5000/uploads/Tenders/' + title;
+                link.textContent = 'View Tender'; // Set your desired link text here
+                viewtender.appendChild(link);
+                row.appendChild(viewtender);
+                
                 // Append the row to the table body
                 dataTableBody.appendChild(row);
             });
