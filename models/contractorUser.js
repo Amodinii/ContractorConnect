@@ -10,10 +10,10 @@ export const contractorUserSchema = new Schema({
   State: String,
   Password: String,
   Email: String, // Email field
-  tenders: [
+  quotations: [
     {
       type: Schema.Types.ObjectId,
-      ref: "Tender",
+      ref: "Quotation",
     },
   ],
 });

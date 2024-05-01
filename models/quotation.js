@@ -13,6 +13,7 @@ export const quotationSchema = new Schema({
     type: Date,
     default: Date.now,
   },
+  title: String,
 });
 
 export const Quotation = model("Quotation", quotationSchema);
