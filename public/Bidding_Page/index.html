@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ContractorConnect Bidding Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="container">
+      <div class="logo">
+        <img src="logo.png" alt="Company Logo">
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bidding Form -->
+  <div class="container bidding-form">
+    <form id="bidding-form">
+      <!-- Quotations will be dynamically generated here using JavaScript -->
+      <label for="amount" style="font-size: 30px;">What will be your amount decided?</label>
+      <input type="number" id="amount" placeholder="Enter Amount" required>
+      
+      <!-- Link to the payment page added to the button -->
+      <button type="button" id="make-payment" onclick="window.location.href='../Payment_Page/pay.html'">Make Payment</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
