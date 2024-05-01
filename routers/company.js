@@ -33,7 +33,7 @@ router.get(
   }
 );
 
-router.get('/api/user/details', async (req, res) => {
+router.get('/userdetails', async (req, res) => {
   console.log("We are extracting the details")
   try {
     const user = await CompanyUser.findOne({ _id: req.user.id }); // Assuming req.user.id contains the user's ID after authentication
@@ -43,7 +43,6 @@ router.get('/api/user/details', async (req, res) => {
     // Extract necessary user details and send as response
     res.json({
       companyName: user.CompanyName,
-      
     });
   } catch (err) {
     console.error('Error fetching user details:', err);
