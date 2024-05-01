@@ -7,7 +7,7 @@ export const quotationSchema = new Schema({
   },
   contractor: {
     type: Schema.Types.ObjectId,
-    ref: "Contractoruser",
+    ref: "contractorUser",
   },
   submitted_at: {
     type: Date,

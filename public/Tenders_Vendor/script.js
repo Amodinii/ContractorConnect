@@ -10,12 +10,13 @@ fetch("/tender/data")
                     <td>${entry.category}</td>
                     <td>${entry.status}</td>
                     <td><a href="http://localhost:5000/uploads/${entry.title}">View Tender</a></td>
-                    <td>
-                        <button class="submit-quotation">Upload Quotation</button>
-                        <input type="file" style="display: none;">
-                        <button class="submit-btn" style="display: none;">Submit</button>
-                        <span class="file-title" style="display: none;"></span>
-                    </td>
+                    <form id="quotationForm" action="/quotation/submitQuotation" method="POST" enctype="multipart/form-data">
+    <button class="submit-quotation" style="background-color:#222831; border-radius:2px;color:#eeeeee;">Upload Quotation</button>
+    <input type="file" name="quotationFile" style="display: none;" onchange="document.querySelector('.file-title').innerText = this.files[0].name;">
+    <button type="submit" class="submit-btn" style="display: none;background-color:#222831; border-radius:2px;color:#eeeeee;margin-top:5px;">Submit</button>
+    <span class="file-title" style="display: none;"></span>
+</form>
+
                 `;
       document.getElementById("data-table-body").appendChild(row);
     });
@@ -39,7 +40,7 @@ fetch("/tender/data")
     // Event listener for Submit button
     document.querySelectorAll(".submit-btn").forEach((button) => {
       button.addEventListener("click", function () {
-        const fileInput = this.previousElementSibling.previousElementSibling; // Get the file input
+        const fileInput = this.previousElementSibling; // Get the file input
         const file = fileInput.files[0]; // Get the selected file
         if (file) {
           // You can now send the file to the server for processing
