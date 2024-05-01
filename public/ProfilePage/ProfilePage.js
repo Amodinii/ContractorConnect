@@ -52,6 +52,47 @@ fetch('/company/userdetails')
   console.error('Error fetching user details:', error);
 });
 
+
+function updateUserDetails() {
+  try {
+    console.log("It is coming in the function.")
+      // Extract current user information from the profile page
+      const companyName = document.getElementById('companyName').value;
+      const websiteLink = document.getElementById('companyWebsite').value;
+      const phoneNumber = document.getElementById('companyPhone').value;
+      const address = document.getElementById('companyAddress').value;
+      const email = document.getElementById('companyEmail').value;
+      const state = document.getElementById('companyState').value;
+
+      const updatedData = {
+          CompanyName: companyName,
+          WebsiteLink: websiteLink,
+          PhoneNumber: phoneNumber,
+          Address: address,
+          State: state,
+          Email: email,
+      };
+      console.log(updatedData);
+      fetch('/company/updateuserdetails',{
+        method:'POST',
+        headers:{
+          'Content-Type' :  'application/json'
+        },
+        body: JSON.stringify(updatedData)
+      }
+      
+
+    )
+      if (response.ok) {
+          console.log('Profile updated successfully');
+      } else {
+          console.error('Failed to update profile:', response.statusText);
+      }
+  } catch (error) {
+      console.error('Error updating profile:', error);
+  }
+}
+
 document.getElementById("logout1").addEventListener("click", function () {
     console.log("haoihdfioaeshjf logout");
     window.setCookie("authorization", "", (expirationDays = -1));
