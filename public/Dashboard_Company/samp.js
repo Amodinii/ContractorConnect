@@ -77,27 +77,23 @@ otherCheckbox.addEventListener("click", function () {
   otherField.style.display = this.checked ? "block" : "none";
 });
 
-function fetchUserDetails() {
-  const token = localStorage.getItem('jwtToken');
 
-  fetch('/company/userprofile', {
-    method: 'GET',
-    headers: {
-      'Authorization': `Bearer ${token}`
-    }
-  })
-  .then(response => response.json())
-  .then(data => {
-    const companyName = data.companyName;
-    const userProfileUsername = document.querySelector('.user-profile span');
-    if (userProfileUsername) {
-      userProfileUsername.textContent = companyName;
-    }
-  })
-  .catch(error => {
-    console.error('Error fetching user details:', error);
-  });
-}
+const token = localStorage.getItem('jwtToken');
+
+fetch('/company/userdetails')
+.then(response => response.json())
+.then(data => {
+  console.log(data.CompanyName)
+  const companyName = data.CompanyName;
+  const userProfileUsername = document.querySelector('#username');
+  if (userProfileUsername) {
+    userProfileUsername.textContent = companyName;
+  }
+})
+.catch(error => {
+  console.error('Error fetching user details:', error);
+});
+
 
 
 document.getElementById("logout1").addEventListener("click", function () {
