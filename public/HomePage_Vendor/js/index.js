@@ -50,6 +50,8 @@ if (token) {
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
+        // Set cookie here
+        setCookie("jwtToken", token, 1); // Set expiration to 1 day
         return response.json();
     })
     .then(data => {
