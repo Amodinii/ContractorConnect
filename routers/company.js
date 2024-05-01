@@ -33,16 +33,22 @@ router.get(
   }
 );
 
-router.get('/userdetails', async (req, res) => {
-  console.log("We are extracting the details")
+router.get('/userdetails',verifyToken, authorizeCompany, async (req, res) => {
+  console.log("We are extracting the details");
+  
   try {
-    const user = await CompanyUser.findOne({ _id: req.user.id }); // Assuming req.user.id contains the user's ID after authentication
+    const user = await CompanyUser.findById(req.user.userId); // Assuming req.user.id contains the user's ID after authentication
     if (!user) {
       return res.status(404).json({ message: 'User not found' });
     }
     // Extract necessary user details and send as response
     res.json({
-      companyName: user.CompanyName,
+      CompanyName: user.CompanyName,
+      companywebsite : user.WebsiteLink,
+      companyphone : user.PhoneNumber,
+      companystate : user.State,
+      companyaddress : user.Address,
+      companymail : user.Email,
     });
   } catch (err) {
     console.error('Error fetching user details:', err);
