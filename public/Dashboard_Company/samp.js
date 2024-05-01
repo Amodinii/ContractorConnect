@@ -89,7 +89,48 @@ fetch('/company/userdetails')
   if (userProfileUsername) {
     userProfileUsername.textContent = companyName;
   }
+  const tenderIds = data.tenders;
+
+  fetch('/tender/gettenders?tenderIds=' + JSON.stringify(tenderIds))
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(tenders => {
+            const dataTableBody = document.getElementById('data-table-body');
+
+            tenders.forEach(tender => {
+                const row = document.createElement('tr');
+
+                // Extract title, category, and status fields from tender object
+                const { title, category, status } = tender;
+
+                // Create table cells for title, category, and status
+                const titleCell = document.createElement('td');
+                titleCell.textContent = title;
+                row.appendChild(titleCell);
+
+                const categoryCell = document.createElement('td');
+                categoryCell.textContent = category;
+                row.appendChild(categoryCell);
+
+                const statusCell = document.createElement('td');
+                statusCell.textContent = status;
+                row.appendChild(statusCell);
+
+                // Append the row to the table body
+                dataTableBody.appendChild(row);
+            });
+
+    })
+    .catch(error => {
+        console.error('Error fetching tender details:', error);
+    })
 })
+
+
 .catch(error => {
   console.error('Error fetching user details:', error);
 });

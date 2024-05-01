@@ -90,4 +90,32 @@ router.get('/data', async (req, res) => {
       res.status(500).send('Internal Server Error');
   }
 });
+
+
+router.get('/gettenders', verifyToken, authorizeCompany, async (req, res) => {
+  console.log("Getting Tender Details");
+  try {
+      const tenderIds = req.query.tenderIds;
+      console.log(tenderIds);
+      const tenders = await Tender.find({ _id: { $in: tenderIds } });
+      console.log(tenders);
+      res.status(200).json(tenders);
+      // Fetch details for each tender ID
+      console.log(tenders);
+      res.status(200).json(tenders);
+  } catch (error) {
+      res.status(500).json({ message: error.message });
+  }
+});
+
+async function getTenderDetailsById(tenderId) {
+  try {
+      const tender = await Tender.findById(tenderId); // Assuming you are using Mongoose for MongoDB
+      console.log(tender);
+      return tender;
+  } catch (error) {
+      throw new Error(`Error fetching tender details for ID ${tenderId}: ${error.message}`);
+  }
+}
+
 export default router;

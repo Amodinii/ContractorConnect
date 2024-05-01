@@ -49,6 +49,7 @@ router.get('/userdetails',verifyToken, authorizeCompany, async (req, res) => {
       companystate : user.State,
       companyaddress : user.Address,
       companymail : user.Email,
+      tenders:user.tenders,
     });
   } catch (err) {
     console.error('Error fetching user details:', err);
