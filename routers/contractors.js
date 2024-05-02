@@ -55,4 +55,28 @@ router.get('/vendordetails',verifyToken, authorizeContractor, async (req, res) =
   }
 });
 
+router.post('/updateuserdetails', verifyToken, authorizeContractor, async (req, res) => {
+  const profileId = req.user.userId; 
+  console.log(profileId);
+  console.log("Updation route is getting hit");
+  const updatedValues = req.body;
+  console.log(updatedValues);
+  try {
+      // Update the profile using the CompanyUser model
+      const updatedUser = await ContractorUser.findByIdAndUpdate(
+          { _id: profileId }, 
+          updatedValues,
+      );
+      
+      if (updatedUser) {
+          res.status(200).send('Profile updated successfully');
+      } else {
+          res.status(404).send('Profile not found');
+      }
+  } catch (error) {
+      console.error('Error updating profile:', error);
+      res.status(500).send('Internal Server Error');
+  }
+});
+
 export default router;

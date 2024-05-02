@@ -84,7 +84,7 @@ fetch('/company/userdetails')
   }
   const tenderIds = data.tenders;
   const userId = data.id;
-  fetch(`/tender/gettenders?tenderIds=${JSON.stringify(tenderIds)}&userId=${userId}`)
+  fetch(`/tender/gettenders`)
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -122,7 +122,6 @@ fetch('/company/userdetails')
           link.textContent = 'View Tender'; // Set your desired link text here
           viewtender.appendChild(link);
           row.appendChild(viewtender);
-          
           // Append the row to the table body
           dataTableBody.appendChild(row);
       });
@@ -136,14 +135,12 @@ fetch('/company/userdetails')
 console.error('Error fetching user details:', error);
 });
 
-fetch('/quotation/getquotations')
-
-
-.catch(error => {
-  console.error('Error fetching user details:', error);
-});
-
-
+fetch(`/quotation/getquotations`)
+.then(response => response.json())
+.then(data => {
+  console.log(data.tender),
+  console.log(data.contractor)
+})
 
 document.getElementById("logout1").addEventListener("click", function () {
   console.log("haoihdfioaeshjf logout");
