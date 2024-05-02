@@ -52,7 +52,7 @@ ContractorConnect is a web application that serves as a bridge between companies
 
 ## Usage
 
-1. Navigate to `http://localhost:3000` in your web browser.
+1. Navigate to `http://localhost:5000` in your web browser.
 2. Sign up as a company or vendor.
 3. Create tenders (for companies) or submit quotations (for vendors).
 4. Explore the dashboard to manage your tenders or quotations.
