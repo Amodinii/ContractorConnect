@@ -228,7 +228,7 @@ function fetchCompaniesData() {
 }
 
 function fetchContractorsData() {
-  fetch("/contractors/userdetails")
+  fetch("/contractor/userdetails")
     .then((response) => response.json())
     .then((contractors) => {
       const contractorsSection = document.getElementById("contractors-section");

@@ -45,6 +45,35 @@ router.get('/userdetails', async (req, res) => {
   }
 });
 
+router.post('/userdetails', verifyToken, authorizeCompany, async (req, res) => {
+  try {
+    // Extract user data from request body
+    const { CompanyName, WebsiteLink, PhoneNumber, AlternatePhoneNumber, Address, Email, State } = req.body;
+
+    // Create a new CompanyUser document
+    const newUser = new CompanyUser({
+      CompanyName,
+      WebsiteLink,
+      PhoneNumber,
+      AlternatePhoneNumber,
+      Address,
+      Email,
+      State
+    });
+
+    // Save the new user to the database
+    await newUser.save();
+
+    // Send a success response
+    res.status(201).json(newUser);
+  } catch (error) {
+    // If an error occurs, send a 500 Internal Server Error response
+    console.error('Error creating company user:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+
 router.get('/companydetails',verifyToken, authorizeCompany, async (req, res) => {
   console.log("Enter getting company details");
   try {

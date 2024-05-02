@@ -33,6 +33,17 @@ router.get(
   }
 );
 
+router.get('/userdetails', async (req, res) => {
+  try {
+      // Fetch all documents from the collection
+      const documents = await ContractorUser.find();
+      res.json(documents); // Send the documents as JSON response
+  } catch (error) {
+      console.error('Error fetching data:', error);
+      res.status(500).send('Internal Server Error');
+  }
+});
+
 router.get('/vendordetails', async (req, res) => {
   console.log("We are getting vendor details");
   try {

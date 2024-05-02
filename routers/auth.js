@@ -29,6 +29,8 @@ router.post("/companyRegister", async (req, res) => {
   }
 });
 
+
+
 // Contractor registration route
 router.post("/contractorRegister", async (req, res) => {
   console.log("hello");
