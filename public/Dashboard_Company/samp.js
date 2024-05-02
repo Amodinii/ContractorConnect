@@ -83,8 +83,8 @@ fetch('/company/userdetails')
     userProfileUsername.textContent = companyName;
   }
   const tenderIds = data.tenders;
-
-  fetch('/tender/gettenders?tenderIds=' + JSON.stringify(tenderIds))
+  const userId = data.id;
+  fetch(`/tender/gettenders?tenderIds=${JSON.stringify(tenderIds)}&userId=${userId}`)
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');

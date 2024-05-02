@@ -41,6 +41,7 @@ router.get('/userdetails',verifyToken, authorizeCompany, async (req, res) => {
     }
     // Extract necessary user details and send as response
     res.json({
+      id: user._id,
       CompanyName: user.CompanyName,
       companywebsite : user.WebsiteLink,
       companyphone : user.PhoneNumber,
