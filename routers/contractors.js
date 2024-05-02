@@ -33,7 +33,7 @@ router.get(
   }
 );
 
-router.get('/vendordetails', async (req, res) => {
+router.get('/vendordetails',verifyToken, async (req, res) => {
   console.log("We are getting vendor details");
   try {
     console.log(req.user.userId)
@@ -80,7 +80,7 @@ router.post('/updateuserdetails', verifyToken, authorizeContractor, async (req, 
   }
 });
 
-router.get('/findcontractor', async (req, res) => {
+router.get('/findcontractor',verifyToken, async (req, res) => {
   console.log("We are getting vendor details");
   try {
     console.log(req.query.id);
