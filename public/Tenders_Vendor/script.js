@@ -11,6 +11,7 @@ fetch(`/tender/data`,{
       fetch(`/company/findcompany?id=${entry.company}`)
         .then((response) => response.json())
         .then((companyData) => {
+          if(entry.status === 'Open'){
           const row = document.createElement("tr");
           row.innerHTML = `
             <td>${entry._id}</td>
@@ -29,6 +30,7 @@ fetch(`/tender/data`,{
             </td>
           `;
           document.getElementById("data-table-body").appendChild(row);
+          }
         })
         .catch((error) => console.error("Error fetching company details:", error));
     });

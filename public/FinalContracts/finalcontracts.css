@@ -1,0 +1,77 @@
+body {
+    overflow-x: hidden;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    background-color: #f2f2f2;
+  }
+  
+  #viewport {
+    padding-left: 250px;
+    transition: all 0.5s ease;
+  }
+  
+  #sidebar {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 250px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background-color: #222831;
+    transition: all 0.5s ease;
+  }
+  
+  #sidebar header {
+    background-color: #263238;
+    font-size: 20px;
+    line-height: 52px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  #sidebar header a {
+    color: inherit;
+    display: block;
+    text-decoration: none;
+  }
+  
+  #sidebar header a:hover {
+    color: #eceff1;
+  }
+  
+  #sidebar .nav {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #sidebar .nav a {
+    background: none;
+    border-bottom: 1px solid #76abae;
+    color: #cfd8dc;
+    font-size: 14px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+  
+  #sidebar .nav a:hover {
+    background: none;
+    color: #eceff1;
+  }
+  
+  #sidebar .nav a i {
+    margin-right: 16px;
+    color: #cfd8dc;
+  }
+  
+  #quotation-table {
+    margin-top: 20px;
+  }
+  
+  #quotation-table th,
+  #quotation-table td {
+    text-align: center;
+  }
+  

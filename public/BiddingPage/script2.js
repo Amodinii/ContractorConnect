@@ -1,5 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 const tenderId = urlParams.get('tenderid');
+const quotationsStatusMap = new Map();
 
 fetch(`/quotation/getquotations`)
     .then(response => {
@@ -14,7 +15,8 @@ fetch(`/quotation/getquotations`)
         allQuotations.forEach(quotation => {
             if (quotation.tender === tenderId) {
                 const row = document.createElement('tr');
-                const { title, _id, status, contractor } = quotation;
+                const { title, _id, status, contractor, tender } = quotation;
+                quotationsStatusMap.set(_id,status);
 
                 fetch(`/contractors/findcontractor?id=${contractor}`)
                     .then(response => {
@@ -49,54 +51,95 @@ fetch(`/quotation/getquotations`)
 
                         const actionCell = document.createElement('td');
                         const form = document.createElement('form');
-                        form.addEventListener('submit', function(event) {
-                            event.preventDefault();
-                            const selectedOption = select.options[select.selectedIndex].value;
-                        });
-
                         const select = document.createElement('select');
                         const defaultOption = document.createElement('option');
-                        defaultOption.value = 'deactivated';
                         defaultOption.textContent = 'Select status';
                         defaultOption.disabled = true;
                         defaultOption.selected = true;
+                        defaultOption.value=' ';
                         const acceptOption = document.createElement('option');
-                        acceptOption.value = 'accept';
+                        acceptOption.value = 'Accepted';
                         acceptOption.textContent = 'Accept';
                         const rejectOption = document.createElement('option');
-                        rejectOption.value = 'reject';
+                        rejectOption.value = 'Rejected';
                         rejectOption.textContent = 'Reject';
                         select.appendChild(defaultOption);
                         select.appendChild(acceptOption);
                         select.appendChild(rejectOption);
-
                         const submitButton = document.createElement('button');
                         submitButton.type = 'submit';
                         submitButton.textContent = 'Submit';
-
                         form.appendChild(select);
                         form.appendChild(submitButton);
                         actionCell.appendChild(form);
                         row.appendChild(actionCell);
 
-
                         dataTableBody.appendChild(row);
 
+                        if(quotationsStatusMap.get(_id) === 'Pending'){
+                            select.disabled=false;
+                            submitButton.disabled=false;
+                        }
+                        else{
+                            select.disabled=true;
+                            submitButton.disabled=true;
+                        }
                         form.addEventListener('submit', function(event) {
+                            event.preventDefault();
+                            const selectedOption = select.options[select.selectedIndex].value;
+                            fetch(`/quotation/updatestatus?id=${_id}`, {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify({ optionValue: selectedOption }), // Fixed variable name
+                            })
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error('Network response was not ok');
+                                }
+                                return response.json();
+                            })
+                            .then(data => {
+                                console.log(data); // You can handle the response data here if needed
+                            })
+                            .catch(error => {
+                                console.error('There was a problem with the fetch operation:', error);
+                            });
 
-                            fetch(`/quotation/updatestatus`)
+                            select.disabled=true;
+                            submitButton.disabled=true;
+                            quotationsStatusMap.set(_id,selectedOption);
 
-                        })
-                            
+                            if(selectedOption === 'Accepted'){
+                                fetch(`/tender/updatestatus?id=${tender}`,{
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/json',
+                                    },
+                                    body: JSON.stringify({ status: 'closed' }),
+                                })
+                                .then(response => {
+                                    if (!response.ok) {
+                                        throw new Error('Network response was not ok');
+                                    }
+                                    return response.json();
+                                })
+                                .then(data => {
+                                    console.log(data); // You can handle the response data here if needed
+                                })
+                                .catch(error => {
+                                    console.error('There was a problem with the fetch operation:', error);
+                                });
+                            }
+                        });
                     })
                     .catch(error => {
-                        console.error('Error fetching contractor info:', error);
-                        // Handle the error here, e.g., display an error message to the user
+                        console.error('There was a problem with the fetch operation:', error);
                     });
             }
-        });
+        })
     })
     .catch(error => {
-        console.error('Error fetching quotations:', error);
-        // Handle the error here, e.g., display an error message to the user
+        console.error('There was a problem with the fetch operation:', error);
     });

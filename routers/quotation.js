@@ -70,4 +70,26 @@ router.get('/getquotations', verifyToken,  async (req, res) => {
   res.json(quotations);
 });
 
+router.post('/updatestatus',verifyToken, async(req,res) =>{
+  console.log("Updating the status of the quotation");
+  console.log(req.body);
+  console.log(req.query.id);
+  try {
+    // Update the profile using the CompanyUser model
+    const updatedUser = await Quotation.findByIdAndUpdate(
+        { _id: req.query.id }, 
+        { $set: { status: req.body.optionValue } }
+    );
+    
+    if (updatedUser) {
+        res.status(200).send('Profile updated successfully');
+    } else {
+        res.status(404).send('Profile not found');
+    }
+} catch (error) {
+    console.error('Error updating profile:', error);
+    res.status(500).send('Internal Server Error');
+}
+})
+
 export default router;

@@ -111,7 +111,6 @@ fetch('/contractors/vendordetails')
                   dataTableBody.appendChild(row);
               });
               var links = document.getElementsByClassName("quotationsLink");
-
               for (var i = 0; i < links.length; i++) {
                 links[i].addEventListener("click", function(event) {
                   event.preventDefault();
@@ -120,6 +119,15 @@ fetch('/contractors/vendordetails')
                 });
               }
 
+
+                var finalcont = document.getElementById("finalcontracts");
+                finalcont.addEventListener("click", function(event) {
+                  event.preventDefault();
+                  var finalurl = this.getAttribute("href") + "?userID=" + encodeURIComponent(userId);
+                  window.location.href = finalurl;
+                });
+              
+              
       })
       .catch(error => {
           console.error('Error fetching tender details:', error);
