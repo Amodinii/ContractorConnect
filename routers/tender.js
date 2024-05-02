@@ -36,7 +36,8 @@ router.post(
       const user = await CompanyUser.findById(req.user.userId);
       user.tenders.push(tender._id);
       await user.save();
-      res.status(201).send({ message: "Tender posted successfully", tender });
+      //res.status(201).send({ message: "Tender posted successfully", tender });
+      res.redirect('/Dashboard_Company/samp.html');
     } catch (error) {
       console.error("Error posting tender:", error);
       res.status(500).send({ message: "Internal server error" });
@@ -79,7 +80,7 @@ router.put("/tender/:tenderId", async (req, res) => {
   }
 });
 
-router.get('/data', async (req, res) => {
+router.get('/data', verifyToken, async (req, res) => {
   try {
       // Fetch all documents from the collection
       const documents = await Tender.find();
@@ -91,7 +92,7 @@ router.get('/data', async (req, res) => {
 });
 
 
-router.get('/gettenders', verifyToken, authorizeCompany, async (req, res) => {
+router.get('/gettenders', verifyToken, async (req, res) => {
   console.log("Getting Tender Details");
   console.log(req.query.userId);
   let tenders;
@@ -99,15 +100,5 @@ router.get('/gettenders', verifyToken, authorizeCompany, async (req, res) => {
   console.log(tenders);
   res.json(tenders);
 });
-
-async function getTenderDetailsById(tenderId) {
-  try {
-      const tender = await Tender.findById(tenderId); // Assuming you are using Mongoose for MongoDB
-      console.log(tender);
-      return tender;
-  } catch (error) {
-      throw new Error(`Error fetching tender details for ID ${tenderId}: ${error.message}`);
-  }
-}
 
 export default router;

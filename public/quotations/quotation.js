@@ -6,7 +6,6 @@ fetch("/quotation/data")
       row.innerHTML = `
         <td>${entry._id}</td>
         <td>${entry.tender}</td>
-        <td>${entry.contractor}</td>
         <td>${entry.title}</td>
         <td>${entry.status}</td>
         <td><a href="http://localhost:5000/uploads/Quotations/${entry.title}">View Quotations</a></td>

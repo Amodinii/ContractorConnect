@@ -47,7 +47,47 @@ fetch(`/quotation/getquotations`)
                         viewQuotationCell.appendChild(link);
                         row.appendChild(viewQuotationCell);
 
+                        const actionCell = document.createElement('td');
+                        const form = document.createElement('form');
+                        form.addEventListener('submit', function(event) {
+                            event.preventDefault();
+                            const selectedOption = select.options[select.selectedIndex].value;
+                        });
+
+                        const select = document.createElement('select');
+                        const defaultOption = document.createElement('option');
+                        defaultOption.value = 'deactivated';
+                        defaultOption.textContent = 'Select status';
+                        defaultOption.disabled = true;
+                        defaultOption.selected = true;
+                        const acceptOption = document.createElement('option');
+                        acceptOption.value = 'accept';
+                        acceptOption.textContent = 'Accept';
+                        const rejectOption = document.createElement('option');
+                        rejectOption.value = 'reject';
+                        rejectOption.textContent = 'Reject';
+                        select.appendChild(defaultOption);
+                        select.appendChild(acceptOption);
+                        select.appendChild(rejectOption);
+
+                        const submitButton = document.createElement('button');
+                        submitButton.type = 'submit';
+                        submitButton.textContent = 'Submit';
+
+                        form.appendChild(select);
+                        form.appendChild(submitButton);
+                        actionCell.appendChild(form);
+                        row.appendChild(actionCell);
+
+
                         dataTableBody.appendChild(row);
+
+                        form.addEventListener('submit', function(event) {
+
+                            fetch(`/quotation/updatestatus`)
+
+                        })
+                            
                     })
                     .catch(error => {
                         console.error('Error fetching contractor info:', error);
