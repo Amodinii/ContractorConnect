@@ -125,7 +125,12 @@ fetch('/company/companydetails')
           // Append the row to the table body
           dataTableBody.appendChild(row);
       });
-
+      var finalcont = document.getElementById("finalcontracts");
+                finalcont.addEventListener("click", function(event) {
+                  event.preventDefault();
+                  var finalurl = this.getAttribute("href") + "?userID=" + encodeURIComponent(userId);
+                  window.location.href = finalurl;
+                });
   })
   .catch(error => {
       console.error('Error fetching tender details:', error);
@@ -135,12 +140,7 @@ fetch('/company/companydetails')
 console.error('Error fetching user details:', error);
 });
 
-fetch(`/quotation/getquotations`)
-.then(response => response.json())
-.then(data => {
-  console.log(data.tender),
-  console.log(data.contractor)
-})
+
 
 document.getElementById("logout1").addEventListener("click", function () {
   console.log("haoihdfioaeshjf logout");

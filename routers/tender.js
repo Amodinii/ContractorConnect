@@ -82,6 +82,7 @@ router.put("/tender/:tenderId", async (req, res) => {
 
 router.get('/data', verifyToken, async (req, res) => {
   try {
+    console.log("hit tender data");
       // Fetch all documents from the collection
       const documents = await Tender.find();
       res.json(documents); // Send the documents as JSON response
@@ -122,4 +123,22 @@ router.post('/updatestatus',verifyToken, async(req,res)=>{
     res.status(500).send('Internal Server Error');
 }
 })
+
+router.get('/findtender', async (req, res) => {
+  console.log("Enter getting tender details");
+  try {
+    const user = await Tender.findById(req.query.id);
+    console.log(user);
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    res.json({
+      title: user.title,
+    });
+  } catch (err) {
+    console.error('Error fetching user details:', err);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
 export default router;

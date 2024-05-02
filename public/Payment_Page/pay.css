@@ -44,6 +44,7 @@ input[type="text"] {
   border-radius: 0.5vw;
   border: 0.1vw solid #ccc;
   height: 1.5vw;
+  color:#222831;
 }
 
 button {

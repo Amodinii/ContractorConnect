@@ -81,7 +81,7 @@ router.post('/updateuserdetails', verifyToken, authorizeContractor, async (req, 
 });
 
 router.get('/findcontractor',verifyToken, async (req, res) => {
-  console.log("We are getting vendor details");
+  console.log("vendor details accessed");
   try {
     console.log(req.query.id);
     const user = await ContractorUser.findById(req.query.id); // Assuming req.user.id contains the user's ID after authentication

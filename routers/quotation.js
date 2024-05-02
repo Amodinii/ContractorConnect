@@ -92,4 +92,21 @@ router.post('/updatestatus',verifyToken, async(req,res) =>{
 }
 })
 
+router.get('/findquotation', async (req, res) => {
+  console.log("Enter getting quotation details");
+  try {
+    const user = await Quotation.findById(req.query.id);
+    console.log(user);
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    res.json({
+      title: user.title,
+    });
+  } catch (err) {
+    console.error('Error fetching user details:', err);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
 export default router;
