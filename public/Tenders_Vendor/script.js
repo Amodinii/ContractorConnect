@@ -1,15 +1,20 @@
-fetch("/tender/data")
+const token = localStorage.getItem("jwtToken");
+fetch(`/tender/data`,{
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
+})
   .then((response) => response.json())
   .then((data) => {
     data.forEach((entry) => {
-      fetch(`/company/findcompany?_id=${entry.company}`)
+      console.log("COMPANY");
+      fetch(`/company/findcompany?id=${entry.company}`)
         .then((response) => response.json())
         .then((companyData) => {
           const row = document.createElement("tr");
           row.innerHTML = `
             <td>${entry._id}</td>
             <td>${companyData.CompanyName}</td>
-            
             <td>${entry.title}</td>
             <td>${entry.category}</td>
             <td>${entry.status}</td>

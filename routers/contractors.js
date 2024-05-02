@@ -33,7 +33,7 @@ router.get(
   }
 );
 
-router.get('/vendordetails',verifyToken, authorizeContractor, async (req, res) => {
+router.get('/vendordetails', async (req, res) => {
   console.log("We are getting vendor details");
   try {
     console.log(req.user.userId)
@@ -77,6 +77,28 @@ router.post('/updateuserdetails', verifyToken, authorizeContractor, async (req, 
   } catch (error) {
       console.error('Error updating profile:', error);
       res.status(500).send('Internal Server Error');
+  }
+});
+
+router.get('/findcontractor', async (req, res) => {
+  console.log("We are getting vendor details");
+  try {
+    console.log(req.query.id);
+    const user = await ContractorUser.findById(req.query.id); // Assuming req.user.id contains the user's ID after authentication
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+    // Extract necessary user details and send as response
+    res.json({
+      CompanyName: user.ContractorName,
+      companyphone : user.PhoneNumber,
+      companystate : user.State,
+      companyaddress : user.Address,
+      companymail : user.Email,
+    });
+  } catch (err) {
+    console.error('Error fetching user details:', err);
+    res.status(500).json({ message: 'Server error' });
   }
 });
 

@@ -1,74 +1,29 @@
-// Retrieve JWT token from localStorage
-const token = localStorage.getItem('jwtToken');
-console.log('Retrieved JWT token:', token);
+const urlParams = new URLSearchParams(window.location.search);
+const tenderId = urlParams.get('tenderid');
 
-// Check if token exists
-if (!token) {
-    console.error('JWT token not found in localStorage');
-} else {
-    // Fetch quotations with JWT token included in the request headers
-    fetch('/quotation/getquotations', {
-        headers: {
-            'Authorization': `Bearer ${token}`
+fetch(`/quotation/getquotations`)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
         }
+        return response.json();
     })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(allQuotations => {
-            // Filter quotations based on the tender ID
-            // Retrieve the tenderid from local storage
-            console.log("Idhar amodini ap hai");
-            const tenderId = localStorage.getItem('tenderid');
-            const quotations = allQuotations.filter(quotation => quotation.tenderid === tenderId);
+    .then(allQuotations => {
+        const dataTableBody = document.getElementById('data-table-body');
 
-            // Array to hold promises for fetching contractor names
-            const contractorPromises = [];
+        allQuotations.forEach(quotation => {
+            if (quotation.tender === tenderId) {
+                const row = document.createElement('tr');
+                const { title, _id, status, contractor } = quotation;
 
-            quotations.forEach(quotation => {
-                // Fetch contractor details for each quotation
-                const userId = quotation.contractorId;
-                const contractorPromise = fetch('/contractors/vendordetails?id=' + userId, {
-                    headers: {
-                        'Authorization': `Bearer ${token}`
-                    }
-                })
+                fetch(`/contractors/findcontractor?id=${contractor}`)
                     .then(response => {
                         if (!response.ok) {
                             throw new Error('Network response was not ok');
                         }
                         return response.json();
                     })
-                    .then(data => {
-                        return { quotation: quotation, contractorName: data.CompanyName };
-                    })
-                    .catch(error => {
-                        console.error('Error fetching contractor details:', error);
-                    });
-                contractorPromises.push(contractorPromise);
-            });
-
-            // Resolve all promises for fetching contractor names
-            Promise.all(contractorPromises)
-                .then(results => {
-                    const dataTableBody = document.getElementById('data-table-body');
-                    results.forEach(result => {
-                        const { quotation, contractorName } = result;
-
-                        const row = document.createElement('tr');
-
-                        // Append contractor name to the table
-                        const contractorNameCell = document.createElement('td');
-                        contractorNameCell.textContent = contractorName;
-                        row.appendChild(contractorNameCell);
-
-                        // Extract fields from quotation object
-                        const { _id, title } = quotation;
-
-                        // Create table cells for ID and title
+                    .then(contractorInfo => {
                         const idCell = document.createElement('td');
                         idCell.textContent = _id;
                         row.appendChild(idCell);
@@ -77,23 +32,31 @@ if (!token) {
                         titleCell.textContent = title;
                         row.appendChild(titleCell);
 
-                        // Create link to view quotation
+                        const statusCell = document.createElement('td');
+                        statusCell.textContent = status;
+                        row.appendChild(statusCell);
+
+                        const contractorCell = document.createElement('td');
+                        contractorCell.textContent = contractorInfo.CompanyName;
+                        row.appendChild(contractorCell);
+
                         const viewQuotationCell = document.createElement('td');
                         const link = document.createElement('a');
-                        link.href = 'http://localhost:5000/uploads/Quotations/' + title;
+                        link.href = `http://localhost:5000/uploads/Quotations/${title}`;
                         link.textContent = 'View Quotation';
                         viewQuotationCell.appendChild(link);
                         row.appendChild(viewQuotationCell);
 
-                        // Append the row to the table body
                         dataTableBody.appendChild(row);
+                    })
+                    .catch(error => {
+                        console.error('Error fetching contractor info:', error);
+                        // Handle the error here, e.g., display an error message to the user
                     });
-                })
-                .catch(error => {
-                    console.error('Error fetching contractor details:', error);
-                });
-        })
-        .catch(error => {
-            console.error('Error fetching quotation details:', error);
+            }
         });
-}
+    })
+    .catch(error => {
+        console.error('Error fetching quotations:', error);
+        // Handle the error here, e.g., display an error message to the user
+    });

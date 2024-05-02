@@ -80,7 +80,6 @@ router.put("/tender/:tenderId", async (req, res) => {
 });
 
 router.get('/data', async (req, res) => {
-  console.log("Hello Guyzz");
   try {
       // Fetch all documents from the collection
       const documents = await Tender.find();

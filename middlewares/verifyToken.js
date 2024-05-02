@@ -3,6 +3,7 @@ import { jwtSecretKey } from "../config.js";
 
 // Middleware to verify JWT token
 export function verifyToken(req, res, next) {
+  
   const token = req.cookies["authorization"];
   console.log(token);
   if (!token) {

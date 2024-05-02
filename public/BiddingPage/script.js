@@ -45,7 +45,7 @@ fetch('/company/userdetails')
 
                     const viewtender = document.createElement('td');
                     const link = document.createElement('a');
-                    link.href = 'http://localhost:5000/BiddingPage/index2.html';
+                    link.href = `http://localhost:5000/BiddingPage/index2.html?tenderid=${_id}`;
                     link.textContent = 'View More'; // Set your desired link text here
                     viewtender.appendChild(link);
                     row.appendChild(viewtender);

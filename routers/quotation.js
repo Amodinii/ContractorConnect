@@ -40,7 +40,8 @@ router.post(
       });
 
       await quotation.save();
-      res.status(201).send({ message: "Quotation posted successfully", quotation });
+      //res.status(201).send({ message: "Quotation posted successfully", quotation });
+      res.redirect("/Dashboard_Vendor/dash.html");
     } catch (error) {
       console.error("Error posting quotation:", error);
       // Send an error response here
@@ -61,7 +62,7 @@ router.get('/data', async (req, res) => {
   }
 });
 
-router.get('/getquotations', verifyToken, authorizeContractor, async (req, res) => {
+router.get('/getquotations', verifyToken,  async (req, res) => {
   console.log("Getting Quotation Details");
   let quotations;
   await Quotation.find({}).then((data) => quotations = data);
