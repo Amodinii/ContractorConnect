@@ -25,6 +25,7 @@ fetch(`/tender/data`,{
                 <input type="hidden" name="tenderId" value="${entry._id}" />
                 <button type="submit" onclick="uploadQuotation()">Upload</button>
               </form>
+              <div id="alertMessage"></div>
             </td>
           `;
           document.getElementById("data-table-body").appendChild(row);

@@ -348,7 +348,7 @@ a {
 .tile {
   padding: 1rem;
   border-radius: 8px;
-  background-color: var(--c-olive-500);
+  background-color: #76aeab;
   color: var(--c-gray-900);
   min-height: 200px;
   display: flex;
@@ -364,15 +364,15 @@ a {
   &:focus-within {
     box-shadow:
       0 0 0 2px var(--c-gray-800),
-      0 0 0 4px var(--c-olive-500);
+      0 0 0 4px #76aeab;
   }
 
   &:nth-child(2) {
-    background-color: var(--c-green-500);
+    background-color: #76aeab;
     &:focus-within {
       box-shadow:
         0 0 0 2px var(--c-gray-800),
-        0 0 0 4px var(--c-green-500);
+        0 0 0 4px #76aeab;
     }
   }
   &:nth-child(3) {
@@ -577,11 +577,11 @@ a {
   font-size: 0.75rem;
   font-weight: 600;
   &.green {
-    background-color: var(--c-green-500);
+    background-color: #76aeab;
   }
 
   &.olive {
-    background-color: var(--c-olive-500);
+    background-color:  #76aeab;
   }
 
   &.gray {

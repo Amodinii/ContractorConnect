@@ -35,6 +35,7 @@ function checkWelcomeCookie() {
 // Call the checkWelcomeCookie function when the page loads
 window.onload = checkWelcomeCookie;
 
+
 const uploadLink = document.getElementById("uploadLink");
 const mainContent = document.querySelector(".app-body-main-content");
 const uploadFormSection = document.getElementById("uploadFormSection");
@@ -109,6 +110,15 @@ fetch('/contractors/vendordetails')
                   // Append the row to the table body
                   dataTableBody.appendChild(row);
               });
+              var links = document.getElementsByClassName("quotationsLink");
+
+              for (var i = 0; i < links.length; i++) {
+                links[i].addEventListener("click", function(event) {
+                  event.preventDefault();
+                  var url = this.getAttribute("href") + "?userID=" + encodeURIComponent(userId);
+                  window.location.href = url;
+                });
+              }
 
       })
       .catch(error => {

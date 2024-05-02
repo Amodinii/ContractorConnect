@@ -128,7 +128,7 @@ router.get('/findcompany', async (req, res) => {
   try {
     console.log("ID jo aa raha hai", req.query.id);
     const user = await CompanyUser.findById(req.query.id);
-
+    console.log(user);
     if (!user) {
       return res.status(404).json({ message: 'User not found' });
     }
