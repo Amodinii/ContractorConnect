@@ -31,7 +31,7 @@ connect("mongodb://localhost:27017/ContractorConnect", {
 // Routes
 app.use("/auth", authRouter);
 app.use("/company", companyRouter);
-app.use("/contractor", contractorRouter);
+app.use("/contractors", contractorRouter);
 app.use("/quotation", quotationRouter);
 app.use("/tender", tenderRouter);
 app.use("/users", userRouter);

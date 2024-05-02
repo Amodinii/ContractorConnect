@@ -173,20 +173,20 @@
             <h2>Your Tenders</h2>
             <div class="filter-options">
               <p>Here are all your recently liked tenders.</p>
-              <button class="icon-button">
-                <i class="ph-funnel"></i>
-              </button>
-              <button class="icon-button">
-                <i class="ph-plus"></i>
-              </button>
+              <!--Quotations Table-->
             </div>
-          </div>
-          <div class="transfers">
-            <div class="transfer">
-              <div class="transfer-logo">
-                <img src="https://assets.codepen.io/285131/apple.svg" />
-              </div>
             </div>
+            <table class="table table-hover" id="data-table" >
+              <thead>
+                  <tr>
+                      <th>Quotation Title</th>
+                      <th>Status</th>
+                      <th>Tender ID</th>
+                      <th>View Quotations</th>
+                  </tr>
+              </thead>
+              <tbody id="data-table-body"></tbody>
+            </table>
           </div>
 <script src="dash.js"></script>
 </body>

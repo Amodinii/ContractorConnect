@@ -14,6 +14,11 @@ export const quotationSchema = new Schema({
     default: Date.now,
   },
   title: String,
+  status: {
+    type: String,
+    enum: ["Accepted", "Rejected", "Pending"],
+    default: "Pending",
+  },
 });
 
 export const Quotation = model("Quotation", quotationSchema);

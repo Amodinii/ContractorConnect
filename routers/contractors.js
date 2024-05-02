@@ -34,7 +34,7 @@ router.get(
 );
 
 router.get('/vendordetails',verifyToken, authorizeContractor, async (req, res) => {
-  console.log("We are extracting the details");
+  console.log("We are getting vendor details");
   try {
     console.log(req.user.userId)
     const user = await ContractorUser.findById(req.user.userId); // Assuming req.user.id contains the user's ID after authentication

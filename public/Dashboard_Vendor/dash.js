@@ -43,24 +43,6 @@ const userProfile = document.querySelector(".user-profile");
 const otherCheckbox = document.getElementById("otherCheckbox");
 const otherField = document.querySelector(".other-field");
 
-// This is to make the content disappear when i clock 'UPLOAD YOUR TENDER'
-
-document.addEventListener("DOMContentLoaded", function () {
-  // this is to switch to the upload your tender side, when selected
-  uploadLink.addEventListener("click", function (event) {
-    event.preventDefault();
-    mainContent.style.display = "none";
-    uploadFormSection.style.display = "block";
-  });
-});
-//this is used to show the dropdown, when we hover over the profile side.
-/*userProfile.addEventListener('mouseenter', function(event) {
-      dropdownContent.style.display = 'block';
-    });
-    userProfile.addEventListener('mouseleave', function(event) {
-      dropdownContent.style.display = 'none';
-    });*/
-
 //this is used to show the dropdown, when we click on the profile side.
 function toggleDropdown() {
   if (dropdownContent.style.display === "block") {
@@ -72,10 +54,6 @@ function toggleDropdown() {
 userProfile.addEventListener("click", function (event) {
   toggleDropdown();
 });
-// Toggle the visibility of the "Other" field based on the checkbox's checked state
-otherCheckbox.addEventListener("click", function () {
-  otherField.style.display = this.checked ? "block" : "none";
-});
 
 
 const token = localStorage.getItem('jwtToken');
@@ -83,18 +61,58 @@ const token = localStorage.getItem('jwtToken');
 fetch('/contractors/vendordetails')
 .then(response => response.json())
 .then(data => {
-  console.log(data.CompanyName)
-  const companyName = data.CompanyName;
-  const userProfileUsername = document.getElementById('username');
-  if (userProfileUsername) {
-    userProfileUsername.textContent = companyName;
-  }
-})
-.catch(error => {
-  console.error('Error fetching user details:', error);
-});
+    const contractorName = data.CompanyName;
+    const userProfileUsername = document.querySelector('#username');
+    if (userProfileUsername) {
+      userProfileUsername.textContent = contractorName;
+    }
+    const quotationIds = data.quotations;
 
+    fetch('/quotation/getquotations?quotationIds=' + JSON.stringify(quotationIds))
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+          return response.json();
+      })
+      .then(quotations => {
+              const dataTableBody = document.getElementById('data-table-body');
 
+              quotations.forEach(quotations => {
+                  const row = document.createElement('tr');
+
+                  // Extract title, category, and status fields from tender object
+                  const { title, tender, status } = quotations;
+
+                  // Create table cells for title, category, and status
+                  const titleCell = document.createElement('td');
+                  titleCell.textContent = title;
+                  row.appendChild(titleCell);
+
+                  const statusCell = document.createElement('td');
+                  statusCell.textContent = status;
+                  row.appendChild(statusCell);
+
+                  const tendercell = document.createElement('td');
+                  tendercell.textContent = tender;
+                  row.appendChild(tendercell);
+
+                  const viewquotation = document.createElement('td');
+                  const link = document.createElement('a');
+                  link.href = 'http://localhost:5000/uploads/Quotations/' + title;
+                  link.textContent = 'View Quotation'; // Set your desired link text here
+                  viewquotation.appendChild(link);
+                  row.appendChild(viewquotation);
+                  
+                  // Append the row to the table body
+                  dataTableBody.appendChild(row);
+              });
+
+      })
+      .catch(error => {
+          console.error('Error fetching tender details:', error);
+      })
+  })
 
 document.getElementById("logout1").addEventListener("click", function () {
   console.log("haoihdfioaeshjf logout");
