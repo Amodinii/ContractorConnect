@@ -33,7 +33,19 @@ router.get(
   }
 );
 
-router.get('/userdetails',verifyToken, authorizeCompany, async (req, res) => {
+router.get('/userdetails', async (req, res) => {
+  console.log("Hello Guyzz");
+  try {
+      // Fetch all documents from the collection
+      const documents = await CompanyUser.find();
+      res.json(documents); // Send the documents as JSON response
+  } catch (error) {
+      console.error('Error fetching data:', error);
+      res.status(500).send('Internal Server Error');
+  }
+});
+
+router.get('/companydetails',verifyToken, authorizeCompany, async (req, res) => {
   console.log("Enter getting company details");
   try {
     const user = await CompanyUser.findById(req.user.userId); // Assuming req.user.id contains the user's ID after authentication

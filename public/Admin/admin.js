@@ -39,6 +39,14 @@ document.addEventListener("DOMContentLoaded", function () {
   document
     .getElementById("contractors-link")
     .addEventListener("click", fetchContractorsData);
+
+  document
+    .getElementById("tenders-link")
+    .addEventListener("click", fetchTenderData);
+
+  document
+    .getElementById("quotations-link")
+    .addEventListener("click", fetchQuotationData);
   // Add event listeners for other links here...
 });
 
@@ -47,33 +55,31 @@ function handleNavigation() {
   const dashboardLink = document.getElementById("dashboard-link");
   const companiesLink = document.getElementById("companies-link");
   const contractorsLink = document.getElementById("contractors-link");
-  const ordersLink = document.getElementById("orders-link");
-  const revenueAnalyticsLink = document.getElementById(
-    "revenue-analytics-link",
-  );
-  const messagesLink = document.getElementById("messages-link");
-  const reportsLink = document.getElementById("reports-link");
+  const tendersLink = document.getElementById("tenders-link");
+  const quotationsLink = document.getElementById("quotations-link");
+  const signedContractsLink = document.getElementById("signed-contracts-link");
+  const paymentsLink = document.getElementById("payments-link");
   const settingsLink = document.getElementById("settings-link");
 
   const dashboardSection = document.getElementById("dashboard-section");
   const companiesSection = document.getElementById("companies-section");
   const contractorsSection = document.getElementById("contractors-section");
-  const ordersSection = document.getElementById("orders-section");
-  const revenueAnalyticsSection = document.getElementById(
-    "revenue-analytics-section",
+  const tendersSection = document.getElementById("tenders-section");
+  const quotationsSection = document.getElementById("quotations-section");
+  const signedContractsSection = document.getElementById(
+    "signed-contracts-section"
   );
-  const messagesSection = document.getElementById("messages-section");
-  const reportsSection = document.getElementById("reports-section");
+  const paymentsSection = document.getElementById("payments-section");
   const settingsSection = document.getElementById("settings-section");
 
   // Hide all sections initially
   dashboardSection.style.display = "none";
   companiesSection.style.display = "none";
   contractorsSection.style.display = "none";
-  ordersSection.style.display = "none";
-  revenueAnalyticsSection.style.display = "none";
-  messagesSection.style.display = "none";
-  reportsSection.style.display = "none";
+  tendersSection.style.display = "none";
+  quotationsSection.style.display = "none";
+  signedContractsSection.style.display = "none";
+  paymentsSection.style.display = "none";
   settingsSection.style.display = "none";
 
   // Event listener for dashboard link
@@ -82,10 +88,10 @@ function handleNavigation() {
     dashboardSection.style.display = "block";
     companiesSection.style.display = "none";
     contractorsSection.style.display = "none";
-    ordersSection.style.display = "none";
-    revenueAnalyticsSection.style.display = "none";
-    messagesSection.style.display = "none";
-    reportsSection.style.display = "none";
+    tendersSection.style.display = "none";
+    quotationsSection.style.display = "none";
+    signedContractsSection.style.display = "none";
+    paymentsSection.style.display = "none";
     settingsSection.style.display = "none";
   });
 
@@ -95,10 +101,10 @@ function handleNavigation() {
     dashboardSection.style.display = "none";
     companiesSection.style.display = "block";
     contractorsSection.style.display = "none";
-    ordersSection.style.display = "none";
-    revenueAnalyticsSection.style.display = "none";
-    messagesSection.style.display = "none";
-    reportsSection.style.display = "none";
+    tendersSection.style.display = "none";
+    quotationsSection.style.display = "none";
+    signedContractsSection.style.display = "none";
+    paymentsSection.style.display = "none";
     settingsSection.style.display = "none";
 
     // Call function to fetch and display companies data
@@ -111,10 +117,10 @@ function handleNavigation() {
     dashboardSection.style.display = "none";
     companiesSection.style.display = "none";
     contractorsSection.style.display = "block";
-    ordersSection.style.display = "none";
-    revenueAnalyticsSection.style.display = "none";
-    messagesSection.style.display = "none";
-    reportsSection.style.display = "none";
+    tendersSection.style.display = "none";
+    quotationsSection.style.display = "none";
+    signedContractsSection.style.display = "none";
+    paymentsSection.style.display = "none";
     settingsSection.style.display = "none";
 
     // Call function to fetch and display contractors data
@@ -122,73 +128,79 @@ function handleNavigation() {
   });
 
   // Add event listeners for other links here...
-  // Similar to the above listeners, adjust the section display as needed
-  // Fetch data if required
 
-  // Event listener for orders link
-  ordersLink.addEventListener("click", function (event) {
+  // Event listener for tenders link
+  tendersLink.addEventListener("click", function (event) {
     event.preventDefault();
     dashboardSection.style.display = "none";
     companiesSection.style.display = "none";
     contractorsSection.style.display = "none";
-    ordersSection.style.display = "block";
-    revenueAnalyticsSection.style.display = "none";
-    messagesSection.style.display = "none";
-    reportsSection.style.display = "none";
+    tendersSection.style.display = "block";
+    quotationsSection.style.display = "none";
+    signedContractsSection.style.display = "none";
+    paymentsSection.style.display = "none";
     settingsSection.style.display = "none";
+
+    fetchTenderData();
   });
-  // Event listener for revenueAnalytics link
-  revenueAnalyticsLink.addEventListener("click", function (event) {
+
+  // Event listener for quotations link
+  quotationsLink.addEventListener("click", function (event) {
     event.preventDefault();
     dashboardSection.style.display = "none";
     companiesSection.style.display = "none";
     contractorsSection.style.display = "none";
-    ordersSection.style.display = "none";
-    revenueAnalyticsSection.style.display = "block";
-    messagesSection.style.display = "none";
-    reportsSection.style.display = "none";
+    tendersSection.style.display = "none";
+    quotationsSection.style.display = "block";
+    signedContractsSection.style.display = "none";
+    paymentsSection.style.display = "none";
     settingsSection.style.display = "none";
+
+    fetchQuotationData();
   });
-  // Event listener for messages link
-  messagesLink.addEventListener("click", function (event) {
+
+  // Event listener for signed contracts link
+  signedContractsLink.addEventListener("click", function (event) {
     event.preventDefault();
     dashboardSection.style.display = "none";
     companiesSection.style.display = "none";
     contractorsSection.style.display = "none";
-    ordersSection.style.display = "none";
-    revenueAnalyticsSection.style.display = "none";
-    messagesSection.style.display = "block";
-    reportsSection.style.display = "none";
+    tendersSection.style.display = "none";
+    quotationsSection.style.display = "none";
+    signedContractsSection.style.display = "block";
+    paymentsSection.style.display = "none";
     settingsSection.style.display = "none";
   });
-  // Event listener for reports link
-  reportsLink.addEventListener("click", function (event) {
+
+  // Event listener for payments link
+  paymentsLink.addEventListener("click", function (event) {
     event.preventDefault();
     dashboardSection.style.display = "none";
     companiesSection.style.display = "none";
     contractorsSection.style.display = "none";
-    ordersSection.style.display = "none";
-    revenueAnalyticsSection.style.display = "none";
-    messagesSection.style.display = "none";
-    reportsSection.style.display = "block";
+    tendersSection.style.display = "none";
+    quotationsSection.style.display = "none";
+    signedContractsSection.style.display = "none";
+    paymentsSection.style.display = "block";
     settingsSection.style.display = "none";
   });
+
   // Event listener for settings link
   settingsLink.addEventListener("click", function (event) {
     event.preventDefault();
     dashboardSection.style.display = "none";
     companiesSection.style.display = "none";
     contractorsSection.style.display = "none";
-    ordersSection.style.display = "none";
-    revenueAnalyticsSection.style.display = "none";
-    messagesSection.style.display = "none";
-    reportsSection.style.display = "none";
+    tendersSection.style.display = "none";
+    quotationsSection.style.display = "none";
+    signedContractsSection.style.display = "none";
+    paymentsSection.style.display = "none";
     settingsSection.style.display = "block";
   });
 }
 
 function fetchCompaniesData() {
-  fetch("http://localhost:5000/companies")
+  fetch("/company/userdetails")
     .then((response) => response.json())
     .then((companies) => {
       const companiesSection = document.getElementById("companies-section");
@@ -203,7 +215,7 @@ function fetchCompaniesData() {
           <div>Phone Number: ${company.PhoneNumber}</div>
           <div>Alternate Phone Number: ${company.AlternatePhoneNumber}</div>
           <div>Address: ${company.Address}</div>
-          <div>City: ${company.City}</div>
+          <div>Email: ${company.Email}</div>
           <div>State: ${company.State}</div>
           <hr>
         `;
@@ -216,7 +228,7 @@ function fetchCompaniesData() {
 }
 
 function fetchContractorsData() {
-  fetch("http://localhost:5000/contractors")
+  fetch("/contractors/userdetails")
     .then((response) => response.json())
     .then((contractors) => {
       const contractorsSection = document.getElementById("contractors-section");
@@ -227,11 +239,11 @@ function fetchContractorsData() {
         contractorElement.innerHTML = `
           <div>Contractor ID: ${contractor._id}</div>
           <div>Contractor Name: ${contractor.ContractorName}</div>
-          <div>Licence Number: ${contractor.LicenceNumber}</div>
           <div>Phone Number: ${contractor.PhoneNumber}</div>
           <div>Address: ${contractor.Address}</div>
           <div>City: ${contractor.City}</div>
           <div>State: ${contractor.State}</div>
+          <div>Email: ${contractor.Email}</div>
           <hr>
         `;
         contractorsSection.appendChild(contractorElement);
@@ -242,73 +254,186 @@ function fetchContractorsData() {
     .catch((error) => console.error("Error fetching contractors:", error));
 }
 
+function fetchTenderData() {
+  fetch("/tender/data")
+    .then((response) => response.json())
+    .then((tenders) => {
+      const tendersSection = document.getElementById("tenders-section");
+      tendersSection.innerHTML = ""; // Clear previous content
+
+      tenders.forEach((tender) => {
+        const tenderElement = document.createElement("div");
+        tenderElement.innerHTML = `
+        <div>Tender ID: ${tender._id}</div>
+        <div>Company ID: ${tender.company}</div>
+        <div>Tender title: ${tender.title}</div>
+        <div>Category: ${tender.category}</div>
+        <div>Status: ${tender.status}</div>
+        <hr>
+      `;
+        tendersSection.appendChild(tenderElement);
+      });
+
+      tendersSection.style.display = "block"; // Show the contractors section
+    })
+    .catch((error) => console.error("Error fetching tenders:", error));
+}
+
+function fetchQuotationData() {
+  fetch("/quotation/data")
+    .then((response) => response.json())
+    .then((quotations) => {
+      const quotationsSection = document.getElementById("quotations-section");
+      quotationsSection.innerHTML = ""; // Clear previous content
+
+      quotations.forEach((quotation) => {
+        const quotationElement = document.createElement("div");
+        quotationElement.innerHTML = `
+        <div>Quotation ID: ${quotation._id}</div>
+        <div>Tender ID: ${quotation.tender}</div>
+        <div>Contractor ID: ${quotation.contractor}</div>
+        <div>Title: ${quotation.title}</div>
+        <hr>
+      `;
+        quotationsSection.appendChild(quotationElement);
+      });
+
+      quotationsSection.style.display = "block"; // Show the contractors section
+    })
+    .catch((error) => console.error("Error fetching quotations:", error));
+}
+
 // Call the handleNavigation function when the DOM is loaded
 document.addEventListener("DOMContentLoaded", handleNavigation);
 
-//functions to fetch reports(implemented later)
+// Function to display the form for creating a new company user
+function showCreateCompanyUserForm() {
+  const companyUserForm = document.createElement("form");
+  companyUserForm.id = "createCompanyUserForm";
 
-// Function to generate and display Order Reports
-function generateOrderReports() {
-  // Add code to fetch order data from backend API
-  // Generate and display order reports based on fetched data
+  // Company Name input
+  const companyNameLabel = document.createElement("label");
+  companyNameLabel.textContent = "Company Name:";
+  const companyNameInput = document.createElement("input");
+  companyNameInput.type = "text";
+  companyNameInput.id = "companyNameInput";
+  companyUserForm.appendChild(companyNameLabel);
+  companyUserForm.appendChild(companyNameInput);
+
+  // Website input
+  const websiteLabel = document.createElement("label");
+  websiteLabel.textContent = "Website:";
+  const websiteInput = document.createElement("input");
+  websiteInput.type = "text";
+  websiteInput.id = "websiteInput";
+  companyUserForm.appendChild(websiteLabel);
+  companyUserForm.appendChild(websiteInput);
+
+  // Phone Number input
+  const phoneLabel = document.createElement("label");
+  phoneLabel.textContent = "Phone Number:";
+  const phoneInput = document.createElement("input");
+  phoneInput.type = "text";
+  phoneInput.id = "phoneInput";
+  companyUserForm.appendChild(phoneLabel);
+  companyUserForm.appendChild(phoneInput);
+
+  // Alternate Phone Number input
+  const alternatePhoneLabel = document.createElement("label");
+  alternatePhoneLabel.textContent = "Alternate Phone Number:";
+  const alternatePhoneInput = document.createElement("input");
+  alternatePhoneInput.type = "text";
+  alternatePhoneInput.id = "alternatePhoneInput";
+  companyUserForm.appendChild(alternatePhoneLabel);
+  companyUserForm.appendChild(alternatePhoneInput);
+
+  // Address input
+  const addressLabel = document.createElement("label");
+  addressLabel.textContent = "Address:";
+  const addressInput = document.createElement("input");
+  addressInput.type = "text";
+  addressInput.id = "addressInput";
+  companyUserForm.appendChild(addressLabel);
+  companyUserForm.appendChild(addressInput);
+
+  // Email input
+  const emailLabel = document.createElement("label");
+  emailLabel.textContent = "Email:";
+  const emailInput = document.createElement("input");
+  emailInput.type = "email";
+  emailInput.id = "emailInput";
+  companyUserForm.appendChild(emailLabel);
+  companyUserForm.appendChild(emailInput);
+
+  // State input
+  const stateLabel = document.createElement("label");
+  stateLabel.textContent = "State:";
+  const stateInput = document.createElement("input");
+  stateInput.type = "text";
+  stateInput.id = "stateInput";
+  companyUserForm.appendChild(stateLabel);
+  companyUserForm.appendChild(stateInput);
+
+  // Submit button
+  const submitButton = document.createElement("button");
+  submitButton.type = "submit";
+  submitButton.textContent = "Create Company User";
+  companyUserForm.appendChild(submitButton);
+
+  // Add form to the companyUsers section
+  const companyUsersSection = document.getElementById("companyUsers");
+  companyUsersSection.appendChild(companyUserForm);
+
+  // Add event listener for form submission
+  companyUserForm.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default form submission
+    // Call function to handle creation of company user with form data
+    createCompanyUser();
+  });
 }
 
-// Function to generate and display Contractor Performance Reports
-function generateContractorPerformanceReports() {
-  // Add code to fetch contractor performance data from backend API
-  // Generate and display contractor performance reports based on fetched data
-}
+// Function to handle creation of a new company user
+function createCompanyUser() {
+  // Get form input values
+  const companyName = document.getElementById("companyNameInput").value;
+  const website = document.getElementById("websiteInput").value;
+  const phoneNumber = document.getElementById("phoneInput").value;
+  const alternatePhoneNumber = document.getElementById(
+    "alternatePhoneInput"
+  ).value;
+  const address = document.getElementById("addressInput").value;
+  const email = document.getElementById("emailInput").value;
+  const state = document.getElementById("stateInput").value;
 
-// Function to generate and display Revenue Reports
-function generateRevenueReports() {
-  // Add code to fetch revenue data from backend API
-  // Generate and display revenue reports based on fetched data
-}
+  // Create an object with the user data
+  const userData = {
+    CompanyName: companyName,
+    WebsiteLink: website,
+    PhoneNumber: phoneNumber,
+    AlternatePhoneNumber: alternatePhoneNumber,
+    Address: address,
+    Email: email,
+    State: state,
+  };
 
-// Function to generate and display Payment Reports
-function generatePaymentReports() {
-  // Add code to fetch payment data from backend API
-  // Generate and display payment reports based on fetched data
-}
-
-// Function to generate and display Company Engagement Reports
-function generateCompanyEngagementReports() {
-  // Add code to fetch company engagement data from backend API
-  // Generate and display company engagement reports based on fetched data
-}
-
-// Function to generate and display Contractor Engagement Reports
-function generateContractorEngagementReports() {
-  // Add code to fetch contractor engagement data from backend API
-  // Generate and display contractor engagement reports based on fetched data
-}
-
-// Function to generate and display Service Type Reports
-function generateServiceTypeReports() {
-  // Add code to fetch service type data from backend API
-  // Generate and display service type reports based on fetched data
-}
-
-// Function to generate and display Geographical Reports
-function generateGeographicalReports() {
-  // Add code to fetch geographical data from backend API
-  // Generate and display geographical reports based on fetched data
-}
-
-// Function to generate and display Feedback and Rating Reports
-function generateFeedbackRatingReports() {
-  // Add code to fetch feedback and rating data from backend API
-  // Generate and display feedback and rating reports based on fetched data
-}
-
-// Function to generate and display Financial Reports
-function generateFinancialReports() {
-  // Add code to fetch financial data from backend API
-  // Generate and display financial reports based on fetched data
-}
-
-// Function to generate and display User Activity Reports
-function generateUserActivityReports() {
-  // Add code to fetch user activity data from backend API
-  // Generate and display user activity reports based on fetched data
+  // Send POST request to backend API to create the user
+  fetch("/company/userdetails", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(userData),
+  })
+    .then((response) => {
+      if (response.ok) {
+        // If user creation is successful, refresh the list of users
+        fetchCompaniesData(); // Assuming you have a function to fetch and display company users
+        // Optionally, clear the form input fields
+        document.getElementById("createCompanyUserForm").reset();
+      } else {
+        // If user creation fails, display an error message
+        console.error("Failed to create company user");
+      }
+    })
+    .catch((error) => console.error("Error creating company user:", error));
 }
