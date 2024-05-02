@@ -33,26 +33,15 @@ router.get(
   }
 );
 
-router.get('/vendordetails',verifyToken, authorizeContractor, async (req, res) => {
-  console.log("We are getting vendor details");
+router.get('/userdetails', async (req, res) => {
+  console.log("Hello Guyzz");
   try {
-    console.log(req.user.userId)
-    const user = await ContractorUser.findById(req.user.userId); // Assuming req.user.id contains the user's ID after authentication
-    if (!user) {
-      return res.status(404).json({ message: 'User not found' });
-    }
-    // Extract necessary user details and send as response
-    res.json({
-      id:user._id,
-      CompanyName: user.ContractorName,
-      companyphone : user.PhoneNumber,
-      companystate : user.State,
-      companyaddress : user.Address,
-      companymail : user.Email,
-    });
-  } catch (err) {
-    console.error('Error fetching user details:', err);
-    res.status(500).json({ message: 'Server error' });
+      // Fetch all documents from the collection
+      const documents = await ContractorUser.find();
+      res.json(documents); // Send the documents as JSON response
+  } catch (error) {
+      console.error('Error fetching data:', error);
+      res.status(500).send('Internal Server Error');
   }
 });
 

@@ -33,28 +33,15 @@ router.get(
   }
 );
 
-router.get('/userdetails',verifyToken, authorizeCompany, async (req, res) => {
-  console.log("Enter getting company details");
+router.get('/userdetails', async (req, res) => {
+  console.log("Hello Guyzz");
   try {
-    const user = await CompanyUser.findById(req.user.userId); // Assuming req.user.id contains the user's ID after authentication
-    if (!user) {
-      return res.status(404).json({ message: 'User not found' });
-    }
-    // Extract necessary user details and send as response
-    console.log(user._id);
-    res.json({
-      id: user._id,
-      CompanyName: user.CompanyName,
-      companywebsite : user.WebsiteLink,
-      companyphone : user.PhoneNumber,
-      companystate : user.State,
-      companyaddress : user.Address,
-      companymail : user.Email,
-      tenders:user.tenders,
-    });
-  } catch (err) {
-    console.error('Error fetching user details:', err);
-    res.status(500).json({ message: 'Server error' });
+      // Fetch all documents from the collection
+      const documents = await CompanyUser.find();
+      res.json(documents); // Send the documents as JSON response
+  } catch (error) {
+      console.error('Error fetching data:', error);
+      res.status(500).send('Internal Server Error');
   }
 });
 
