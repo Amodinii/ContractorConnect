@@ -7,11 +7,17 @@ export const quotationSchema = new Schema({
   },
   contractor: {
     type: Schema.Types.ObjectId,
-    ref: "Contractoruser",
+    ref: "contractorUser",
   },
   submitted_at: {
     type: Date,
     default: Date.now,
+  },
+  title: String,
+  status: {
+    type: String,
+    enum: ["Accepted", "Rejected", "Pending"],
+    default: "Pending",
   },
 });
 

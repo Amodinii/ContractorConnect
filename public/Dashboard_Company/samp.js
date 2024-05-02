@@ -53,13 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
     uploadFormSection.style.display = "block";
   });
 });
-//this is used to show the dropdown, when we hover over the profile side.
-/*userProfile.addEventListener('mouseenter', function(event) {
-      dropdownContent.style.display = 'block';
-    });
-    userProfile.addEventListener('mouseleave', function(event) {
-      dropdownContent.style.display = 'none';
-    });*/
 
 //this is used to show the dropdown, when we click on the profile side.
 function toggleDropdown() {
@@ -76,6 +69,78 @@ userProfile.addEventListener("click", function (event) {
 otherCheckbox.addEventListener("click", function () {
   otherField.style.display = this.checked ? "block" : "none";
 });
+
+
+const token = localStorage.getItem('jwtToken');
+
+fetch('/company/userdetails')
+.then(response => response.json())
+.then(data => {
+  console.log(data.CompanyName);
+  const companyName = data.CompanyName;
+  const userProfileUsername = document.querySelector('#username');
+  if (userProfileUsername) {
+    userProfileUsername.textContent = companyName;
+  }
+  const tenderIds = data.tenders;
+  const userId = data.id;
+  fetch(`/tender/gettenders`)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(allTenders => {
+      // Filter tenders based on the user ID
+      const userTenders = allTenders.filter(tender => tender.company === userId);
+
+      const dataTableBody = document.getElementById('data-table-body');
+
+      userTenders.forEach(tender => {
+          const row = document.createElement('tr');
+
+          // Extract title, category, and status fields from tender object
+          const { title, category, status } = tender;
+
+          // Create table cells for title, category, and status
+          const titleCell = document.createElement('td');
+          titleCell.textContent = title;
+          row.appendChild(titleCell);
+
+          const categoryCell = document.createElement('td');
+          categoryCell.textContent = category;
+          row.appendChild(categoryCell);
+
+          const statusCell = document.createElement('td');
+          statusCell.textContent = status;
+          row.appendChild(statusCell);
+
+          const viewtender = document.createElement('td');
+          const link = document.createElement('a');
+          link.href = 'http://localhost:5000/uploads/Tenders/' + title;
+          link.textContent = 'View Tender'; // Set your desired link text here
+          viewtender.appendChild(link);
+          row.appendChild(viewtender);
+          // Append the row to the table body
+          dataTableBody.appendChild(row);
+      });
+
+  })
+  .catch(error => {
+      console.error('Error fetching tender details:', error);
+  });
+})
+.catch(error => {
+console.error('Error fetching user details:', error);
+});
+
+fetch(`/quotation/getquotations`)
+.then(response => response.json())
+.then(data => {
+  console.log(data.tender),
+  console.log(data.contractor)
+})
 
 document.getElementById("logout1").addEventListener("click", function () {
   console.log("haoihdfioaeshjf logout");

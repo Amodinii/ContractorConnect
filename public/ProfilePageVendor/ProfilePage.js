@@ -5,22 +5,13 @@ function setCookie(cookieName, cookieValue, expirationDays) {
     document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
   }
   
-fetch('/company/userdetails')
-.then(response => response.json())
-.then(data => {
-    console.log('User details:', data);
-    fetch('/company/userdetails')
+    fetch('/contractors/vendordetails')
     .then(response => response.json())
     .then(data => {
       // Update each detail with the received data
       const userProfileCompanyName = document.querySelector('#companyName');
       if (userProfileCompanyName) {
         userProfileCompanyName.value = data.CompanyName;
-      }
-  
-      const userProfileCompanyWebsite = document.querySelector('#companyWebsite');
-      if (userProfileCompanyWebsite) {
-        userProfileCompanyWebsite.value = data.companywebsite;
       }
   
       const userProfileCompanyPhone = document.querySelector('#companyPhone');
@@ -46,11 +37,7 @@ fetch('/company/userdetails')
     .catch(error => {
       console.error('Error fetching user details:', error);
     });
-  
-})
-.catch(error => {
-  console.error('Error fetching user details:', error);
-});
+
 
 
 function updateUserDetails() {
@@ -58,22 +45,20 @@ function updateUserDetails() {
     console.log("It is coming in the function.")
       // Extract current user information from the profile page
       const companyName = document.getElementById('companyName').value;
-      const websiteLink = document.getElementById('companyWebsite').value;
       const phoneNumber = document.getElementById('companyPhone').value;
       const address = document.getElementById('companyAddress').value;
       const email = document.getElementById('companyEmail').value;
       const state = document.getElementById('companyState').value;
 
       const updatedData = {
-          CompanyName: companyName,
-          WebsiteLink: websiteLink,
+          ContractorName: companyName,
           PhoneNumber: phoneNumber,
           Address: address,
           State: state,
           Email: email,
       };
       console.log(updatedData);
-      fetch('/company/updateuserdetails',{
+      fetch('/contractors/updateuserdetails',{
         method:'POST',
         headers:{
           'Content-Type' :  'application/json'

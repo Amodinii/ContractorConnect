@@ -7,8 +7,7 @@ import { jwtSecretKey } from "../config.js";
 
 const router = Router();
 
-//function to generate jwt token
-
+// Function to generate jwt token
 function generateToken(userId, userType) {
   return jwt.sign({ userId, userType }, jwtSecretKey, { expiresIn: "1h" });
 }
@@ -51,42 +50,45 @@ router.post("/contractorRegister", async (req, res) => {
   }
 });
 
+
+
 // Sign-in route
 router.post("/signin", async (req, res) => {
   try {
     const { email, password } = req.body;
-    let user;
-    const companyUser = await CompanyUser.findOne({ Email: email }).exec();
-    const contractorUser = await ContractorUser.findOne({
-      Email: email,
-    }).exec();
 
-    const match = await bcrypt.compare(password, companyUser.Password);
-    
-    if (companyUser && match) {
-      const token = generateToken(companyUser._id, "Company");
-      const now = new Date();
-      res.cookie("authorization", token, {
-        expires: new Date(now.setDate(now.getDate() + 3)),
-      });
-      res.status(200).send({
-        message: "Company User signed in successfully",
-        userType: "Company",
-      });
-    } else if (
-      contractorUser &&
-      (await bcrypt.compare(password, contractorUser.Password))
-    ) {
-      const token = generateToken(contractorUser._id, "Contractor");
-      res.cookie("authorization", token);
-      res.status(200).send({
-        message: "Contractor signed in successfully",
-        userType: "Contractor",
-      });
-    } else {
-      res.status(401).send({ message: "Invalid email or password" });
+    // Look for the user in both company and contractor collections
+    const companyUser = await CompanyUser.findOne({ Email: email }).exec();
+    const contractorUser = await ContractorUser.findOne({ Email: email }).exec();
+
+    if (companyUser) {
+      // If user is a company user
+      const match = await bcrypt.compare(password, companyUser.Password);
+      if (match) {
+        const token = generateToken(companyUser._id, "Company");
+        res.cookie("authorization", token);
+        return res.status(200).send({
+          message: "Company User signed in successfully",
+          userType: "Company",
+        });
+      }
+    } else if (contractorUser) {
+      // If user is a contractor user
+      const match = await bcrypt.compare(password, contractorUser.Password);
+      if (match) {
+        const token = generateToken(contractorUser._id, "Contractor");
+        res.cookie("authorization", token);
+        return res.status(200).send({
+          message: "Contractor signed in successfully",
+          userType: "Contractor",
+        });
+      }
     }
+
+    // If user doesn't exist or password doesn't match
+    res.status(401).send({ message: "Invalid email or password" });
   } catch (error) {
+    console.error("Error during sign-in:", error);
     res.status(500).send({ message: "Internal server error" });
   }
 });

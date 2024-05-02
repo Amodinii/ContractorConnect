@@ -33,4 +33,75 @@ router.get(
   }
 );
 
+router.get('/userdetails',verifyToken, authorizeCompany, async (req, res) => {
+  console.log("Enter getting company details");
+  try {
+    const user = await CompanyUser.findById(req.user.userId); // Assuming req.user.id contains the user's ID after authentication
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+    // Extract necessary user details and send as response
+    console.log(user._id);
+    res.json({
+      id: user._id,
+      CompanyName: user.CompanyName,
+      companywebsite : user.WebsiteLink,
+      companyphone : user.PhoneNumber,
+      companystate : user.State,
+      companyaddress : user.Address,
+      companymail : user.Email,
+      tenders:user.tenders,
+    });
+  } catch (err) {
+    console.error('Error fetching user details:', err);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
+router.post('/updateuserdetails', verifyToken, authorizeCompany, async (req, res) => {
+  const profileId = req.user.userId; 
+  console.log(profileId);
+  console.log("Updation route is getting hit");
+  const updatedValues = req.body;
+  console.log(updatedValues);
+  try {
+      // Update the profile using the CompanyUser model
+      const updatedUser = await CompanyUser.findByIdAndUpdate(
+          { _id: profileId }, 
+          updatedValues,
+      );
+      
+      if (updatedUser) {
+          res.status(200).send('Profile updated successfully');
+      } else {
+          res.status(404).send('Profile not found');
+      }
+  } catch (error) {
+      console.error('Error updating profile:', error);
+      res.status(500).send('Internal Server Error');
+  }
+});
+
+router.get('/findcompany',verifyToken, authorizeCompany, async (req, res) => {
+  console.log("Enter getting company details");
+  try {
+    const user = await CompanyUser.findById(req.query._id);
+    console.log(user);
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+    res.json({
+      CompanyName: user.CompanyName,
+      companywebsite: user.WebsiteLink,
+      companyphone: user.PhoneNumber,
+      companystate: user.State,
+      companyaddress: user.Address,
+      companymail: user.Email,
+    });
+  } catch (err) {
+    console.error('Error fetching user details:', err);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
 export default router;
