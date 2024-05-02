@@ -1,0 +1,180 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eeeeee;
+    /* Background color */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar Styles */
+nav {
+    background-color: #eeeeee;
+    /* Navbar background color */
+    color: #eeeeee;
+    /* Navbar text color */
+    padding: 10px 0;
+    position: relative;
+    z-index: 2;
+}
+
+nav .logo {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+}
+
+nav .logo img {
+    width: 150px;
+    /* Adjust the width of the logo */
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #31363f;
+    /* Navbar text color */
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    padding: 10px 20px;
+}
+
+nav ul li a:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #76abae;
+    /* Navbar hover effect color */
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+    visibility: hidden;
+    z-index: -1;
+}
+
+nav ul li a:hover:before {
+    transform: scaleX(1);
+    visibility: visible;
+}
+
+/* Bidding Form Styles */
+.bidding-form {
+    margin-top: 50px;
+    background-color: #222831;
+    /* Form background color */
+    color: #eeeeee;
+    /* Form text color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.quotation {
+    border: 1px solid #31363f;
+    /* Quotation border color */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    background-color: #31363f;
+    /* Quotation background color */
+}
+
+.quotation:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.quotation h3 {
+    margin-top: 0;
+}
+
+.quotation p {
+    margin-bottom: 5px;
+}
+
+.quotation input[type="radio"] {
+    display: none;
+}
+
+.quotation input[type="radio"]+label {
+    display: block;
+    background-color: #76abae;
+    /* Quotation select button color */
+    color: #eeeeee;
+    /* Quotation select button text color */
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.quotation input[type="radio"]:checked+label {
+    background-color: #222831;
+    /* Selected quotation button color */
+}
+
+/* Form Question Styles */
+.bidding-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 18px;
+    /* Increased font size */
+}
+
+.bidding-form input[type="number"] {
+    padding: 10px;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+/* Make Payment Button Styles */
+.bidding-form button {
+    background-color: #76abae;
+    /* Make Payment button color */
+    color: #eeeeee;
+    /* Make Payment button text color */
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    /* Increased font size */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.bidding-form button:hover {
+    background-color: #31363f;
+    /* Make Payment button hover color */
+}
+
+table {
+    margin-top: 5vw;
+}
