@@ -67,7 +67,7 @@ fetch('/contractors/vendordetails')
       userProfileUsername.textContent = contractorName;
     }
     const quotationIds = data.quotations;
-
+    const userId = data.id;
     fetch('/quotation/getquotations?quotationIds=' + JSON.stringify(quotationIds))
       .then(response => {
           if (!response.ok) {
@@ -75,7 +75,9 @@ fetch('/contractors/vendordetails')
           }
           return response.json();
       })
-      .then(quotations => {
+      .then(allQuotations => {
+        // Filter tenders based on the user ID
+        const quotations = allQuotations.filter(quotations => quotations.contractor === userId);
               const dataTableBody = document.getElementById('data-table-body');
 
               quotations.forEach(quotations => {

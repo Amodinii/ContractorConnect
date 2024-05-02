@@ -43,6 +43,7 @@ router.get('/vendordetails',verifyToken, authorizeContractor, async (req, res) =
     }
     // Extract necessary user details and send as response
     res.json({
+      id:user._id,
       CompanyName: user.ContractorName,
       companyphone : user.PhoneNumber,
       companystate : user.State,
