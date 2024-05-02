@@ -82,4 +82,26 @@ router.post('/updateuserdetails', verifyToken, authorizeCompany, async (req, res
   }
 });
 
+router.get('/findcompany',verifyToken, authorizeCompany, async (req, res) => {
+  console.log("Enter getting company details");
+  try {
+    const user = await CompanyUser.findById(req.query._id);
+    console.log(user);
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+    res.json({
+      CompanyName: user.CompanyName,
+      companywebsite: user.WebsiteLink,
+      companyphone: user.PhoneNumber,
+      companystate: user.State,
+      companyaddress: user.Address,
+      companymail: user.Email,
+    });
+  } catch (err) {
+    console.error('Error fetching user details:', err);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
 export default router;

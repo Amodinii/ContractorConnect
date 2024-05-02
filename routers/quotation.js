@@ -49,6 +49,18 @@ router.post(
   }
 );
 
+router.get('/data', async (req, res) => {
+  console.log("Hello Guyzz");
+  try {
+      // Fetch all documents from the collection
+      const documents = await Quotation.find();
+      res.json(documents); // Send the documents as JSON response
+  } catch (error) {
+      console.error('Error fetching data:', error);
+      res.status(500).send('Internal Server Error');
+  }
+});
+
 router.get('/getquotations', verifyToken, authorizeContractor, async (req, res) => {
   console.log("Getting Quotation Details");
   let quotations;

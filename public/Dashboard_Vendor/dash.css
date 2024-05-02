@@ -906,3 +906,14 @@ button {
   border-radius: 50%; /* Makes the image circular */
   margin-left: 1vw;
 }
+
+#data-table th {
+  padding: 1vw;
+  width: 25%;
+  text-align: left;
+}
+#data-table td {
+  padding: 1vw;
+  width: 25%;
+  text-align: left;
+}
