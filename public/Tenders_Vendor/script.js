@@ -9,6 +9,7 @@ fetch("/tender/data")
           row.innerHTML = `
             <td>${entry._id}</td>
             <td>${companyData.CompanyName}</td>
+            
             <td>${entry.title}</td>
             <td>${entry.category}</td>
             <td>${entry.status}</td>
