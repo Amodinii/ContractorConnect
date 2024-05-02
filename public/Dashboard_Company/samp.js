@@ -76,7 +76,7 @@ const token = localStorage.getItem('jwtToken');
 fetch('/company/userdetails')
 .then(response => response.json())
 .then(data => {
-  console.log(data.CompanyName)
+  console.log(data.CompanyName);
   const companyName = data.CompanyName;
   const userProfileUsername = document.querySelector('#username');
   if (userProfileUsername) {
@@ -91,44 +91,52 @@ fetch('/company/userdetails')
         }
         return response.json();
     })
-    .then(tenders => {
-            const dataTableBody = document.getElementById('data-table-body');
+    .then(allTenders => {
+      // Filter tenders based on the user ID
+      const userTenders = allTenders.filter(tender => tender.company === userId);
 
-            tenders.forEach(tender => {
-                const row = document.createElement('tr');
+      const dataTableBody = document.getElementById('data-table-body');
 
-                // Extract title, category, and status fields from tender object
-                const { title, category, status } = tender;
+      userTenders.forEach(tender => {
+          const row = document.createElement('tr');
 
-                // Create table cells for title, category, and status
-                const titleCell = document.createElement('td');
-                titleCell.textContent = title;
-                row.appendChild(titleCell);
+          // Extract title, category, and status fields from tender object
+          const { title, category, status } = tender;
 
-                const categoryCell = document.createElement('td');
-                categoryCell.textContent = category;
-                row.appendChild(categoryCell);
+          // Create table cells for title, category, and status
+          const titleCell = document.createElement('td');
+          titleCell.textContent = title;
+          row.appendChild(titleCell);
 
-                const statusCell = document.createElement('td');
-                statusCell.textContent = status;
-                row.appendChild(statusCell);
+          const categoryCell = document.createElement('td');
+          categoryCell.textContent = category;
+          row.appendChild(categoryCell);
 
-                const viewtender = document.createElement('td');
-                const link = document.createElement('a');
-                link.href = 'http://localhost:5000/uploads/Tenders/' + title;
-                link.textContent = 'View Tender'; // Set your desired link text here
-                viewtender.appendChild(link);
-                row.appendChild(viewtender);
-                
-                // Append the row to the table body
-                dataTableBody.appendChild(row);
-            });
+          const statusCell = document.createElement('td');
+          statusCell.textContent = status;
+          row.appendChild(statusCell);
 
-    })
-    .catch(error => {
-        console.error('Error fetching tender details:', error);
-    })
+          const viewtender = document.createElement('td');
+          const link = document.createElement('a');
+          link.href = 'http://localhost:5000/uploads/Tenders/' + title;
+          link.textContent = 'View Tender'; // Set your desired link text here
+          viewtender.appendChild(link);
+          row.appendChild(viewtender);
+          
+          // Append the row to the table body
+          dataTableBody.appendChild(row);
+      });
+
+  })
+  .catch(error => {
+      console.error('Error fetching tender details:', error);
+  });
 })
+.catch(error => {
+console.error('Error fetching user details:', error);
+});
+
+fetch('/quotation/getquotations')
 
 
 .catch(error => {

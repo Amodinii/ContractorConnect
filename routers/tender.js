@@ -94,7 +94,7 @@ router.get('/data', async (req, res) => {
 
 router.get('/gettenders', verifyToken, authorizeCompany, async (req, res) => {
   console.log("Getting Tender Details");
-  console.log(req.body);
+  console.log(req.query.userId);
   let tenders;
   await Tender.find({}).then((data)=> tenders = data);
   console.log(tenders);

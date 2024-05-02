@@ -34,12 +34,14 @@ router.get(
 );
 
 router.get('/userdetails',verifyToken, authorizeCompany, async (req, res) => {
+  console.log("Enter getting company details");
   try {
     const user = await CompanyUser.findById(req.user.userId); // Assuming req.user.id contains the user's ID after authentication
     if (!user) {
       return res.status(404).json({ message: 'User not found' });
     }
     // Extract necessary user details and send as response
+    console.log(user._id);
     res.json({
       id: user._id,
       CompanyName: user.CompanyName,
