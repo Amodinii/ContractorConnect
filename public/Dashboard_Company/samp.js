@@ -73,7 +73,7 @@ otherCheckbox.addEventListener("click", function () {
 
 const token = localStorage.getItem('jwtToken');
 
-fetch('/company/userdetails')
+fetch('/company/companydetails')
 .then(response => response.json())
 .then(data => {
   console.log(data.CompanyName);

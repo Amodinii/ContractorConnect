@@ -1,5 +1,3 @@
-
-
 // Sidebar functionality
 let sidebar = document.querySelector(".sidebar");
 let closeBtn = document.querySelector("#btn");
@@ -387,7 +385,7 @@ function showCreateCompanyUserForm() {
   companyUsersSection.appendChild(companyUserForm);
 
   // Add event listener for form submission
-  companyUserForm.addEventListener("submit", function(event) {
+  companyUserForm.addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent default form submission
     // Call function to handle creation of company user with form data
     createCompanyUser();
@@ -400,7 +398,9 @@ function createCompanyUser() {
   const companyName = document.getElementById("companyNameInput").value;
   const website = document.getElementById("websiteInput").value;
   const phoneNumber = document.getElementById("phoneInput").value;
-  const alternatePhoneNumber = document.getElementById("alternatePhoneInput").value;
+  const alternatePhoneNumber = document.getElementById(
+    "alternatePhoneInput"
+  ).value;
   const address = document.getElementById("addressInput").value;
   const email = document.getElementById("emailInput").value;
   const state = document.getElementById("stateInput").value;
@@ -413,7 +413,7 @@ function createCompanyUser() {
     AlternatePhoneNumber: alternatePhoneNumber,
     Address: address,
     Email: email,
-    State: state
+    State: state,
   };
 
   // Send POST request to backend API to create the user
@@ -424,18 +424,16 @@ function createCompanyUser() {
     },
     body: JSON.stringify(userData),
   })
-  .then((response) => {
-    if (response.ok) {
-      // If user creation is successful, refresh the list of users
-      fetchCompaniesData(); // Assuming you have a function to fetch and display company users
-      // Optionally, clear the form input fields
-      document.getElementById("createCompanyUserForm").reset();
-    } else {
-      // If user creation fails, display an error message
-      console.error("Failed to create company user");
-    }
-  })
-  .catch((error) => console.error("Error creating company user:", error));
+    .then((response) => {
+      if (response.ok) {
+        // If user creation is successful, refresh the list of users
+        fetchCompaniesData(); // Assuming you have a function to fetch and display company users
+        // Optionally, clear the form input fields
+        document.getElementById("createCompanyUserForm").reset();
+      } else {
+        // If user creation fails, display an error message
+        console.error("Failed to create company user");
+      }
+    })
+    .catch((error) => console.error("Error creating company user:", error));
 }
-
-
